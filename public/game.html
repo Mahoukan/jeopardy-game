@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jeopardy Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section class="card">
+      <h1>Jeopardy</h1>
+      <h2 id="playerInfo"></h2>
+      <h2 id="turnText"></h2>
+    </section>
+
+    <section class="layout">
+      <section>
+        <h2>Board</h2>
+        <div id="board" class="board"></div>
+      </section>
+
+      <section class="side-panel">
+        <h2>Scores</h2>
+        <div id="players"></div>
+
+        <h2>Question</h2>
+        <div id="questionBox" class="question-box">
+          Waiting for host...
+        </div>
+
+        <button id="buzzBtn" class="buzz-btn">BUZZ!</button>
+      </section>
+    </section>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="player.js"></script>
+</body>
+</html>
