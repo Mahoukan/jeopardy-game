@@ -1,5 +1,8 @@
 const socket = io();
 
+const importJsonBtn = document.getElementById("importJsonBtn");
+const jsonImportInput = document.getElementById("jsonImportInput");
+
 const boardNameInput = document.getElementById("boardNameInput");
 const saveBoardBtn = document.getElementById("saveBoardBtn");
 const createGameBtn = document.getElementById("createGameBtn");
@@ -31,9 +34,9 @@ let editorBoard = [
     questions: [
       { value: 100, clue: "", answer: "" },
       { value: 200, clue: "", answer: "" },
-      { value: 300, clue: "", answer: "" }
-    ]
-  }
+      { value: 300, clue: "", answer: "" },
+    ],
+  },
 ];
 
 renderEditor();
@@ -43,7 +46,7 @@ saveBoardBtn.addEventListener("click", () => {
 
   socket.emit("saveBoard", {
     name: boardNameInput.value,
-    board: editorBoard
+    board: editorBoard,
   });
 });
 
@@ -55,8 +58,8 @@ addCategoryBtn.addEventListener("click", () => {
     questions: [
       { value: 100, clue: "", answer: "" },
       { value: 200, clue: "", answer: "" },
-      { value: 300, clue: "", answer: "" }
-    ]
+      { value: 300, clue: "", answer: "" },
+    ],
   });
 
   renderEditor();
@@ -66,20 +69,20 @@ createGameBtn.addEventListener("click", () => {
   updateBoardFromEditor();
 
   socket.emit("createGame", {
-    board: editorBoard
+    board: editorBoard,
   });
 });
 
-socket.on("savedBoardsUpdated", boards => {
+socket.on("savedBoardsUpdated", (boards) => {
   savedBoards = boards;
   renderSavedBoards();
 });
 
-socket.on("successMessage", message => {
+socket.on("successMessage", (message) => {
   alert(message);
 });
 
-socket.on("errorMessage", message => {
+socket.on("errorMessage", (message) => {
   alert(message);
 });
 
@@ -89,7 +92,7 @@ socket.on("gameCreated", ({ code }) => {
   gameCodeText.textContent = `Game Code: ${code}`;
 });
 
-socket.on("gameUpdate", game => {
+socket.on("gameUpdate", (game) => {
   currentCode = game.code;
 
   gameCodeText.textContent = `Game Code: ${game.code}`;
@@ -105,17 +108,23 @@ function renderSavedBoards() {
     return;
   }
 
-  savedBoardsDiv.innerHTML = savedBoards.map(board => `
+  savedBoardsDiv.innerHTML = savedBoards
+    .map(
+      (board) => `
     <div class="saved-board">
       <strong>${escapeHtml(board.name)}</strong>
       <button class="load-board-btn" data-id="${board.id}">Load</button>
       <button class="delete-board-btn" data-id="${board.id}">Delete</button>
     </div>
-  `).join("");
+  `,
+    )
+    .join("");
 
-  document.querySelectorAll(".load-board-btn").forEach(button => {
+  document.querySelectorAll(".load-board-btn").forEach((button) => {
     button.addEventListener("click", () => {
-      const savedBoard = savedBoards.find(board => board.id === button.dataset.id);
+      const savedBoard = savedBoards.find(
+        (board) => board.id === button.dataset.id,
+      );
       if (!savedBoard) return;
 
       boardNameInput.value = savedBoard.name;
@@ -125,10 +134,10 @@ function renderSavedBoards() {
     });
   });
 
-  document.querySelectorAll(".delete-board-btn").forEach(button => {
+  document.querySelectorAll(".delete-board-btn").forEach((button) => {
     button.addEventListener("click", () => {
       socket.emit("deleteBoard", {
-        id: button.dataset.id
+        id: button.dataset.id,
       });
     });
   });
@@ -155,7 +164,9 @@ function renderEditor() {
       </div>
 
       <div class="question-editor-list">
-        ${category.questions.map((question, questionIndex) => `
+        ${category.questions
+          .map(
+            (question, questionIndex) => `
           <div class="question-editor">
             <input 
               class="value-input" 
@@ -190,7 +201,9 @@ function renderEditor() {
               Remove
             </button>
           </div>
-        `).join("")}
+        `,
+          )
+          .join("")}
       </div>
 
       <button class="add-question-btn" data-category-index="${categoryIndex}">
@@ -201,27 +214,28 @@ function renderEditor() {
     boardEditor.appendChild(categoryBox);
   });
 
-  document.querySelectorAll(".add-question-btn").forEach(button => {
+  document.querySelectorAll(".add-question-btn").forEach((button) => {
     button.addEventListener("click", () => {
       updateBoardFromEditor();
 
       const categoryIndex = Number(button.dataset.categoryIndex);
       const questions = editorBoard[categoryIndex].questions;
-      const nextValue = questions.length > 0
-        ? Number(questions[questions.length - 1].value) + 100
-        : 100;
+      const nextValue =
+        questions.length > 0
+          ? Number(questions[questions.length - 1].value) + 100
+          : 100;
 
       questions.push({
         value: nextValue,
         clue: "",
-        answer: ""
+        answer: "",
       });
 
       renderEditor();
     });
   });
 
-  document.querySelectorAll(".remove-category-btn").forEach(button => {
+  document.querySelectorAll(".remove-category-btn").forEach((button) => {
     button.addEventListener("click", () => {
       updateBoardFromEditor();
 
@@ -232,7 +246,7 @@ function renderEditor() {
     });
   });
 
-  document.querySelectorAll(".remove-question-btn").forEach(button => {
+  document.querySelectorAll(".remove-question-btn").forEach((button) => {
     button.addEventListener("click", () => {
       updateBoardFromEditor();
 
@@ -247,24 +261,26 @@ function renderEditor() {
 }
 
 function updateBoardFromEditor() {
-  document.querySelectorAll(".category-name-input").forEach(input => {
+  document.querySelectorAll(".category-name-input").forEach((input) => {
     const categoryIndex = Number(input.dataset.categoryIndex);
     editorBoard[categoryIndex].category = input.value;
   });
 
-  document.querySelectorAll(".value-input").forEach(input => {
+  document.querySelectorAll(".value-input").forEach((input) => {
     const categoryIndex = Number(input.dataset.categoryIndex);
     const questionIndex = Number(input.dataset.questionIndex);
-    editorBoard[categoryIndex].questions[questionIndex].value = Number(input.value);
+    editorBoard[categoryIndex].questions[questionIndex].value = Number(
+      input.value,
+    );
   });
 
-  document.querySelectorAll(".clue-input").forEach(input => {
+  document.querySelectorAll(".clue-input").forEach((input) => {
     const categoryIndex = Number(input.dataset.categoryIndex);
     const questionIndex = Number(input.dataset.questionIndex);
     editorBoard[categoryIndex].questions[questionIndex].clue = input.value;
   });
 
-  document.querySelectorAll(".answer-input").forEach(input => {
+  document.querySelectorAll(".answer-input").forEach((input) => {
     const categoryIndex = Number(input.dataset.categoryIndex);
     const questionIndex = Number(input.dataset.questionIndex);
     editorBoard[categoryIndex].questions[questionIndex].answer = input.value;
@@ -299,7 +315,7 @@ function renderBoard(board) {
         socket.emit("selectQuestion", {
           code: currentCode,
           categoryIndex,
-          questionIndex
+          questionIndex,
         });
       });
 
@@ -316,11 +332,35 @@ function renderPlayers(players, scores, currentTurnIndex) {
     return;
   }
 
-  playersDiv.innerHTML = players.map((player, index) => {
-    const turnLabel = index === currentTurnIndex ? " ← turn" : "";
-    const connectionLabel = player.connected ? "" : " (disconnected)";
-    return `<p><strong>${escapeHtml(player.name)}</strong>: ${scores[player.id]} ${turnLabel}${connectionLabel}</p>`;
-  }).join("");
+  playersDiv.innerHTML = players
+    .map((player, index) => {
+      const turnLabel = index === currentTurnIndex ? " ← turn" : "";
+      const connectionLabel = player.connected ? "" : " (disconnected)";
+
+      return `
+      <div class="player-score-row">
+        <strong>${escapeHtml(player.name)}</strong>
+        <input 
+          class="score-input"
+          type="number"
+          value="${scores[player.id]}"
+          data-player-id="${player.id}"
+        >
+        <span>${turnLabel}${connectionLabel}</span>
+      </div>
+    `;
+    })
+    .join("");
+
+  document.querySelectorAll(".score-input").forEach((input) => {
+    input.addEventListener("change", () => {
+      socket.emit("setPlayerScore", {
+        code: currentCode,
+        playerId: input.dataset.playerId,
+        score: input.value,
+      });
+    });
+  });
 }
 
 function renderQuestion(game) {
@@ -329,7 +369,7 @@ function renderQuestion(game) {
     return;
   }
 
-  const buzzedPlayer = game.players.find(p => p.id === game.buzzedPlayerId);
+  const buzzedPlayer = game.players.find((p) => p.id === game.buzzedPlayerId);
 
   questionBox.innerHTML = `
     <p><strong>For ${game.currentQuestion.value} points</strong></p>
@@ -362,7 +402,7 @@ function escapeHtml(text) {
 
 adminLoginBtn.addEventListener("click", () => {
   socket.emit("adminLogin", {
-    password: adminPasswordInput.value
+    password: adminPasswordInput.value,
   });
 });
 
@@ -373,6 +413,52 @@ socket.on("adminLoginSuccess", () => {
   socket.emit("getSavedBoards");
 });
 
-socket.on("adminLoginError", message => {
+socket.on("adminLoginError", (message) => {
   adminLoginMessage.textContent = message;
+});
+
+importJsonBtn.addEventListener("click", () => {
+  jsonImportInput.click();
+});
+
+jsonImportInput.addEventListener("change", (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+
+  reader.onload = () => {
+    try {
+      const imported = JSON.parse(reader.result);
+
+      if (Array.isArray(imported)) {
+        editorBoard = imported;
+      } else if (imported.board && Array.isArray(imported.board)) {
+        editorBoard = imported.board;
+        if (imported.name) {
+          boardNameInput.value = imported.name;
+        }
+      } else {
+        alert("Invalid JSON format.");
+        return;
+      }
+
+      editorBoard = editorBoard.map((category) => ({
+        category: category.category || "Untitled Category",
+        questions: category.questions.map((question) => ({
+          value: Number(question.value) || 100,
+          clue: question.clue || "",
+          answer: question.answer || "",
+        })),
+      }));
+
+      renderEditor();
+      alert("Board imported.");
+    } catch (error) {
+      alert("Could not read JSON file.");
+    }
+  };
+
+  reader.readAsText(file);
+  jsonImportInput.value = "";
 });

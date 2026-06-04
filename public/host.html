@@ -17,50 +17,60 @@
         <p id="adminLoginMessage"></p>
       </section>
       <div id="adminPanel" class="hidden">
-      <section class="card">
-        <h1>Host Jeopardy</h1>
+        <section class="card">
+          <h1>Host Jeopardy</h1>
 
-        <input id="boardNameInput" placeholder="Board name" />
+          <input id="boardNameInput" placeholder="Board name" />
 
-        <button id="saveBoardBtn">Save Board</button>
-        <button id="addCategoryBtn">Add Category</button>
-        <button id="createGameBtn">Create Game With This Board</button>
+          <button id="saveBoardBtn">Save Board</button>
+          <button id="addCategoryBtn">Add Category</button>
+          <button id="createGameBtn">Create Game With This Board</button>
 
-        <h2 id="gameCodeText">No game created yet</h2>
-        <p>Share this code with your players.</p>
-      </section>
+          <input
+            id="jsonImportInput"
+            type="file"
+            accept=".json"
+            class="hidden"
+          />
+          <button id="importJsonBtn">Import JSON Board</button>
 
-      <section class="editor-card">
-        <h2>Saved Boards</h2>
-        <div id="savedBoards"></div>
-      </section>
-
-      <section class="editor-card">
-        <h2>Board Editor</h2>
-        <div id="boardEditor"></div>
-      </section>
-
-      <section class="layout">
-        <section>
-          <h2>Live Board</h2>
-          <div id="board" class="board"></div>
+          <h2 id="gameCodeText">No game created yet</h2>
+          <p>Share this code with your players.</p>
         </section>
 
-        <section class="side-panel">
-          <h2>Players</h2>
-          <div id="players"></div>
-
-          <h2>Current Question</h2>
-          <div id="questionBox" class="question-box">No question selected.</div>
-
-          <div class="host-buttons">
-            <button id="correctBtn">Correct</button>
-            <button id="wrongBtn">Wrong</button>
-            <button id="skipBtn">Skip</button>
-          </div>
+        <section class="editor-card">
+          <h2>Saved Boards</h2>
+          <div id="savedBoards"></div>
         </section>
-      </section>
-    </div>
+
+        <section class="editor-card">
+          <h2>Board Editor</h2>
+          <div id="boardEditor"></div>
+        </section>
+
+        <section class="layout">
+          <section>
+            <h2>Live Board</h2>
+            <div id="board" class="board"></div>
+          </section>
+
+          <section class="side-panel">
+            <h2>Players</h2>
+            <div id="players"></div>
+
+            <h2>Current Question</h2>
+            <div id="questionBox" class="question-box">
+              No question selected.
+            </div>
+
+            <div class="host-buttons">
+              <button id="correctBtn">Correct</button>
+              <button id="wrongBtn">Wrong</button>
+              <button id="skipBtn">Skip</button>
+            </div>
+          </section>
+        </section>
+      </div>
     </main>
 
     <script src="/socket.io/socket.io.js"></script>

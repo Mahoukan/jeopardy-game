@@ -290,6 +290,22 @@ io.on("connection", (socket) => {
     sendGameUpdate(code);
   });
 
+  socket.on("setPlayerScore", ({ code, playerId, score }) => {
+    if (!socket.data.isAdmin) {
+      socket.emit("errorMessage", "Admin login required.");
+      return;
+    }
+
+    const game = games[code];
+    if (!game) return;
+
+    if (!game.scores.hasOwnProperty(playerId)) return;
+
+    game.scores[playerId] = Number(score) || 0;
+
+    sendGameUpdate(code);
+  });
+
   socket.on("skipQuestion", ({ code }) => {
     if (!socket.data.isAdmin) {
       socket.emit("errorMessage", "Admin login required.");

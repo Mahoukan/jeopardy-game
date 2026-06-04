@@ -208,3 +208,16 @@ a {
 .hidden {
   display: none;
 }
+
+.player-score-row {
+  display: grid;
+  grid-template-columns: 1fr 90px auto;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.score-input {
+  width: 90px;
+  padding: 8px;
+}
