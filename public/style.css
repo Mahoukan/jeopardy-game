@@ -284,3 +284,18 @@ a {
     font-weight: bold;
   }
 }
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1d2942;
+  padding: 8px 16px;
+  margin-bottom: 12px;
+  font-size: 18px;
+  border-radius: 0 0 12px 12px;
+}
+
+.game-header span {
+  font-weight: bold;
+}
