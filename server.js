@@ -5,6 +5,9 @@ const fs = require("fs");
 const path = require("path");
 const { Server } = require("socket.io");
 
+const QUESTION_TIME_MS = 30000;
+const BUZZ_LOCKOUT_MS = 3000;
+
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
@@ -79,6 +82,8 @@ function sendGameUpdate(code) {
     currentTurnIndex: game.currentTurnIndex,
     currentQuestion: game.currentQuestion,
     buzzedPlayerId: game.buzzedPlayerId,
+    questionEndsAt: game.questionEndsAt,
+    buzzUnlocksAt: game.buzzUnlocksAt,
   });
 }
 
@@ -181,6 +186,9 @@ io.on("connection", (socket) => {
       currentTurnIndex: 0,
       currentQuestion: null,
       buzzedPlayerId: null,
+      questionEndsAt: null,
+      buzzUnlocksAt: null,
+      timerInterval: null,
     };
 
     socket.join(code);
@@ -260,6 +268,34 @@ io.on("connection", (socket) => {
       value: question.value,
     };
 
+    game.questionEndsAt = Date.now() + QUESTION_TIME_MS;
+    game.buzzUnlocksAt = Date.now() + BUZZ_LOCKOUT_MS;
+
+    if (game.timerInterval) {
+      clearInterval(game.timerInterval);
+    }
+
+    game.timerInterval = setInterval(() => {
+      const stillExists = games[code];
+
+      if (!stillExists || !stillExists.currentQuestion) {
+        clearInterval(game.timerInterval);
+        game.timerInterval = null;
+        return;
+      }
+
+      sendGameUpdate(code);
+
+      if (Date.now() >= stillExists.questionEndsAt) {
+        stillExists.buzzedPlayerId = null;
+
+        clearInterval(stillExists.timerInterval);
+        stillExists.timerInterval = null;
+
+        sendGameUpdate(code);
+      }
+    }, 1000);
+
     game.buzzedPlayerId = null;
     sendGameUpdate(code);
   });
@@ -267,6 +303,9 @@ io.on("connection", (socket) => {
   socket.on("buzz", ({ code }) => {
     const game = games[code];
     if (!game || !game.currentQuestion) return;
+
+    if (Date.now() < game.buzzUnlocksAt) return;
+    if (Date.now() > game.questionEndsAt) return;
 
     if (!game.buzzedPlayerId) {
       game.buzzedPlayerId = socket.id;
@@ -292,6 +331,13 @@ io.on("connection", (socket) => {
 
     game.currentQuestion = null;
     game.buzzedPlayerId = null;
+    if (game.timerInterval) {
+      clearInterval(game.timerInterval);
+      game.timerInterval = null;
+    }
+
+    game.questionEndsAt = null;
+    game.buzzUnlocksAt = null;
 
     sendGameUpdate(code);
   });
@@ -337,6 +383,13 @@ io.on("connection", (socket) => {
 
     game.currentQuestion = null;
     game.buzzedPlayerId = null;
+    if (game.timerInterval) {
+      clearInterval(game.timerInterval);
+      game.timerInterval = null;
+    }
+
+    game.questionEndsAt = null;
+    game.buzzUnlocksAt = null;
 
     if (game.players.length > 0) {
       game.currentTurnIndex = (game.currentTurnIndex + 1) % game.players.length;

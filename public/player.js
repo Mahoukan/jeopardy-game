@@ -35,11 +35,15 @@ if (joinBtn) {
 }
 
 socket.on("joinedGame", ({ code, playerId }) => {
+  const joiningName = nameInput ? nameInput.value.trim() : playerName;
+
   localStorage.setItem("gameCode", code);
-  localStorage.setItem("playerName", nameInput.value.trim());
+  localStorage.setItem("playerName", joiningName);
   localStorage.setItem("playerId", playerId);
 
-  window.location.href = "game.html";
+  if (!path.includes("game.html")) {
+    window.location.href = "game.html";
+  }
 });
 
 socket.on("joinError", (error) => {
@@ -145,17 +149,29 @@ function renderQuestion(game) {
     if (buzzBtn) buzzBtn.disabled = true;
     return;
   }
+  const now = Date.now();
+  const timeLeft = game.questionEndsAt
+    ? Math.max(0, Math.ceil((game.questionEndsAt - now) / 1000))
+    : 0;
+
+  const buzzLocked = game.buzzUnlocksAt && now < game.buzzUnlocksAt;
+  const lockoutLeft = buzzLocked
+    ? Math.ceil((game.buzzUnlocksAt - now) / 1000)
+    : 0;
 
   const buzzedPlayer = game.players.find((p) => p.id === game.buzzedPlayerId);
 
   questionBox.innerHTML = `
-    <p><strong>For ${game.currentQuestion.value} points</strong></p>
-    <p>${game.currentQuestion.clue}</p>
-    <p><strong>Buzzed:</strong> ${buzzedPlayer ? buzzedPlayer.name : "No one yet"}</p>
-  `;
+  <p><strong>For ${game.currentQuestion.value} points</strong></p>
+  <p>${game.currentQuestion.clue}</p>
+  <p><strong>Time left:</strong> ${timeLeft}s</p>
+  <p><strong>Buzz:</strong> ${buzzLocked ? `Locked for ${lockoutLeft}s` : "Open"}</p>
+  <p><strong>Buzzed:</strong> ${buzzedPlayer ? buzzedPlayer.name : "No one yet"}</p>
+`;
 
   if (buzzBtn) {
-    buzzBtn.disabled = Boolean(game.buzzedPlayerId);
+    buzzBtn.disabled =
+      Boolean(game.buzzedPlayerId) || buzzLocked || timeLeft <= 0;
   }
 }
 
