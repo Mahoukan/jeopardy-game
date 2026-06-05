@@ -5,8 +5,8 @@ const fs = require("fs");
 const path = require("path");
 const { Server } = require("socket.io");
 
-const ANSWER_TIME_MS = 10000;
-const BUZZ_LOCKOUT_MS = 3000;
+const ANSWER_TIME_MS = 15000;
+const BUZZ_LOCKOUT_MS = 5000;
 
 const app = express();
 const server = http.createServer(app);
