@@ -282,3 +282,20 @@ a {
     font-weight: bold;
   }
 }
+@media (orientation: portrait), (max-width: 800px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+  }
+
+  .board {
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .category-column {
+    min-width: 145px;
+  }
+}
