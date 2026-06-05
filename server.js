@@ -6,7 +6,6 @@ const path = require("path");
 const { Server } = require("socket.io");
 
 const ANSWER_TIME_MS = 10000;
-const QUESTION_TIME_MS = 30000;
 const BUZZ_LOCKOUT_MS = 3000;
 
 const app = express();
@@ -83,7 +82,6 @@ function sendGameUpdate(code) {
     currentTurnIndex: game.currentTurnIndex,
     currentQuestion: game.currentQuestion,
     buzzedPlayerId: game.buzzedPlayerId,
-    questionEndsAt: game.questionEndsAt,
     buzzUnlocksAt: game.buzzUnlocksAt,
     answerEndsAt: game.answerEndsAt,
   });
@@ -188,7 +186,6 @@ io.on("connection", (socket) => {
       currentTurnIndex: 0,
       currentQuestion: null,
       buzzedPlayerId: null,
-      questionEndsAt: null,
       buzzUnlocksAt: null,
       timerInterval: null,
       answerEndsAt: null,
@@ -271,7 +268,6 @@ io.on("connection", (socket) => {
       value: question.value,
     };
 
-    game.questionEndsAt = Date.now() + QUESTION_TIME_MS;
     game.buzzUnlocksAt = Date.now() + BUZZ_LOCKOUT_MS;
 
     if (game.timerInterval) {
@@ -290,18 +286,6 @@ io.on("connection", (socket) => {
       if (stillExists.answerEndsAt && Date.now() >= stillExists.answerEndsAt) {
         stillExists.buzzedPlayerId = null;
         stillExists.answerEndsAt = null;
-        sendGameUpdate(code);
-        return;
-      }
-
-      if (
-        !stillExists.buzzedPlayerId &&
-        Date.now() >= stillExists.questionEndsAt
-      ) {
-        clearInterval(stillExists.timerInterval);
-        stillExists.timerInterval = null;
-        sendGameUpdate(code);
-        return;
       }
 
       sendGameUpdate(code);
@@ -316,7 +300,6 @@ io.on("connection", (socket) => {
     if (!game || !game.currentQuestion) return;
 
     if (Date.now() < game.buzzUnlocksAt) return;
-    if (Date.now() > game.questionEndsAt) return;
 
     if (!game.buzzedPlayerId) {
       game.buzzedPlayerId = socket.id;
@@ -348,7 +331,6 @@ io.on("connection", (socket) => {
       game.timerInterval = null;
     }
     game.answerEndsAt = null;
-    game.questionEndsAt = null;
     game.buzzUnlocksAt = null;
 
     sendGameUpdate(code);
@@ -400,7 +382,6 @@ io.on("connection", (socket) => {
       game.timerInterval = null;
     }
 
-    game.questionEndsAt = null;
     game.buzzUnlocksAt = null;
     game.answerEndsAt = null;
 

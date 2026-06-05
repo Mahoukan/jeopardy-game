@@ -372,9 +372,6 @@ function renderQuestion(game) {
     return;
   }
   const now = Date.now();
-  const timeLeft = game.questionEndsAt
-    ? Math.max(0, Math.ceil((game.questionEndsAt - now) / 1000))
-    : 0;
   const answerTimeLeft = game.answerEndsAt
     ? Math.max(0, Math.ceil((game.answerEndsAt - now) / 1000))
     : null;
@@ -388,7 +385,6 @@ function renderQuestion(game) {
   questionBox.innerHTML = `
   <p><strong>For ${game.currentQuestion.value} points</strong></p>
   <p>${escapeHtml(game.currentQuestion.clue)}</p>
-  <p><strong>Time left:</strong> ${timeLeft}s</p>
   <p><strong>Answer timer:</strong> ${
   answerTimeLeft !== null ? `${answerTimeLeft}s` : "Not started"
 }</p>
