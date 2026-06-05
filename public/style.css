@@ -66,7 +66,7 @@ a {
 }
 
 .category-column {
-  min-width: 160px;
+  min-width: 22vw;
 }
 
 .category-title {
@@ -223,67 +223,62 @@ a {
 }
 
 @media (orientation: portrait), (max-width: 800px) {
-  main {
+
+  /* Center board horizontally */
+  .board {
+    justify-content: center;
+    overflow-x: auto;
+  }
+
+  /* Bigger category names */
+  .category-title {
+    min-height: 70px;
+    font-size: 20px;
     padding: 10px;
   }
 
-  .card {
-    margin: 10px auto;
-    padding: 12px;
-  }
-
-  .layout {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
-  .board {
-    justify-content: flex-start;
-  }
-
-  .category-column {
-    min-width: 120px;
-  }
-
-  .category-title {
-    min-height: 55px;
-    padding: 8px;
-    font-size: 13px;
-  }
-
+  /* Bigger point values */
   .question-button {
-    height: 58px;
-    font-size: 22px;
+    height: 90px;
+    font-size: 36px;
+    font-weight: bold;
   }
 
-  .side-panel {
-    width: 100%;
-    padding: 14px;
-    text-align: center;
+  /* Bigger player name and game code */
+  #playerInfo {
+    font-size: 32px;
   }
 
-  .question-box {
-    min-height: 90px;
-    font-size: 18px;
+  /* Bigger current turn text */
+  #turnText {
+    font-size: 28px;
   }
 
-  .buzz-btn {
-    height: 150px;
-    font-size: 42px;
-    width: 100%;
-    margin: 10px 0 0;
-  }
-
+  /* Bigger scores */
   #players {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6px;
+    gap: 8px;
+    font-size: 22px;
   }
 
   #players p {
     background: #111827;
-    padding: 8px;
+    padding: 12px;
     border-radius: 8px;
     margin: 0;
+  }
+
+  /* Bigger question text */
+  .question-box {
+    font-size: 24px;
+    min-height: 120px;
+  }
+
+  /* MASSIVE buzzer */
+  .buzz-btn {
+    height: 220px;
+    font-size: 64px;
+    font-weight: bold;
   }
 }
