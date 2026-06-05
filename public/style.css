@@ -66,7 +66,7 @@ a {
 }
 
 .category-column {
-  min-width: 22vw;
+  min-width: 140px;
 }
 
 .category-title {
@@ -223,66 +223,6 @@ a {
 }
 
 @media (orientation: portrait), (max-width: 800px) {
-
-  /* Center board horizontally */
-  .board {
-    justify-content: center;
-    overflow-x: auto;
-  }
-
-  /* Bigger category names */
-  .category-title {
-    min-height: 70px;
-    font-size: 20px;
-    padding: 10px;
-  }
-
-  /* Bigger point values */
-  .question-button {
-    height: 90px;
-    font-size: 36px;
-    font-weight: bold;
-  }
-
-  /* Bigger player name and game code */
-  #playerInfo {
-    font-size: 32px;
-  }
-
-  /* Bigger current turn text */
-  #turnText {
-    font-size: 28px;
-  }
-
-  /* Bigger scores */
-  #players {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    font-size: 22px;
-  }
-
-  #players p {
-    background: #111827;
-    padding: 12px;
-    border-radius: 8px;
-    margin: 0;
-  }
-
-  /* Bigger question text */
-  .question-box {
-    font-size: 24px;
-    min-height: 120px;
-  }
-
-  /* MASSIVE buzzer */
-  .buzz-btn {
-    height: 220px;
-    font-size: 64px;
-    font-weight: bold;
-  }
-}
-@media (orientation: portrait), (max-width: 800px) {
   .layout {
     display: grid;
     grid-template-columns: 1fr !important;
@@ -297,5 +237,50 @@ a {
 
   .category-column {
     min-width: 145px;
+  }
+
+  .category-title {
+    min-height: 70px;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .question-button {
+    height: 90px;
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  #playerInfo {
+    font-size: 32px;
+  }
+
+  #turnText {
+    font-size: 28px;
+  }
+
+  #players {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    font-size: 22px;
+  }
+
+  #players p {
+    background: #111827;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 0;
+  }
+
+  .question-box {
+    font-size: 24px;
+    min-height: 120px;
+  }
+
+  .buzz-btn {
+    height: 220px;
+    font-size: 64px;
+    font-weight: bold;
   }
 }
