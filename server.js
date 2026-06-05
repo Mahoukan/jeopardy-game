@@ -92,6 +92,27 @@ io.on("connection", (socket) => {
       socket.emit("adminLoginError", "Wrong password.");
     }
   });
+  socket.on("hostRejoin", ({ code }) => {
+    if (!socket.data.isAdmin) {
+      socket.emit("errorMessage", "Admin login required.");
+      return;
+    }
+
+    const game = games[code];
+
+    if (!game) {
+      socket.emit("errorMessage", "Game not found.");
+      return;
+    }
+
+    game.hostId = socket.id;
+
+    socket.join(code);
+    socket.data.code = code;
+    socket.data.isHost = true;
+
+    sendGameUpdate(code);
+  });
   socket.on("getSavedBoards", () => {
     if (!socket.data.isAdmin) {
       socket.emit("errorMessage", "Admin login required.");
@@ -226,7 +247,7 @@ io.on("connection", (socket) => {
       return;
     }
     const game = games[code];
-    if (!game || socket.id !== game.hostId) return;
+    if (!game) return;
 
     const question = game.board[categoryIndex]?.questions[questionIndex];
     if (!question || question.used) return;
@@ -259,7 +280,7 @@ io.on("connection", (socket) => {
       return;
     }
     const game = games[code];
-    if (!game || socket.id !== game.hostId) return;
+    if (!game) return;
     if (!game.currentQuestion || !game.buzzedPlayerId) return;
 
     game.scores[game.buzzedPlayerId] += game.currentQuestion.value;
@@ -281,7 +302,7 @@ io.on("connection", (socket) => {
       return;
     }
     const game = games[code];
-    if (!game || socket.id !== game.hostId) return;
+    if (!game) return;
     if (!game.currentQuestion || !game.buzzedPlayerId) return;
 
     game.scores[game.buzzedPlayerId] -= game.currentQuestion.value;
@@ -312,7 +333,7 @@ io.on("connection", (socket) => {
       return;
     }
     const game = games[code];
-    if (!game || socket.id !== game.hostId) return;
+    if (!game) return;
 
     game.currentQuestion = null;
     game.buzzedPlayerId = null;

@@ -263,7 +263,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
-    font-size: 48px;
+    font-size: 24px;
   }
 
   #players p {

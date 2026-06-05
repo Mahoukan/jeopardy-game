@@ -1,5 +1,8 @@
 const socket = io();
 
+const rejoinCodeInput = document.getElementById("rejoinCodeInput");
+const rejoinGameBtn = document.getElementById("rejoinGameBtn");
+
 const importJsonBtn = document.getElementById("importJsonBtn");
 const jsonImportInput = document.getElementById("jsonImportInput");
 
@@ -411,6 +414,12 @@ socket.on("adminLoginSuccess", () => {
   adminPanel.classList.remove("hidden");
 
   socket.emit("getSavedBoards");
+
+  const lastCode = localStorage.getItem("hostCode");
+
+  if (lastCode) {
+    socket.emit("hostRejoin", { code: lastCode });
+  }
 });
 
 socket.on("adminLoginError", (message) => {
@@ -461,4 +470,16 @@ jsonImportInput.addEventListener("change", (event) => {
 
   reader.readAsText(file);
   jsonImportInput.value = "";
+});
+
+rejoinGameBtn.addEventListener("click", () => {
+  const code = rejoinCodeInput.value.trim();
+
+  if (!code) {
+    alert("Enter a game code first.");
+    return;
+  }
+
+  localStorage.setItem("hostCode", code);
+  socket.emit("hostRejoin", { code });
 });
