@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const { Server } = require("socket.io");
 
+const ANSWER_TIME_MS = 10000;
 const QUESTION_TIME_MS = 30000;
 const BUZZ_LOCKOUT_MS = 3000;
 
@@ -84,6 +85,7 @@ function sendGameUpdate(code) {
     buzzedPlayerId: game.buzzedPlayerId,
     questionEndsAt: game.questionEndsAt,
     buzzUnlocksAt: game.buzzUnlocksAt,
+    answerEndsAt: game.answerEndsAt,
   });
 }
 
@@ -189,6 +191,7 @@ io.on("connection", (socket) => {
       questionEndsAt: null,
       buzzUnlocksAt: null,
       timerInterval: null,
+      answerEndsAt: null,
     };
 
     socket.join(code);
@@ -284,16 +287,24 @@ io.on("connection", (socket) => {
         return;
       }
 
-      sendGameUpdate(code);
-
-      if (Date.now() >= stillExists.questionEndsAt) {
+      if (stillExists.answerEndsAt && Date.now() >= stillExists.answerEndsAt) {
         stillExists.buzzedPlayerId = null;
+        stillExists.answerEndsAt = null;
+        sendGameUpdate(code);
+        return;
+      }
 
+      if (
+        !stillExists.buzzedPlayerId &&
+        Date.now() >= stillExists.questionEndsAt
+      ) {
         clearInterval(stillExists.timerInterval);
         stillExists.timerInterval = null;
-
         sendGameUpdate(code);
+        return;
       }
+
+      sendGameUpdate(code);
     }, 1000);
 
     game.buzzedPlayerId = null;
@@ -309,6 +320,7 @@ io.on("connection", (socket) => {
 
     if (!game.buzzedPlayerId) {
       game.buzzedPlayerId = socket.id;
+      game.answerEndsAt = Date.now() + ANSWER_TIME_MS;
       sendGameUpdate(code);
     }
   });
@@ -335,7 +347,7 @@ io.on("connection", (socket) => {
       clearInterval(game.timerInterval);
       game.timerInterval = null;
     }
-
+    game.answerEndsAt = null;
     game.questionEndsAt = null;
     game.buzzUnlocksAt = null;
 
@@ -353,7 +365,7 @@ io.on("connection", (socket) => {
 
     game.scores[game.buzzedPlayerId] -= game.currentQuestion.value;
     game.buzzedPlayerId = null;
-
+    game.answerEndsAt = null;
     sendGameUpdate(code);
   });
 
@@ -390,6 +402,7 @@ io.on("connection", (socket) => {
 
     game.questionEndsAt = null;
     game.buzzUnlocksAt = null;
+    game.answerEndsAt = null;
 
     if (game.players.length > 0) {
       game.currentTurnIndex = (game.currentTurnIndex + 1) % game.players.length;
