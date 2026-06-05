@@ -1,171 +1,432 @@
 [
   {
-    "id": "1780559848115",
-    "name": "Dabble",
+    "id": "4597-J",
+    "name": "Show #4597 - 2004-09-07 - Jeopardy",
     "board": [
       {
-        "category": "Able",
+        "category": "WORLD RELIGION",
         "questions": [
-          { "value": 100, "clue": "A", "answer": "A", "used": false },
-          { "value": 200, "clue": "B", "answer": "B", "used": false },
-          { "value": 300, "clue": "C", "answer": "C", "used": false },
-          { "value": 400, "clue": "D", "answer": "D", "used": false }
+          {
+            "value": 200,
+            "clue": "As the Mayan god of merchants, Ek Chuah was responsible for this yummy bean, once the standard Mayan currency",
+            "answer": "Cacao bean",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "The Voodoo of New Orleans owes a debt to this Caribbean nation once known as St. Domingue",
+            "answer": "Haiti",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "By definition, the Hashemites are either direct or collateral descendants of this prophet",
+            "answer": "Muhammad",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "Parasurama is the... let me see, fourth, fifth... no, sixth avatar of this Hindu god",
+            "answer": "Vishnu",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "From the Latin for a room that can be locked, it's a meeting assembled to choose a pope",
+            "answer": "a conclave",
+            "used": false
+          }
         ]
       },
       {
-        "category": "Babble",
+        "category": "THE EXPERIENCE MUSIC PROJECT",
         "questions": [
-          { "value": 100, "clue": "A", "answer": "A", "used": false },
-          { "value": 200, "clue": "B", "answer": "B", "used": false },
-          { "value": 300, "clue": "C", "answer": "C", "used": false },
-          { "value": 400, "clue": "D", "answer": "D", "used": false }
+          {
+            "value": 200,
+            "clue": "( Sofia of the Clue Crew holds a feathered headdress at Experience Music Project in Seattle, WA. ) Felipe Rose, who wore this costume as part of this '70s group, has since founded Tomahawk Records",
+            "answer": "The Village People",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "In 2004, for the 40th anniversary of the Fab 4 in the U.S., EMP presents an exhibit titled this, like a 1977 Broadway show",
+            "answer": "Beatlemania",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "( Sofia of the Clue Crew holds a giant black boot at Experience Music Project in Seattle, WA. ) The dragon boots were part of the finery of this hard rock band",
+            "answer": "Kiss",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "In the area called DJ Hallway, learn scratching & the other aspects of this -ism",
+            "answer": "turntablism",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "( Sofia of the Clue Crew holds a red hat at the Experience Music Project in Seattle, WA. ) Experience Music Project has a hat from the collection of this man from Romeo, Michigan",
+            "answer": "Kid Rock",
+            "used": false
+          }
         ]
       },
       {
-        "category": "Cable",
+        "category": "GROCERY SHOPPING",
         "questions": [
-          { "value": 100, "clue": "A", "answer": "A", "used": false },
-          { "value": 200, "clue": "B", "answer": "B", "used": false },
-          { "value": 300, "clue": "C", "answer": "C", "used": false },
-          { "value": 400, "clue": "D", "answer": "D", "used": false }
+          {
+            "value": 200,
+            "clue": "If in a hurry, grab a prewashed salad mix, perhaps with the red leaf & green leaf types of this",
+            "answer": "lettuce",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "If you're buying a whole fish, these (on the fish) should be clear & not sunken",
+            "answer": "eyes",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "Mom, not shredded wheat! Please can we get Tony's Cinnamon Krunchers from this company, can we please?",
+            "answer": "Kellogg's",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "You'll get fresher milk from the bottom of your market's display case for this reason",
+            "answer": "because it's colder at the bottom",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "Choose one of these with evenly distributed netting",
+            "answer": "cantaloupe",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "THE LARGEST IN AREA",
+        "questions": [
+          {
+            "value": 200,
+            "clue": "Maine, Maryland, Montana",
+            "answer": "Montana",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "Wisconsin, Wyoming, Washington",
+            "answer": "Wyoming",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "Ohio, Oklahoma, Oregon",
+            "answer": "Oregon",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "Nebraska, Nevada, North Carolina",
+            "answer": "Nevada",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "American Samoa, Bermuda, Puerto Rico",
+            "answer": "Puerto Rico",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "FEATHERS",
+        "questions": [
+          {
+            "value": 200,
+            "clue": "Depending on the source, he \"stuck a feather in his cap\" or \"in his hat and called it macaroni\"",
+            "answer": "Yankee Doodle",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "According to the proverb, \"Birds of a feather\" do this",
+            "answer": "flock together",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "For a Plains Indian's war bonnet, the best feathers were from this bird",
+            "answer": "an eagle",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "A female swan, or what a quill can be used as",
+            "answer": "a pen",
+            "used": false
+          },
+          {
+            "value": 3000,
+            "clue": "It's what Daedalus used to hold the feathers together in the wings he made for himself & his son",
+            "answer": "wax",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "THE QUEEN'S ENGLISH",
+        "questions": [
+          {
+            "value": 200,
+            "clue": "If you take a nappy in London, it's one of these to put on a baby",
+            "answer": "a diaper",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "The type of car the Brits call an estate car, we Americans call one of these wagons",
+            "answer": "a station wagon",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "If you're challenged to a game of draughts in a Birmingham pub, be prepared to contest this board game",
+            "answer": "checkers",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "If your mechanic in Manchester needs a spanner to fix your car, he's asking for one of these",
+            "answer": "a wrench",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "If the Westminster Bobby pulls out his truncheon, be worried because it's one of these",
+            "answer": "a club (or a nightstick)",
+            "used": false
+          }
         ]
       }
     ]
   },
   {
-    "id": "1780560000001",
-    "name": "Friends Night Jeopardy - Board 1",
+    "id": "4597-DJ",
+    "name": "Show #4597 - 2004-09-07 - Double Jeopardy",
     "board": [
       {
-        "category": "Science",
+        "category": "THE WAR OF 1812",
         "questions": [
-          { "value": 100, "clue": "The chemical symbol for gold.", "answer": "What is Au?", "used": false },
-          { "value": 200, "clue": "The scientist who proposed the three laws of motion.", "answer": "Who is Isaac Newton?", "used": false },
-          { "value": 300, "clue": "The effect that causes a siren's pitch to change as an ambulance drives past.", "answer": "What is the Doppler Effect?", "used": false },
-          { "value": 400, "clue": "The law stating that the entropy of an isolated system tends to increase over time.", "answer": "What is the Second Law of Thermodynamics?", "used": false },
-          { "value": 500, "clue": "The only letter that does not appear in any official chemical element symbol.", "answer": "What is J?", "used": false }
+          {
+            "value": 400,
+            "clue": "About 2,000 British soldiers were killed or wounded by Jackson's troops in this last engagement of the war",
+            "answer": "Battle of New Orleans",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "In April 1813, the U.S. captured Toronto, but this general after whom a Colorado mountain is named died in the battle",
+            "answer": "Zebulon Pike",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "On December 29, 1812 this famous U.S. frigate defeated the British frigate Java off the coast of Brazil",
+            "answer": "the Constitution",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "In 1813 this naval officer supervised the building of American ships to strengthen the Navy's fleet on Lake Erie",
+            "answer": "Oliver Hazard Perry",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "A provision of this treaty ending the war set up a commission to settle the boundary between the U.S. & Canada",
+            "answer": "the Treaty of Ghent",
+            "used": false
+          }
         ]
       },
       {
-        "category": "Mythology",
+        "category": "HODGEPODGE",
         "questions": [
-          { "value": 100, "clue": "This figure from Greek mythology flew too close to the Sun.", "answer": "Who is Icarus?", "used": false },
-          { "value": 200, "clue": "This Egyptian god is commonly depicted with the head of a jackal.", "answer": "Who is Anubis?", "used": false },
-          { "value": 300, "clue": "The name of Odin's eight-legged horse.", "answer": "What is Sleipnir?", "used": false },
-          { "value": 400, "clue": "The legendary spear wielded by the Irish hero Cú Chulainn.", "answer": "What is Gáe Bolg?", "used": false },
-          { "value": 500, "clue": "This primordial goddess was slain by Marduk and used to form the heavens and earth in Mesopotamian mythology.", "answer": "Who is Tiamat?", "used": false }
+          {
+            "value": 400,
+            "clue": "This adjective can be applied to writers like Shelley & Hugo as well as to a \"getaway\" for 2",
+            "answer": "Romantic",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "The logo of the National Beagle Club doesn't show a beagle but this scared animal that beagles hunt",
+            "answer": "a rabbit",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "Big Sandy isn't a feared bouncer, but a river that divides Kentucky from this \"Mountain State\"",
+            "answer": "West Virginia",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "Official job title of the person who directs the largest library in the world",
+            "answer": "the Librarian of Congress",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "Born in 1714, this 3-initialed son of J.S. Bach became his father's student & successor",
+            "answer": "Carl Philipp Emanuel Bach",
+            "used": false
+          }
         ]
       },
       {
-        "category": "Internet Culture",
+        "category": "DOC TALK",
         "questions": [
-          { "value": 100, "clue": "The meaning of the acronym GIF.", "answer": "What is Graphics Interchange Format?", "used": false },
-          { "value": 200, "clue": "The social media platform that originally limited posts to 140 characters.", "answer": "What is Twitter?", "used": false },
-          { "value": 300, "clue": "The internet term for text repeatedly copied and pasted across websites and forums.", "answer": "What is copypasta?", "used": false },
-          { "value": 400, "clue": "The imageboard often credited with originating many early internet memes.", "answer": "What is 4chan?", "used": false },
-          { "value": 500, "clue": "The video game responsible for the phrase 'All your base are belong to us.'", "answer": "What is Zero Wing?", "used": false }
+          {
+            "value": 400,
+            "clue": "Myopia is the medical term for this",
+            "answer": "nearsightedness",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "This is the common name for a lumbar puncture, used to test for meningitis",
+            "answer": "a spinal tap",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "An LFT tests the function of this organ",
+            "answer": "the liver",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "Minor ailments can be treated by NPs (Nurse-practitioners) & PAs (these)",
+            "answer": "physician assistants",
+            "used": false
+          },
+          {
+            "value": 3800,
+            "clue": "Properly called the optic disk, it's the region of the retina that has no rods or cones",
+            "answer": "the blind spot",
+            "used": false
+          }
         ]
       },
       {
-        "category": "Movies",
+        "category": "BASEBALL: THE 1930s",
         "questions": [
-          { "value": 100, "clue": "The director of Jurassic Park.", "answer": "Who is Steven Spielberg?", "used": false },
-          { "value": 200, "clue": "The highest-grossing film of all time, not adjusted for inflation.", "answer": "What is Avatar?", "used": false },
-          { "value": 300, "clue": "The first feature-length animated film ever released.", "answer": "What is Snow White and the Seven Dwarfs?", "used": false },
-          { "value": 400, "clue": "The actor who portrayed Maximus in Gladiator.", "answer": "Who is Russell Crowe?", "used": false },
-          { "value": 500, "clue": "The first non-English language film to win the Academy Award for Best Picture.", "answer": "What is Parasite?", "used": false }
+          {
+            "value": 400,
+            "clue": "On May 25, 1935 he slugged the last 3 home runs of his career -- numbers 712, 713 & 714",
+            "answer": "Babe Ruth",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "On July 6, 1933 this city's Comiskey Park hosted the first All-Star Game; the American League won, 4-2",
+            "answer": "Chicago",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "In 1939 Red Sox rookie batted .327; 2 years later his batting average increased 79 points",
+            "answer": "Ted Williams",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "In 1934 this eccentric St. Louis Cardinals pitcher who won 30 games was named the NL's most valuable player",
+            "answer": "Dizzy Dean",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "In June 1938 this Cincinnati Reds pitcher became the only man to pitch a no-hitter in 2 consecutive games",
+            "answer": "Johnny Van Der Meer",
+            "used": false
+          }
         ]
       },
       {
-        "category": "Mathematics",
+        "category": "WHO'S THE SUBJECT?",
         "questions": [
-          { "value": 100, "clue": "The value of π rounded to three decimal places.", "answer": "What is 3.142?", "used": false },
-          { "value": 200, "clue": "The prime number immediately following 29.", "answer": "What is 31?", "used": false },
-          { "value": 300, "clue": "The mathematical constant that serves as the base of natural logarithms.", "answer": "What is e?", "used": false },
-          { "value": 400, "clue": "The branch of mathematics concerned with rates of change and accumulation.", "answer": "What is Calculus?", "used": false },
-          { "value": 500, "clue": "The classification of numbers such as 6 and 28 that equal the sum of their positive divisors excluding themselves.", "answer": "What is a Perfect Number?", "used": false }
+          {
+            "value": 400,
+            "clue": "\"A Private Disgrace\" & \"Forty Whacks\"",
+            "answer": "Lizzie Borden",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "\"Against the Current\" & \"Far Side of Paradise\"",
+            "answer": "F. Scott Fitzgerald",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "\"American Caesar\" & \"Old Soldiers Never Die\"",
+            "answer": "Douglas MacArthur",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "\"Prince of Humbugs\" & \"The Fabulous Showman\"",
+            "answer": "P.T. Barnum",
+            "used": false
+          },
+          {
+            "value": 4200,
+            "clue": "\"The Last Lion\" & \"Lion of Britain\"",
+            "answer": "Winston Churchill",
+            "used": false
+          }
         ]
       },
       {
-        "category": "History",
-        "dailyDouble": true,
-        "dailyDoubleValue": 400,
+        "category": "\"I\" CATCHING",
         "questions": [
-          { "value": 100, "clue": "The wall whose fall in 1989 became a symbol of the end of the Cold War.", "answer": "What is the Berlin Wall?", "used": false },
-          { "value": 200, "clue": "The ship on which Charles Darwin undertook his famous voyage.", "answer": "What is HMS Beagle?", "used": false },
-          { "value": 300, "clue": "The empire founded by Genghis Khan.", "answer": "What is the Mongol Empire?", "used": false },
-          { "value": 400, "clue": "The year of the Battle of Hastings.", "answer": "What is 1066?", "used": false },
-          { "value": 500, "clue": "The treaty that ended the Thirty Years' War in 1648.", "answer": "What is the Peace of Westphalia?", "used": false }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "1780560000002",
-    "name": "Friends Night Jeopardy - Double Jeopardy",
-    "board": [
-      {
-        "category": "Space",
-        "questions": [
-          { "value": 400, "clue": "The galaxy that contains our Solar System.", "answer": "What is the Milky Way?", "used": false },
-          { "value": 800, "clue": "The first human to travel into space.", "answer": "Who is Yuri Gagarin?", "used": false },
-          { "value": 1200, "clue": "The point at which a star exhausts its core hydrogen and leaves the main sequence.", "answer": "What is the Main Sequence Turnoff?", "used": false },
-          { "value": 1600, "clue": "These five positions around a two-body system allow spacecraft to maintain relatively stable positions.", "answer": "What are Lagrange Points?", "used": false },
-          { "value": 2000, "clue": "The theoretical boundary around a black hole beyond which nothing can escape.", "answer": "What is the Event Horizon?", "used": false }
-        ]
-      },
-      {
-        "category": "Video Games",
-        "dailyDouble": true,
-        "dailyDoubleValue": 1600,
-        "questions": [
-          { "value": 400, "clue": "The plumber who first appeared in Donkey Kong.", "answer": "Who is Mario?", "used": false },
-          { "value": 800, "clue": "The company that created the Pokémon franchise.", "answer": "What is Nintendo?", "used": false },
-          { "value": 1200, "clue": "The best-selling video game of all time.", "answer": "What is Minecraft?", "used": false },
-          { "value": 1600, "clue": "The arcade game in which Mario first appeared.", "answer": "What is Donkey Kong?", "used": false },
-          { "value": 2000, "clue": "The first commercially successful home video game console.", "answer": "What is the Magnavox Odyssey?", "used": false }
-        ]
-      },
-      {
-        "category": "World Mythology",
-        "questions": [
-          { "value": 400, "clue": "The world tree connecting the nine realms in Norse mythology.", "answer": "What is Yggdrasil?", "used": false },
-          { "value": 800, "clue": "The Egyptian god of the underworld and judge of the dead.", "answer": "Who is Osiris?", "used": false },
-          { "value": 1200, "clue": "The Hindu monkey god who aided Rama in the Ramayana.", "answer": "Who is Hanuman?", "used": false },
-          { "value": 1600, "clue": "The dragon that gnaws at the roots of Yggdrasil.", "answer": "Who is Níðhöggr?", "used": false },
-          { "value": 2000, "clue": "The hundred-handed giants who aided Zeus in the Titanomachy.", "answer": "Who are the Hecatoncheires?", "used": false }
-        ]
-      },
-      {
-        "category": "Geography",
-        "questions": [
-          { "value": 400, "clue": "This landmark, located on the River Thames, served as a royal palace, prison, and execution site for two wives of Henry VIII.", "answer": "What is the Tower of London?", "used": false },
-          { "value": 800, "clue": "This monument, gifted by France in 1886, stands on Liberty Island in New York Harbor.", "answer": "What is the Statue of Liberty?", "used": false },
-          { "value": 1200, "clue": "This surviving section of an ancient retaining wall in Jerusalem remains one of Judaism's holiest prayer sites.", "answer": "What is the Western Wall?", "used": false },
-          { "value": 1600, "clue": "This ancient Greek temple atop the Acropolis was dedicated to Athena, the patron goddess of Athens.", "answer": "What is the Parthenon?", "used": false },
-          { "value": 2000, "clue": "Opened in 1869, this canal connects the Mediterranean Sea to the Red Sea and dramatically shortened trade routes between Europe and Asia.", "answer": "What is the Suez Canal?", "used": false }
-        ]
-      },
-      {
-        "category": "Famous People",
-        "dailyDouble": true,
-        "dailyDoubleValue": 1200,
-        "questions": [
-          { "value": 400, "clue": "The physicist who developed the theory of relativity.", "answer": "Who is Albert Einstein?", "used": false },
-          { "value": 800, "clue": "The South African leader who became president after spending 27 years in prison.", "answer": "Who is Nelson Mandela?", "used": false },
-          { "value": 1200, "clue": "The artist who painted the ceiling of the Sistine Chapel.", "answer": "Who is Michelangelo?", "used": false },
-          { "value": 1600, "clue": "The explorer whose expedition completed the first circumnavigation of the Earth after his death.", "answer": "Who is Ferdinand Magellan?", "used": false },
-          { "value": 2000, "clue": "The scientist who formulated the laws of planetary motion that bear his name.", "answer": "Who is Johannes Kepler?", "used": false }
-        ]
-      },
-      {
-        "category": "Random",
-        "questions": [
-          { "value": 400, "clue": "This empire from the 13-14th centuries fought in WW1.", "answer": "What is the Ottoman Empire?", "used": false },
-          { "value": 800, "clue": "The longest river in South America.", "answer": "What is the Amazon River?", "used": false },
-          { "value": 1200, "clue": "The only continent without native ant species.", "answer": "What is Antarctica?", "used": false },
-          { "value": 1600, "clue": "The first recorded autopsy was performed on this historical figure.", "answer": "Who is Julius Caesar?", "used": false },
-          { "value": 2000, "clue": "The country with the most official languages in the world.", "answer": "What is Bolivia?", "used": false }
+          {
+            "value": 400,
+            "clue": "The Fianna Fail political party's name means \"Warriors of\" this country",
+            "answer": "Ireland",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "From the Latin for \"inactivity\" it's the tendency of a body to resist change in its motion",
+            "answer": "inertia",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "Astrud Gilberto had a monster hit song about \"The Girl From\" this place",
+            "answer": "Ipanema",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "Cambodia, Laos & Vietnam are part of this peninsula",
+            "answer": "Indochina",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "This innovative Russian designed the Soviet Union's IL-2, a famous dive-bombing fighter plane of WWII",
+            "answer": "Sergei Ilyushin",
+            "used": false
+          }
         ]
       }
     ]
