@@ -1,214 +1,214 @@
 [
   {
-    "id": "4597-J",
-    "name": "Show #4597 - 2004-09-07 - Jeopardy",
+    "id": "FRIENDS-J",
+    "name": "Friends Game - Jeopardy",
     "board": [
       {
-        "category": "WORLD RELIGION",
+        "category": "MOVIES",
         "questions": [
           {
             "value": 200,
-            "clue": "As the Mayan god of merchants, Ek Chuah was responsible for this yummy bean, once the standard Mayan currency",
-            "answer": "Cacao bean",
+            "clue": "This toy cowboy is best friends with Buzz Lightyear",
+            "answer": "Woody",
             "used": false
           },
           {
             "value": 400,
-            "clue": "The Voodoo of New Orleans owes a debt to this Caribbean nation once known as St. Domingue",
-            "answer": "Haiti",
+            "clue": "This wizard attended Hogwarts School of Witchcraft and Wizardry",
+            "answer": "Harry Potter",
             "used": false
           },
           {
             "value": 600,
-            "clue": "By definition, the Hashemites are either direct or collateral descendants of this prophet",
-            "answer": "Muhammad",
+            "clue": "This blue alien was adopted by a Hawaiian girl named Lilo",
+            "answer": "Stitch",
             "used": false
           },
           {
             "value": 800,
-            "clue": "Parasurama is the... let me see, fourth, fifth... no, sixth avatar of this Hindu god",
-            "answer": "Vishnu",
+            "clue": "This superhero famously said 'I am Iron Man'",
+            "answer": "Tony Stark",
             "used": false
           },
           {
             "value": 1000,
-            "clue": "From the Latin for a room that can be locked, it's a meeting assembled to choose a pope",
-            "answer": "a conclave",
+            "clue": "This James Cameron film follows Jack and Rose aboard a doomed ship",
+            "answer": "Titanic",
             "used": false
           }
         ]
       },
       {
-        "category": "THE EXPERIENCE MUSIC PROJECT",
+        "category": "VIDEO GAMES",
         "questions": [
           {
             "value": 200,
-            "clue": "( Sofia of the Clue Crew holds a feathered headdress at Experience Music Project in Seattle, WA. ) Felipe Rose, who wore this costume as part of this '70s group, has since founded Tomahawk Records",
-            "answer": "The Village People",
+            "clue": "This plumber often rescues Princess Peach",
+            "answer": "Mario",
             "used": false
           },
           {
             "value": 400,
-            "clue": "In 2004, for the 40th anniversary of the Fab 4 in the U.S., EMP presents an exhibit titled this, like a 1977 Broadway show",
-            "answer": "Beatlemania",
+            "clue": "Creepers explode in this block-building game",
+            "answer": "Minecraft",
             "used": false
           },
           {
             "value": 600,
-            "clue": "( Sofia of the Clue Crew holds a giant black boot at Experience Music Project in Seattle, WA. ) The dragon boots were part of the finery of this hard rock band",
-            "answer": "Kiss",
+            "clue": "Pikachu belongs to this franchise",
+            "answer": "Pokemon",
             "used": false
           },
           {
             "value": 800,
-            "clue": "In the area called DJ Hallway, learn scratching & the other aspects of this -ism",
-            "answer": "turntablism",
+            "clue": "Master Chief is the main hero of this series",
+            "answer": "Halo",
             "used": false
           },
           {
             "value": 1000,
-            "clue": "( Sofia of the Clue Crew holds a red hat at the Experience Music Project in Seattle, WA. ) Experience Music Project has a hat from the collection of this man from Romeo, Michigan",
-            "answer": "Kid Rock",
+            "clue": "Link explores Hyrule in this game series",
+            "answer": "The Legend of Zelda",
             "used": false
           }
         ]
       },
       {
-        "category": "GROCERY SHOPPING",
+        "category": "GEOGRAPHY",
         "questions": [
           {
             "value": 200,
-            "clue": "If in a hurry, grab a prewashed salad mix, perhaps with the red leaf & green leaf types of this",
-            "answer": "lettuce",
+            "clue": "The capital city of New Zealand",
+            "answer": "Wellington",
             "used": false
           },
           {
             "value": 400,
-            "clue": "If you're buying a whole fish, these (on the fish) should be clear & not sunken",
-            "answer": "eyes",
+            "clue": "This country is famous for its boot-like shape",
+            "answer": "Italy",
             "used": false
           },
           {
             "value": 600,
-            "clue": "Mom, not shredded wheat! Please can we get Tony's Cinnamon Krunchers from this company, can we please?",
-            "answer": "Kellogg's",
+            "clue": "The world's largest desert outside the polar regions",
+            "answer": "Sahara",
             "used": false
           },
           {
             "value": 800,
-            "clue": "You'll get fresher milk from the bottom of your market's display case for this reason",
-            "answer": "because it's colder at the bottom",
+            "clue": "Mount Everest lies partly within this country",
+            "answer": "Nepal",
             "used": false
           },
           {
             "value": 1000,
-            "clue": "Choose one of these with evenly distributed netting",
-            "answer": "cantaloupe",
+            "clue": "This river flows through Egypt",
+            "answer": "Nile",
             "used": false
           }
         ]
       },
       {
-        "category": "THE LARGEST IN AREA",
+        "category": "FOOD",
         "questions": [
           {
             "value": 200,
-            "clue": "Maine, Maryland, Montana",
-            "answer": "Montana",
+            "clue": "This Italian dish is typically covered in cheese and tomato sauce",
+            "answer": "Pizza",
             "used": false
           },
           {
             "value": 400,
-            "clue": "Wisconsin, Wyoming, Washington",
-            "answer": "Wyoming",
+            "clue": "Guacamole is made primarily from this fruit",
+            "answer": "Avocado",
             "used": false
           },
           {
             "value": 600,
-            "clue": "Ohio, Oklahoma, Oregon",
-            "answer": "Oregon",
+            "clue": "Sushi is traditionally made with this grain",
+            "answer": "Rice",
             "used": false
           },
           {
             "value": 800,
-            "clue": "Nebraska, Nevada, North Carolina",
-            "answer": "Nevada",
+            "clue": "The main ingredient in hummus",
+            "answer": "Chickpeas",
             "used": false
           },
           {
             "value": 1000,
-            "clue": "American Samoa, Bermuda, Puerto Rico",
-            "answer": "Puerto Rico",
+            "clue": "This flaky French pastry is shaped like a crescent",
+            "answer": "Croissant",
             "used": false
           }
         ]
       },
       {
-        "category": "FEATHERS",
+        "category": "SCIENCE",
         "questions": [
           {
             "value": 200,
-            "clue": "Depending on the source, he \"stuck a feather in his cap\" or \"in his hat and called it macaroni\"",
-            "answer": "Yankee Doodle",
+            "clue": "Humans need this gas to breathe",
+            "answer": "Oxygen",
             "used": false
           },
           {
             "value": 400,
-            "clue": "According to the proverb, \"Birds of a feather\" do this",
-            "answer": "flock together",
+            "clue": "The closest star to Earth",
+            "answer": "The Sun",
             "used": false
           },
           {
             "value": 600,
-            "clue": "For a Plains Indian's war bonnet, the best feathers were from this bird",
-            "answer": "an eagle",
+            "clue": "Water freezes at this temperature on the Celsius scale",
+            "answer": "0",
             "used": false
           },
           {
             "value": 800,
-            "clue": "A female swan, or what a quill can be used as",
-            "answer": "a pen",
+            "clue": "The largest planet in our solar system",
+            "answer": "Jupiter",
             "used": false
           },
           {
-            "value": 3000,
-            "clue": "It's what Daedalus used to hold the feathers together in the wings he made for himself & his son",
-            "answer": "wax",
+            "value": 1000,
+            "clue": "The chemical symbol for gold",
+            "answer": "Au",
             "used": false
           }
         ]
       },
       {
-        "category": "THE QUEEN'S ENGLISH",
+        "category": "ODD ONE OUT",
         "questions": [
           {
             "value": 200,
-            "clue": "If you take a nappy in London, it's one of these to put on a baby",
-            "answer": "a diaper",
+            "clue": "Dog, Cat, Goldfish, Car",
+            "answer": "Car",
             "used": false
           },
           {
             "value": 400,
-            "clue": "The type of car the Brits call an estate car, we Americans call one of these wagons",
-            "answer": "a station wagon",
+            "clue": "Red, Blue, Green, Elephant",
+            "answer": "Elephant",
             "used": false
           },
           {
             "value": 600,
-            "clue": "If you're challenged to a game of draughts in a Birmingham pub, be prepared to contest this board game",
-            "answer": "checkers",
+            "clue": "January, February, Tuesday, March",
+            "answer": "Tuesday",
             "used": false
           },
           {
             "value": 800,
-            "clue": "If your mechanic in Manchester needs a spanner to fix your car, he's asking for one of these",
-            "answer": "a wrench",
+            "clue": "Fork, Spoon, Knife, Bicycle",
+            "answer": "Bicycle",
             "used": false
           },
           {
             "value": 1000,
-            "clue": "If the Westminster Bobby pulls out his truncheon, be worried because it's one of these",
-            "answer": "a club (or a nightstick)",
+            "clue": "Earth, Mars, Jupiter, Auckland",
+            "answer": "Auckland",
             "used": false
           }
         ]
@@ -216,215 +216,215 @@
     ]
   },
   {
-    "id": "4597-DJ",
-    "name": "Show #4597 - 2004-09-07 - Double Jeopardy",
+    "id": "FRIENDS-DJ",
+    "name": "Friends Game - Double Jeopardy",
     "board": [
       {
-        "category": "THE WAR OF 1812",
+        "category": "MUSIC",
         "questions": [
           {
             "value": 400,
-            "clue": "About 2,000 British soldiers were killed or wounded by Jackson's troops in this last engagement of the war",
-            "answer": "Battle of New Orleans",
+            "clue": "The Eras Tour belongs to this singer",
+            "answer": "Taylor Swift",
             "used": false
           },
           {
             "value": 800,
-            "clue": "In April 1813, the U.S. captured Toronto, but this general after whom a Colorado mountain is named died in the battle",
-            "answer": "Zebulon Pike",
+            "clue": "This King of Pop recorded Thriller",
+            "answer": "Michael Jackson",
             "used": false
           },
           {
             "value": 1200,
-            "clue": "On December 29, 1812 this famous U.S. frigate defeated the British frigate Java off the coast of Brazil",
-            "answer": "the Constitution",
+            "clue": "Bohemian Rhapsody was recorded by this band",
+            "answer": "Queen",
             "used": false
           },
           {
             "value": 1600,
-            "clue": "In 1813 this naval officer supervised the building of American ships to strengthen the Navy's fleet on Lake Erie",
-            "answer": "Oliver Hazard Perry",
+            "clue": "This instrument typically has 88 keys",
+            "answer": "Piano",
             "used": false
           },
           {
             "value": 2000,
-            "clue": "A provision of this treaty ending the war set up a commission to settle the boundary between the U.S. & Canada",
-            "answer": "the Treaty of Ghent",
+            "clue": "The Beatles were formed in this English city",
+            "answer": "Liverpool",
             "used": false
           }
         ]
       },
       {
-        "category": "HODGEPODGE",
+        "category": "TV SHOWS",
         "questions": [
           {
             "value": 400,
-            "clue": "This adjective can be applied to writers like Shelley & Hugo as well as to a \"getaway\" for 2",
-            "answer": "Romantic",
+            "clue": "This yellow cartoon family lives in Springfield",
+            "answer": "The Simpsons",
             "used": false
           },
           {
             "value": 800,
-            "clue": "The logo of the National Beagle Club doesn't show a beagle but this scared animal that beagles hunt",
-            "answer": "a rabbit",
+            "clue": "Ross, Rachel and Chandler appear in this sitcom",
+            "answer": "Friends",
             "used": false
           },
           {
             "value": 1200,
-            "clue": "Big Sandy isn't a feared bouncer, but a river that divides Kentucky from this \"Mountain State\"",
-            "answer": "West Virginia",
+            "clue": "The Upside Down appears in this Netflix series",
+            "answer": "Stranger Things",
             "used": false
           },
           {
             "value": 1600,
-            "clue": "Official job title of the person who directs the largest library in the world",
-            "answer": "the Librarian of Congress",
+            "clue": "This fantasy series featured the Iron Throne",
+            "answer": "Game of Thrones",
             "used": false
           },
           {
             "value": 2000,
-            "clue": "Born in 1714, this 3-initialed son of J.S. Bach became his father's student & successor",
-            "answer": "Carl Philipp Emanuel Bach",
+            "clue": "Michael Scott manages a paper company in this sitcom",
+            "answer": "The Office",
             "used": false
           }
         ]
       },
       {
-        "category": "DOC TALK",
+        "category": "HISTORY",
         "questions": [
           {
             "value": 400,
-            "clue": "Myopia is the medical term for this",
-            "answer": "nearsightedness",
+            "clue": "This ship sank on its maiden voyage in 1912",
+            "answer": "Titanic",
             "used": false
           },
           {
             "value": 800,
-            "clue": "This is the common name for a lumbar puncture, used to test for meningitis",
-            "answer": "a spinal tap",
+            "clue": "The first person to walk on the Moon",
+            "answer": "Neil Armstrong",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "This wall divided East and West Berlin",
+            "answer": "Berlin Wall",
             "used": false
           },
           {
             "value": 1600,
-            "clue": "An LFT tests the function of this organ",
-            "answer": "the liver",
+            "clue": "This civilization built Machu Picchu",
+            "answer": "Inca",
             "used": false
           },
           {
             "value": 2000,
-            "clue": "Minor ailments can be treated by NPs (Nurse-practitioners) & PAs (these)",
-            "answer": "physician assistants",
-            "used": false
-          },
-          {
-            "value": 3800,
-            "clue": "Properly called the optic disk, it's the region of the retina that has no rods or cones",
-            "answer": "the blind spot",
+            "clue": "The famous Egyptian queen who allied with Julius Caesar",
+            "answer": "Cleopatra",
             "used": false
           }
         ]
       },
       {
-        "category": "BASEBALL: THE 1930s",
+        "category": "SPORTS",
         "questions": [
           {
             "value": 400,
-            "clue": "On May 25, 1935 he slugged the last 3 home runs of his career -- numbers 712, 713 & 714",
-            "answer": "Babe Ruth",
+            "clue": "This sport uses a bat, ball and wickets",
+            "answer": "Cricket",
             "used": false
           },
           {
             "value": 800,
-            "clue": "On July 6, 1933 this city's Comiskey Park hosted the first All-Star Game; the American League won, 4-2",
-            "answer": "Chicago",
+            "clue": "A standard rugby union team has this many players on the field",
+            "answer": "15",
             "used": false
           },
           {
             "value": 1200,
-            "clue": "In 1939 Red Sox rookie batted .327; 2 years later his batting average increased 79 points",
-            "answer": "Ted Williams",
+            "clue": "This country won the first Rugby World Cup in 1987",
+            "answer": "New Zealand",
             "used": false
           },
           {
             "value": 1600,
-            "clue": "In 1934 this eccentric St. Louis Cardinals pitcher who won 30 games was named the NL's most valuable player",
-            "answer": "Dizzy Dean",
+            "clue": "The NBA is associated with this sport",
+            "answer": "Basketball",
             "used": false
           },
           {
             "value": 2000,
-            "clue": "In June 1938 this Cincinnati Reds pitcher became the only man to pitch a no-hitter in 2 consecutive games",
-            "answer": "Johnny Van Der Meer",
+            "clue": "Usain Bolt became famous in this event",
+            "answer": "Sprinting",
             "used": false
           }
         ]
       },
       {
-        "category": "WHO'S THE SUBJECT?",
+        "category": "BEFORE & AFTER",
         "questions": [
           {
             "value": 400,
-            "clue": "\"A Private Disgrace\" & \"Forty Whacks\"",
-            "answer": "Lizzie Borden",
+            "clue": "A Disney queen plus a tropical fruit",
+            "answer": "Elsa Mango",
             "used": false
           },
           {
             "value": 800,
-            "clue": "\"Against the Current\" & \"Far Side of Paradise\"",
-            "answer": "F. Scott Fitzgerald",
+            "clue": "A famous detective plus an alien visitor",
+            "answer": "Sherlock E.T.",
             "used": false
           },
           {
             "value": 1200,
-            "clue": "\"American Caesar\" & \"Old Soldiers Never Die\"",
-            "answer": "Douglas MacArthur",
+            "clue": "A Pokemon mascot plus a mountain summit",
+            "answer": "Pikachu Peak",
             "used": false
           },
           {
             "value": 1600,
-            "clue": "\"Prince of Humbugs\" & \"The Fabulous Showman\"",
-            "answer": "P.T. Barnum",
+            "clue": "A Jedi master plus a yoga position",
+            "answer": "Yoda Pose",
             "used": false
           },
           {
-            "value": 4200,
-            "clue": "\"The Last Lion\" & \"Lion of Britain\"",
-            "answer": "Winston Churchill",
+            "value": 2000,
+            "clue": "A wizard school plus a citrus fruit",
+            "answer": "Hogwarts Orange",
             "used": false
           }
         ]
       },
       {
-        "category": "\"I\" CATCHING",
+        "category": "RANDOM KNOWLEDGE",
         "questions": [
           {
             "value": 400,
-            "clue": "The Fianna Fail political party's name means \"Warriors of\" this country",
-            "answer": "Ireland",
+            "clue": "A leap year contains this many days",
+            "answer": "366",
             "used": false
           },
           {
             "value": 800,
-            "clue": "From the Latin for \"inactivity\" it's the tendency of a body to resist change in its motion",
-            "answer": "inertia",
+            "clue": "The opposite direction of north",
+            "answer": "South",
             "used": false
           },
           {
             "value": 1200,
-            "clue": "Astrud Gilberto had a monster hit song about \"The Girl From\" this place",
-            "answer": "Ipanema",
+            "clue": "The fastest land animal",
+            "answer": "Cheetah",
             "used": false
           },
           {
             "value": 1600,
-            "clue": "Cambodia, Laos & Vietnam are part of this peninsula",
-            "answer": "Indochina",
+            "clue": "The largest ocean on Earth",
+            "answer": "Pacific Ocean",
             "used": false
           },
           {
             "value": 2000,
-            "clue": "This innovative Russian designed the Soviet Union's IL-2, a famous dive-bombing fighter plane of WWII",
-            "answer": "Sergei Ilyushin",
+            "clue": "The language with the most native speakers in the world",
+            "answer": "Mandarin Chinese",
             "used": false
           }
         ]
