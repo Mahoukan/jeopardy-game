@@ -1,37 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>Jeopardy Game</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main>
-    <section class="game-header">
-      <p id="playerInfo"></p>
-      <p id="turnText"></p>
-    </section>
-
-    <section class="layout">
-      <section>
-        <h2>Board</h2>
-        <div id="board" class="board"></div>
+  <head>
+    <title>Jeopardy Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#101728" />
+  </head>
+  <body>
+    <main>
+      <section class="game-header">
+        <p id="playerInfo"></p>
+        <p id="turnText"></p>
       </section>
 
-      <section class="side-panel">
-        <h2>Scores</h2>
-        <div id="players"></div>
+      <section class="layout">
+        <section>
+          <h2>Board</h2>
+          <div id="board" class="board"></div>
+        </section>
 
-        <h2>Question</h2>
-        <div id="questionBox" class="question-box">
-          Waiting for host...
-        </div>
+        <section class="side-panel">
+          <h2>Scores</h2>
+          <div id="players"></div>
 
-        <button id="buzzBtn" class="buzz-btn">BUZZ!</button>
+          <h2>Question</h2>
+          <div id="questionBox" class="question-box">Waiting for host...</div>
+
+          <button id="buzzBtn" class="buzz-btn">BUZZ!</button>
+        </section>
       </section>
-    </section>
-  </main>
+    </main>
 
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="player.js"></script>
-</body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="player.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/service-worker.js");
+      }
+    </script>
+  </body>
 </html>

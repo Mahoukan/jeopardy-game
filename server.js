@@ -409,6 +409,41 @@ io.on("connection", (socket) => {
 
     sendGameUpdate(code);
   });
+
+  socket.on("heartbeat", () => {
+    socket.emit("heartbeatAck");
+  });
+
+  socket.on("restoreGame", ({ snapshot }) => {
+    if (!socket.data.isAdmin) {
+      socket.emit("errorMessage", "Admin login required.");
+      return;
+    }
+
+    if (!snapshot || !snapshot.code) {
+      socket.emit("errorMessage", "Invalid snapshot.");
+      return;
+    }
+
+    games[snapshot.code] = {
+      hostId: socket.id,
+      board: snapshot.board,
+      players: snapshot.players,
+      scores: snapshot.scores,
+      currentTurnIndex: snapshot.currentTurnIndex,
+      currentQuestion: snapshot.currentQuestion,
+      buzzedPlayerId: snapshot.buzzedPlayerId,
+      buzzUnlocksAt: null,
+      answerEndsAt: null,
+      timerInterval: null,
+    };
+
+    socket.join(snapshot.code);
+
+    sendGameUpdate(snapshot.code);
+
+    socket.emit("successMessage", "Game restored.");
+  });
 });
 
 server.listen(PORT, () => {

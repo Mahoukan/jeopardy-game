@@ -2,6 +2,7 @@ const socket = io();
 
 const rejoinCodeInput = document.getElementById("rejoinCodeInput");
 const rejoinGameBtn = document.getElementById("rejoinGameBtn");
+const restoreGameBtn = document.getElementById("restoreGameBtn");
 
 const importJsonBtn = document.getElementById("importJsonBtn");
 const jsonImportInput = document.getElementById("jsonImportInput");
@@ -97,7 +98,7 @@ socket.on("gameCreated", ({ code }) => {
 
 socket.on("gameUpdate", (game) => {
   currentCode = game.code;
-
+  localStorage.setItem("jeopardyBackup", JSON.stringify(game));
   gameCodeText.textContent = `Game Code: ${game.code}`;
 
   renderBoard(game.board);
@@ -489,4 +490,32 @@ rejoinGameBtn.addEventListener("click", () => {
 
   localStorage.setItem("hostCode", code);
   socket.emit("hostRejoin", { code });
+});
+
+socket.on("connect", () => {
+  const lastCode = localStorage.getItem("hostCode");
+
+  if (lastCode && adminPanel && !adminPanel.classList.contains("hidden")) {
+    socket.emit("hostRejoin", { code: lastCode });
+  }
+});
+
+setInterval(() => {
+  if (currentCode) {
+    socket.emit("heartbeat");
+  }
+}, 30000);
+
+restoreGameBtn.addEventListener("click", () => {
+  const backup =
+    localStorage.getItem("jeopardyBackup");
+
+  if (!backup) {
+    alert("No backup found.");
+    return;
+  }
+
+  socket.emit("restoreGame", {
+    snapshot: JSON.parse(backup)
+  });
 });

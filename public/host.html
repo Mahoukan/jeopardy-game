@@ -3,6 +3,8 @@
   <head>
     <title>Host Jeopardy</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#101728" />
   </head>
   <body>
     <main>
@@ -39,6 +41,7 @@
         </section>
         <input id="rejoinCodeInput" placeholder="Existing game code" />
         <button id="rejoinGameBtn">Rejoin Existing Game</button>
+        <button id="restoreGameBtn">Restore Last Game</button>
 
         <section class="editor-card">
           <h2>Saved Boards</h2>
@@ -77,5 +80,10 @@
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="host.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/service-worker.js");
+      }
+    </script>
   </body>
 </html>

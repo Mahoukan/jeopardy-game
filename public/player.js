@@ -174,3 +174,19 @@ if (buzzBtn) {
     socket.emit("buzz", { code: currentCode });
   });
 }
+
+socket.on("connect", () => {
+  if (path.includes("game.html") && currentCode && playerName) {
+    socket.emit("joinGame", {
+      code: currentCode,
+      name: playerName,
+      playerToken
+    });
+  }
+});
+
+setInterval(() => {
+  if (currentCode) {
+    socket.emit("heartbeat");
+  }
+}, 30000);
