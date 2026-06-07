@@ -1,171 +1,432 @@
 [
   {
-    "id": "1780559848115",
-    "name": "Dabble",
+    "id": "FRIENDS-J",
+    "name": "Friends Game - Jeopardy",
     "board": [
       {
-        "category": "Able",
+        "category": "MOVIES",
         "questions": [
-          { "value": 100, "clue": "A", "answer": "A", "used": false },
-          { "value": 200, "clue": "B", "answer": "B", "used": false },
-          { "value": 300, "clue": "C", "answer": "C", "used": false },
-          { "value": 400, "clue": "D", "answer": "D", "used": false }
+          {
+            "value": 200,
+            "clue": "This toy cowboy is best friends with Buzz Lightyear",
+            "answer": "Woody",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "This wizard attended Hogwarts School of Witchcraft and Wizardry",
+            "answer": "Harry Potter",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "This blue alien was adopted by a Hawaiian girl named Lilo",
+            "answer": "Stitch",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "This superhero famously said 'I am Iron Man'",
+            "answer": "Tony Stark",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "This James Cameron film follows Jack and Rose aboard a doomed ship",
+            "answer": "Titanic",
+            "used": false
+          }
         ]
       },
       {
-        "category": "Babble",
+        "category": "VIDEO GAMES",
         "questions": [
-          { "value": 100, "clue": "A", "answer": "A", "used": false },
-          { "value": 200, "clue": "B", "answer": "B", "used": false },
-          { "value": 300, "clue": "C", "answer": "C", "used": false },
-          { "value": 400, "clue": "D", "answer": "D", "used": false }
+          {
+            "value": 200,
+            "clue": "This plumber often rescues Princess Peach",
+            "answer": "Mario",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "Creepers explode in this block-building game",
+            "answer": "Minecraft",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "Pikachu belongs to this franchise",
+            "answer": "Pokemon",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "Master Chief is the main hero of this series",
+            "answer": "Halo",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "Link explores Hyrule in this game series",
+            "answer": "The Legend of Zelda",
+            "used": false
+          }
         ]
       },
       {
-        "category": "Cable",
+        "category": "GEOGRAPHY",
         "questions": [
-          { "value": 100, "clue": "A", "answer": "A", "used": false },
-          { "value": 200, "clue": "B", "answer": "B", "used": false },
-          { "value": 300, "clue": "C", "answer": "C", "used": false },
-          { "value": 400, "clue": "D", "answer": "D", "used": false }
+          {
+            "value": 200,
+            "clue": "The capital city of New Zealand",
+            "answer": "Wellington",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "This country is famous for its boot-like shape",
+            "answer": "Italy",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "The world's largest desert outside the polar regions",
+            "answer": "Sahara",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "Mount Everest lies partly within this country",
+            "answer": "Nepal",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "This river flows through Egypt",
+            "answer": "Nile",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "FOOD",
+        "questions": [
+          {
+            "value": 200,
+            "clue": "This Italian dish is typically covered in cheese and tomato sauce",
+            "answer": "Pizza",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "Guacamole is made primarily from this fruit",
+            "answer": "Avocado",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "Sushi is traditionally made with this grain",
+            "answer": "Rice",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "The main ingredient in hummus",
+            "answer": "Chickpeas",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "This flaky French pastry is shaped like a crescent",
+            "answer": "Croissant",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "SCIENCE",
+        "questions": [
+          {
+            "value": 200,
+            "clue": "Humans need this gas to breathe",
+            "answer": "Oxygen",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "The closest star to Earth",
+            "answer": "The Sun",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "Water freezes at this temperature on the Celsius scale",
+            "answer": "0",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "The largest planet in our solar system",
+            "answer": "Jupiter",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "The chemical symbol for gold",
+            "answer": "Au",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "ODD ONE OUT",
+        "questions": [
+          {
+            "value": 200,
+            "clue": "Dog, Cat, Goldfish, Car",
+            "answer": "Car",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "Red, Blue, Green, Elephant",
+            "answer": "Elephant",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "January, February, Tuesday, March",
+            "answer": "Tuesday",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "Fork, Spoon, Knife, Bicycle",
+            "answer": "Bicycle",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "Earth, Mars, Jupiter, Auckland",
+            "answer": "Auckland",
+            "used": false
+          }
         ]
       }
     ]
   },
   {
-    "id": "1780560000001",
-    "name": "Friends Night Jeopardy - Board 1",
+    "id": "FRIENDS-DJ",
+    "name": "Friends Game - Double Jeopardy",
     "board": [
       {
-        "category": "Science",
+        "category": "MUSIC",
         "questions": [
-          { "value": 100, "clue": "The chemical symbol for gold.", "answer": "What is Au?", "used": false },
-          { "value": 200, "clue": "The scientist who proposed the three laws of motion.", "answer": "Who is Isaac Newton?", "used": false },
-          { "value": 300, "clue": "The effect that causes a siren's pitch to change as an ambulance drives past.", "answer": "What is the Doppler Effect?", "used": false },
-          { "value": 400, "clue": "The law stating that the entropy of an isolated system tends to increase over time.", "answer": "What is the Second Law of Thermodynamics?", "used": false },
-          { "value": 500, "clue": "The only letter that does not appear in any official chemical element symbol.", "answer": "What is J?", "used": false }
+          {
+            "value": 400,
+            "clue": "The Eras Tour belongs to this singer",
+            "answer": "Taylor Swift",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "This King of Pop recorded Thriller",
+            "answer": "Michael Jackson",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "Bohemian Rhapsody was recorded by this band",
+            "answer": "Queen",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "This instrument typically has 88 keys",
+            "answer": "Piano",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "The Beatles were formed in this English city",
+            "answer": "Liverpool",
+            "used": false
+          }
         ]
       },
       {
-        "category": "Mythology",
+        "category": "TV SHOWS",
         "questions": [
-          { "value": 100, "clue": "This figure from Greek mythology flew too close to the Sun.", "answer": "Who is Icarus?", "used": false },
-          { "value": 200, "clue": "This Egyptian god is commonly depicted with the head of a jackal.", "answer": "Who is Anubis?", "used": false },
-          { "value": 300, "clue": "The name of Odin's eight-legged horse.", "answer": "What is Sleipnir?", "used": false },
-          { "value": 400, "clue": "The legendary spear wielded by the Irish hero Cú Chulainn.", "answer": "What is Gáe Bolg?", "used": false },
-          { "value": 500, "clue": "This primordial goddess was slain by Marduk and used to form the heavens and earth in Mesopotamian mythology.", "answer": "Who is Tiamat?", "used": false }
+          {
+            "value": 400,
+            "clue": "This yellow cartoon family lives in Springfield",
+            "answer": "The Simpsons",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "Ross, Rachel and Chandler appear in this sitcom",
+            "answer": "Friends",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "The Upside Down appears in this Netflix series",
+            "answer": "Stranger Things",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "This fantasy series featured the Iron Throne",
+            "answer": "Game of Thrones",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "Michael Scott manages a paper company in this sitcom",
+            "answer": "The Office",
+            "used": false
+          }
         ]
       },
       {
-        "category": "Internet Culture",
+        "category": "HISTORY",
         "questions": [
-          { "value": 100, "clue": "The meaning of the acronym GIF.", "answer": "What is Graphics Interchange Format?", "used": false },
-          { "value": 200, "clue": "The social media platform that originally limited posts to 140 characters.", "answer": "What is Twitter?", "used": false },
-          { "value": 300, "clue": "The internet term for text repeatedly copied and pasted across websites and forums.", "answer": "What is copypasta?", "used": false },
-          { "value": 400, "clue": "The imageboard often credited with originating many early internet memes.", "answer": "What is 4chan?", "used": false },
-          { "value": 500, "clue": "The video game responsible for the phrase 'All your base are belong to us.'", "answer": "What is Zero Wing?", "used": false }
+          {
+            "value": 400,
+            "clue": "This ship sank on its maiden voyage in 1912",
+            "answer": "Titanic",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "The first person to walk on the Moon",
+            "answer": "Neil Armstrong",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "This wall divided East and West Berlin",
+            "answer": "Berlin Wall",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "This civilization built Machu Picchu",
+            "answer": "Inca",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "The famous Egyptian queen who allied with Julius Caesar",
+            "answer": "Cleopatra",
+            "used": false
+          }
         ]
       },
       {
-        "category": "Movies",
+        "category": "SPORTS",
         "questions": [
-          { "value": 100, "clue": "The director of Jurassic Park.", "answer": "Who is Steven Spielberg?", "used": false },
-          { "value": 200, "clue": "The highest-grossing film of all time, not adjusted for inflation.", "answer": "What is Avatar?", "used": false },
-          { "value": 300, "clue": "The first feature-length animated film ever released.", "answer": "What is Snow White and the Seven Dwarfs?", "used": false },
-          { "value": 400, "clue": "The actor who portrayed Maximus in Gladiator.", "answer": "Who is Russell Crowe?", "used": false },
-          { "value": 500, "clue": "The first non-English language film to win the Academy Award for Best Picture.", "answer": "What is Parasite?", "used": false }
+          {
+            "value": 400,
+            "clue": "This sport uses a bat, ball and wickets",
+            "answer": "Cricket",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "A standard rugby union team has this many players on the field",
+            "answer": "15",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "This country won the first Rugby World Cup in 1987",
+            "answer": "New Zealand",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "The NBA is associated with this sport",
+            "answer": "Basketball",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "Usain Bolt became famous in this event",
+            "answer": "Sprinting",
+            "used": false
+          }
         ]
       },
       {
-        "category": "Mathematics",
+        "category": "BEFORE & AFTER",
         "questions": [
-          { "value": 100, "clue": "The value of π rounded to three decimal places.", "answer": "What is 3.142?", "used": false },
-          { "value": 200, "clue": "The prime number immediately following 29.", "answer": "What is 31?", "used": false },
-          { "value": 300, "clue": "The mathematical constant that serves as the base of natural logarithms.", "answer": "What is e?", "used": false },
-          { "value": 400, "clue": "The branch of mathematics concerned with rates of change and accumulation.", "answer": "What is Calculus?", "used": false },
-          { "value": 500, "clue": "The classification of numbers such as 6 and 28 that equal the sum of their positive divisors excluding themselves.", "answer": "What is a Perfect Number?", "used": false }
+          {
+            "value": 400,
+            "clue": "A Disney queen plus a tropical fruit",
+            "answer": "Elsa Mango",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "A famous detective plus an alien visitor",
+            "answer": "Sherlock E.T.",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "A Pokemon mascot plus a mountain summit",
+            "answer": "Pikachu Peak",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "A Jedi master plus a yoga position",
+            "answer": "Yoda Pose",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "A wizard school plus a citrus fruit",
+            "answer": "Hogwarts Orange",
+            "used": false
+          }
         ]
       },
       {
-        "category": "History",
-        "dailyDouble": true,
-        "dailyDoubleValue": 400,
+        "category": "RANDOM KNOWLEDGE",
         "questions": [
-          { "value": 100, "clue": "The wall whose fall in 1989 became a symbol of the end of the Cold War.", "answer": "What is the Berlin Wall?", "used": false },
-          { "value": 200, "clue": "The ship on which Charles Darwin undertook his famous voyage.", "answer": "What is HMS Beagle?", "used": false },
-          { "value": 300, "clue": "The empire founded by Genghis Khan.", "answer": "What is the Mongol Empire?", "used": false },
-          { "value": 400, "clue": "The year of the Battle of Hastings.", "answer": "What is 1066?", "used": false },
-          { "value": 500, "clue": "The treaty that ended the Thirty Years' War in 1648.", "answer": "What is the Peace of Westphalia?", "used": false }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "1780560000002",
-    "name": "Friends Night Jeopardy - Double Jeopardy",
-    "board": [
-      {
-        "category": "Space",
-        "questions": [
-          { "value": 400, "clue": "The galaxy that contains our Solar System.", "answer": "What is the Milky Way?", "used": false },
-          { "value": 800, "clue": "The first human to travel into space.", "answer": "Who is Yuri Gagarin?", "used": false },
-          { "value": 1200, "clue": "The point at which a star exhausts its core hydrogen and leaves the main sequence.", "answer": "What is the Main Sequence Turnoff?", "used": false },
-          { "value": 1600, "clue": "These five positions around a two-body system allow spacecraft to maintain relatively stable positions.", "answer": "What are Lagrange Points?", "used": false },
-          { "value": 2000, "clue": "The theoretical boundary around a black hole beyond which nothing can escape.", "answer": "What is the Event Horizon?", "used": false }
-        ]
-      },
-      {
-        "category": "Video Games",
-        "dailyDouble": true,
-        "dailyDoubleValue": 1600,
-        "questions": [
-          { "value": 400, "clue": "The plumber who first appeared in Donkey Kong.", "answer": "Who is Mario?", "used": false },
-          { "value": 800, "clue": "The company that created the Pokémon franchise.", "answer": "What is Nintendo?", "used": false },
-          { "value": 1200, "clue": "The best-selling video game of all time.", "answer": "What is Minecraft?", "used": false },
-          { "value": 1600, "clue": "The arcade game in which Mario first appeared.", "answer": "What is Donkey Kong?", "used": false },
-          { "value": 2000, "clue": "The first commercially successful home video game console.", "answer": "What is the Magnavox Odyssey?", "used": false }
-        ]
-      },
-      {
-        "category": "World Mythology",
-        "questions": [
-          { "value": 400, "clue": "The world tree connecting the nine realms in Norse mythology.", "answer": "What is Yggdrasil?", "used": false },
-          { "value": 800, "clue": "The Egyptian god of the underworld and judge of the dead.", "answer": "Who is Osiris?", "used": false },
-          { "value": 1200, "clue": "The Hindu monkey god who aided Rama in the Ramayana.", "answer": "Who is Hanuman?", "used": false },
-          { "value": 1600, "clue": "The dragon that gnaws at the roots of Yggdrasil.", "answer": "Who is Níðhöggr?", "used": false },
-          { "value": 2000, "clue": "The hundred-handed giants who aided Zeus in the Titanomachy.", "answer": "Who are the Hecatoncheires?", "used": false }
-        ]
-      },
-      {
-        "category": "Geography",
-        "questions": [
-          { "value": 400, "clue": "This landmark, located on the River Thames, served as a royal palace, prison, and execution site for two wives of Henry VIII.", "answer": "What is the Tower of London?", "used": false },
-          { "value": 800, "clue": "This monument, gifted by France in 1886, stands on Liberty Island in New York Harbor.", "answer": "What is the Statue of Liberty?", "used": false },
-          { "value": 1200, "clue": "This surviving section of an ancient retaining wall in Jerusalem remains one of Judaism's holiest prayer sites.", "answer": "What is the Western Wall?", "used": false },
-          { "value": 1600, "clue": "This ancient Greek temple atop the Acropolis was dedicated to Athena, the patron goddess of Athens.", "answer": "What is the Parthenon?", "used": false },
-          { "value": 2000, "clue": "Opened in 1869, this canal connects the Mediterranean Sea to the Red Sea and dramatically shortened trade routes between Europe and Asia.", "answer": "What is the Suez Canal?", "used": false }
-        ]
-      },
-      {
-        "category": "Famous People",
-        "dailyDouble": true,
-        "dailyDoubleValue": 1200,
-        "questions": [
-          { "value": 400, "clue": "The physicist who developed the theory of relativity.", "answer": "Who is Albert Einstein?", "used": false },
-          { "value": 800, "clue": "The South African leader who became president after spending 27 years in prison.", "answer": "Who is Nelson Mandela?", "used": false },
-          { "value": 1200, "clue": "The artist who painted the ceiling of the Sistine Chapel.", "answer": "Who is Michelangelo?", "used": false },
-          { "value": 1600, "clue": "The explorer whose expedition completed the first circumnavigation of the Earth after his death.", "answer": "Who is Ferdinand Magellan?", "used": false },
-          { "value": 2000, "clue": "The scientist who formulated the laws of planetary motion that bear his name.", "answer": "Who is Johannes Kepler?", "used": false }
-        ]
-      },
-      {
-        "category": "Random",
-        "questions": [
-          { "value": 400, "clue": "This empire from the 13-14th centuries fought in WW1.", "answer": "What is the Ottoman Empire?", "used": false },
-          { "value": 800, "clue": "The longest river in South America.", "answer": "What is the Amazon River?", "used": false },
-          { "value": 1200, "clue": "The only continent without native ant species.", "answer": "What is Antarctica?", "used": false },
-          { "value": 1600, "clue": "The first recorded autopsy was performed on this historical figure.", "answer": "Who is Julius Caesar?", "used": false },
-          { "value": 2000, "clue": "The country with the most official languages in the world.", "answer": "What is Bolivia?", "used": false }
+          {
+            "value": 400,
+            "clue": "A leap year contains this many days",
+            "answer": "366",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "The opposite direction of north",
+            "answer": "South",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "The fastest land animal",
+            "answer": "Cheetah",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "The largest ocean on Earth",
+            "answer": "Pacific Ocean",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "The language with the most native speakers in the world",
+            "answer": "Mandarin Chinese",
+            "used": false
+          }
         ]
       }
     ]
