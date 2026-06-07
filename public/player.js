@@ -82,9 +82,10 @@ socket.on("gameUpdate", (game) => {
 function renderPlayerInfo(game) {
   if (!playerInfo) return;
 
-  playerInfo.textContent = `${playerName} • Game ${game.code} • Turn: ${currentPlayer?.name ?? "-"}`;
-
   const currentPlayer = game.players[game.currentTurnIndex];
+
+  playerInfo.textContent =
+    `${playerName} • Game ${game.code} • Turn: ${currentPlayer?.name ?? "-"}`;
 
   if (turnText) {
     turnText.textContent = currentPlayer
