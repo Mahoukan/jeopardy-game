@@ -64,12 +64,14 @@ socket.on("errorMessage", (message) => {
 
 socket.on("gameCreated", ({ code }) => {
   currentCode = code;
+  window.currentCode = currentCode;
   localStorage.setItem("hostCode", code);
   gameCodeText.textContent = `Game Code: ${code}`;
 });
 
 socket.on("gameUpdate", (game) => {
   currentCode = game.code;
+  window.currentCode = currentCode;
   localStorage.setItem("jeopardyBackup", JSON.stringify(game));
   gameCodeText.textContent = `Game Code: ${game.code}`;
 

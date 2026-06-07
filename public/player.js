@@ -69,7 +69,6 @@ if (path.includes("game.html")) {
 
 socket.on("gameUpdate", (game) => {
   currentCode = game.code;
-
   const me = game.players.find((p) => p.name === playerName);
   if (me) {
     playerId = me.id;
@@ -147,28 +146,36 @@ function renderPlayers(players, scores, currentTurnIndex) {
 function renderQuestion(game) {
   if (game.finalMode) {
     const final = game.finalJeopardy;
-
+    const alreadyWagered = game.finalWagers?.[playerId] !== undefined;
+    const alreadyAnswered = game.finalAnswers?.[playerId] !== undefined;
     questionBox.innerHTML = `
     <h2>Final Jeopardy</h2>
     <p><strong>Category:</strong> ${final.category}</p>
 
     ${
       !game.finalRevealed
-        ? `
-    <input
-      id="finalWagerInput"
-      type="number"
-      min="0"
-      max="${game.scores[playerId] ?? 0}"
-      placeholder="Your wager"
-    >
-    <button id="submitFinalWagerBtn">Submit Wager</button>
-  `
+        ? alreadyWagered
+         ? `<p><strong>Wager submitted.</strong></p>`
+          : `
+            <input
+              id="finalWagerInput"
+              type="number"
+              min="0"
+              max="${game.scores[playerId] ?? 0}"
+              placeholder="Your wager"
+            >
+            <button id="submitFinalWagerBtn">Submit Wager</button>
+          `
+        : alreadyAnswered
+          ? `
+            <p><strong>Clue:</strong> ${final.clue}</p>
+            <p><strong>Answer submitted.</strong></p>
+          `
         : `
-          <p><strong>Clue:</strong> ${final.clue}</p>
-          <input id="finalAnswerInput" placeholder="Your answer">
-          <button id="submitFinalAnswerBtn">Submit Answer</button>
-        `
+            <p><strong>Clue:</strong> ${final.clue}</p>
+            <input id="finalAnswerInput" placeholder="Your answer">
+            <button id="submitFinalAnswerBtn">Submit Answer</button>
+          `
     }
   `;
 
