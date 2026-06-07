@@ -98,8 +98,13 @@ function renderSavedBoards() {
       boardNameInput.value = savedBoard.name;
 
       if (savedBoard.jeopardy && savedBoard.doubleJeopardy) {
+        currentCode = null;
+        localStorage.removeItem("hostCode");
+        gameCodeText.textContent = "No game created yet";
+
         selectedGame = JSON.parse(JSON.stringify(savedBoard));
         boardNameInput.value = savedBoard.name;
+
         alert("Game loaded. Click Create Game With This Board.");
         return;
       }
