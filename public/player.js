@@ -177,11 +177,20 @@ function renderQuestion(game) {
     const wagerBtn = document.getElementById("submitFinalWagerBtn");
     if (wagerBtn) {
       wagerBtn.addEventListener("click", () => {
-        const wager = document.getElementById("finalWagerInput").value;
+        const wagerInput = document.getElementById("finalWagerInput");
+        const wager = Number(wagerInput.value);
+        const maxWager = game.scores[playerId] ?? 0;
+
+        if (!Number.isFinite(wager) || wager < 0 || wager > maxWager) {
+          alert(`You can only wager between 0 and ${maxWager}.`);
+          return;
+        }
+
         socket.emit("submitFinalWager", {
           code: currentCode,
           wager,
         });
+
         wagerBtn.disabled = true;
         wagerBtn.textContent = "Wager Submitted";
       });
