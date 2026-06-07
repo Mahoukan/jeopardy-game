@@ -149,16 +149,9 @@ function renderQuestion(game) {
     if (buzzBtn) buzzBtn.disabled = true;
     return;
   }
-  const now = Date.now();
-  const answerTimeLeft = game.answerEndsAt
-    ? Math.max(0, Math.ceil((game.answerEndsAt - now) / 1000))
-    : null;
-
-  const buzzLocked = game.buzzUnlocksAt && now < game.buzzUnlocksAt;
-  const lockoutLeft = buzzLocked
-    ? Math.ceil((game.buzzUnlocksAt - now) / 1000)
-    : 0;
-
+  const answerTimeLeft = game.answerTimeLeft;
+  const lockoutLeft = game.buzzLockoutLeft || 0;
+  const buzzLocked = lockoutLeft > 0;
   const buzzedPlayer = game.players.find((p) => p.id === game.buzzedPlayerId);
 
   questionBox.innerHTML = `

@@ -82,8 +82,12 @@ function sendGameUpdate(code) {
     currentTurnIndex: game.currentTurnIndex,
     currentQuestion: game.currentQuestion,
     buzzedPlayerId: game.buzzedPlayerId,
-    buzzUnlocksAt: game.buzzUnlocksAt,
-    answerEndsAt: game.answerEndsAt,
+    buzzLockoutLeft: game.buzzUnlocksAt
+      ? Math.max(0, Math.ceil((game.buzzUnlocksAt - Date.now()) / 1000))
+      : 0,
+    answerTimeLeft: game.answerEndsAt
+      ? Math.max(0, Math.ceil((game.answerEndsAt - Date.now()) / 1000))
+      : null,
   });
 }
 

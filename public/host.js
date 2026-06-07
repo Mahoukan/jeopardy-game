@@ -371,14 +371,9 @@ function renderQuestion(game) {
     questionBox.innerHTML = "No question selected.";
     return;
   }
-  const now = Date.now();
-  const answerTimeLeft = game.answerEndsAt
-    ? Math.max(0, Math.ceil((game.answerEndsAt - now) / 1000))
-    : null;
-  const buzzLocked = game.buzzUnlocksAt && now < game.buzzUnlocksAt;
-  const lockoutLeft = buzzLocked
-    ? Math.ceil((game.buzzUnlocksAt - now) / 1000)
-    : 0;
+  const answerTimeLeft = game.answerTimeLeft;
+  const lockoutLeft = game.buzzLockoutLeft || 0;
+  const buzzLocked = lockoutLeft > 0;
 
   const buzzedPlayer = game.players.find((p) => p.id === game.buzzedPlayerId);
 
@@ -386,8 +381,8 @@ function renderQuestion(game) {
   <p><strong>For ${game.currentQuestion.value} points</strong></p>
   <p>${escapeHtml(game.currentQuestion.clue)}</p>
   <p><strong>Answer timer:</strong> ${
-  answerTimeLeft !== null ? `${answerTimeLeft}s` : "Not started"
-}</p>
+    answerTimeLeft !== null ? `${answerTimeLeft}s` : "Not started"
+  }</p>
   <p><strong>Buzz:</strong> ${buzzLocked ? `Locked for ${lockoutLeft}s` : "Open"}</p>
   <hr>
   <p><strong>Answer:</strong> ${escapeHtml(game.currentQuestion.answer)}</p>
