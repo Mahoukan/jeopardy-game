@@ -540,8 +540,14 @@ io.on("connection", (socket) => {
     const game = games[code];
     if (!game || !game.finalMode) return;
 
+    const player = game.players.find(
+      (p) => p.token === socket.data.playerToken || p.id === socket.id,
+    );
+
+    if (!player) return;
+
     const amount = Number(wager);
-    const playerScore = game.scores[socket.id] || 0;
+    const playerScore = game.scores[player.id] || 0;
 
     if (!Number.isFinite(amount) || amount < 0 || amount > playerScore) {
       socket.emit(
@@ -551,7 +557,7 @@ io.on("connection", (socket) => {
       return;
     }
 
-    game.finalWagers[socket.id] = amount;
+    game.finalWagers[player.id] = amount;
 
     sendGameUpdate(code);
   });
@@ -560,7 +566,14 @@ io.on("connection", (socket) => {
     const game = games[code];
     if (!game || !game.finalMode) return;
 
-    game.finalAnswers[socket.id] = String(answer || "").trim();
+    const player = game.players.find(
+      (p) => p.token === socket.data.playerToken || p.id === socket.id,
+    );
+
+    if (!player) return;
+
+    game.finalAnswers[player.id] = String(answer || "").trim();
+
     sendGameUpdate(code);
   });
 
