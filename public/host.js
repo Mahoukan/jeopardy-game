@@ -2,6 +2,9 @@ const socket = io();
 
 let selectedGame = null;
 
+const startFinalBtn = document.getElementById("startFinalBtn");
+const revealFinalBtn = document.getElementById("revealFinalBtn");
+
 const startDoubleBtn = document.getElementById("startDoubleBtn");
 
 const rejoinCodeInput = document.getElementById("rejoinCodeInput");
@@ -105,13 +108,13 @@ function renderSavedBoards() {
         selectedGame = JSON.parse(JSON.stringify(savedBoard));
         boardNameInput.value = savedBoard.name;
 
-        alert("Game loaded. Click Create Game With This Board.");
+        alert("Game loaded. Click Start Selected Game.");
         return;
       }
 
       selectedGame = JSON.parse(JSON.stringify(savedBoard));
       boardNameInput.value = savedBoard.name;
-      alert("Board loaded. Click Create Game With This Board.");
+      alert("Game loaded. Click Start Selected Game.");
     });
   });
 
@@ -201,6 +204,40 @@ function renderPlayers(players, scores, currentTurnIndex) {
 }
 
 function renderQuestion(game) {
+  if (game.finalMode) {
+    const final = game.finalJeopardy;
+
+    questionBox.innerHTML = `
+    <h2>Final Jeopardy</h2>
+    <p><strong>Category:</strong> ${escapeHtml(final.category)}</p>
+    ${
+      game.finalRevealed
+        ? `<p><strong>Clue:</strong> ${escapeHtml(final.clue)}</p>
+           <hr>
+           <p><strong>Answer:</strong> ${escapeHtml(final.answer)}</p>`
+        : `<p>Waiting to reveal clue...</p>`
+    }
+    <hr>
+    ${game.players
+      .map((player) => {
+        const wager = game.finalWagers?.[player.id] ?? "No wager";
+        const answer = game.finalAnswers?.[player.id] ?? "No answer";
+
+        return `
+          <div class="player-score-row">
+            <strong>${escapeHtml(player.name)}</strong>
+            <span>Wager: ${escapeHtml(wager)}</span>
+            <span>Answer: ${escapeHtml(answer)}</span>
+            <button onclick="socket.emit('markFinalCorrect', { code: currentCode, playerId: '${player.id}' })">Correct</button>
+            <button onclick="socket.emit('markFinalWrong', { code: currentCode, playerId: '${player.id}' })">Wrong</button>
+          </div>
+        `;
+      })
+      .join("")}
+  `;
+
+    return;
+  }
   if (!game.currentQuestion) {
     questionBox.innerHTML = "No question selected.";
     return;
@@ -323,4 +360,17 @@ restoreGameBtn.addEventListener("click", () => {
   socket.emit("restoreGame", {
     snapshot: JSON.parse(backup),
   });
+});
+
+startFinalBtn.addEventListener("click", () => {
+  if (!currentCode) {
+    alert("Create or rejoin a game first.");
+    return;
+  }
+
+  socket.emit("startFinalJeopardy", { code: currentCode });
+});
+
+revealFinalBtn.addEventListener("click", () => {
+  socket.emit("revealFinalClue", { code: currentCode });
 });

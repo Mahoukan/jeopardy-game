@@ -14,6 +14,9 @@ const playersDiv = document.getElementById("players");
 const questionBox = document.getElementById("questionBox");
 const buzzBtn = document.getElementById("buzzBtn");
 
+let finalWagerSubmitted = false;
+let finalAnswerSubmitted = false;
+
 let currentCode = localStorage.getItem("gameCode");
 let playerName = localStorage.getItem("playerName");
 let playerId = localStorage.getItem("playerId");
@@ -143,6 +146,57 @@ function renderPlayers(players, scores, currentTurnIndex) {
 }
 
 function renderQuestion(game) {
+  if (game.finalMode) {
+  const final = game.finalJeopardy;
+
+  questionBox.innerHTML = `
+    <h2>Final Jeopardy</h2>
+    <p><strong>Category:</strong> ${final.category}</p>
+
+    ${
+      !game.finalRevealed
+        ? `
+          <input id="finalWagerInput" type="number" placeholder="Your wager">
+          <button id="submitFinalWagerBtn">Submit Wager</button>
+        `
+        : `
+          <p><strong>Clue:</strong> ${final.clue}</p>
+          <input id="finalAnswerInput" placeholder="Your answer">
+          <button id="submitFinalAnswerBtn">Submit Answer</button>
+        `
+    }
+  `;
+
+  if (buzzBtn) buzzBtn.disabled = true;
+
+  const wagerBtn = document.getElementById("submitFinalWagerBtn");
+  if (wagerBtn) {
+    wagerBtn.addEventListener("click", () => {
+      const wager = document.getElementById("finalWagerInput").value;
+      socket.emit("submitFinalWager", {
+        code: currentCode,
+        wager,
+      });
+      wagerBtn.disabled = true;
+      wagerBtn.textContent = "Wager Submitted";
+    });
+  }
+
+  const answerBtn = document.getElementById("submitFinalAnswerBtn");
+  if (answerBtn) {
+    answerBtn.addEventListener("click", () => {
+      const answer = document.getElementById("finalAnswerInput").value;
+      socket.emit("submitFinalAnswer", {
+        code: currentCode,
+        answer,
+      });
+      answerBtn.disabled = true;
+      answerBtn.textContent = "Answer Submitted";
+    });
+  }
+
+  return;
+}
   if (!questionBox) return;
 
   if (!game.currentQuestion) {

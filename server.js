@@ -91,6 +91,11 @@ function sendGameUpdate(code) {
     code,
     gameName: game.gameName,
     currentRound: game.currentRound,
+    finalMode: game.finalMode,
+    finalMarked: game.finalMarked,
+    finalRevealed: game.finalRevealed,
+    finalWagers: game.finalWagers,
+    finalAnswers: game.finalAnswers,
     finalJeopardy: game.finalJeopardy,
     board: game.board,
     players: game.players,
@@ -215,6 +220,11 @@ io.on("connection", (socket) => {
       doubleJeopardy: isFullGame ? board.doubleJeopardy : null,
       finalJeopardy: isFullGame ? board.finalJeopardy : null,
       currentRound: "jeopardy",
+      finalMode: false,
+      finalMarked: {},
+      finalRevealed: false,
+      finalWagers: {},
+      finalAnswers: {},
 
       board: isFullGame ? cleanBoard(board.jeopardy.board) : cleanBoard(board),
       players: [],
@@ -458,6 +468,77 @@ io.on("connection", (socket) => {
     sendGameUpdate(code);
   });
 
+  socket.on("startFinalJeopardy", ({ code }) => {
+    if (!socket.data.isAdmin) return;
+
+    const game = games[code];
+    if (!game || !game.finalJeopardy) {
+      socket.emit("errorMessage", "No Final Jeopardy found.");
+      return;
+    }
+
+    game.finalMode = true;
+    game.finalRevealed = false;
+    game.currentQuestion = null;
+    game.buzzedPlayerId = null;
+    game.finalWagers = {};
+    game.finalAnswers = {};
+    game.finalMarked = {};
+    sendGameUpdate(code);
+  });
+
+  socket.on("revealFinalClue", ({ code }) => {
+    if (!socket.data.isAdmin) return;
+
+    const game = games[code];
+    if (!game || !game.finalMode) return;
+
+    game.finalRevealed = true;
+    sendGameUpdate(code);
+  });
+
+  socket.on("submitFinalWager", ({ code, wager }) => {
+    const game = games[code];
+    if (!game || !game.finalMode) return;
+
+    game.finalWagers[socket.id] = Number(wager) || 0;
+    sendGameUpdate(code);
+  });
+
+  socket.on("submitFinalAnswer", ({ code, answer }) => {
+    const game = games[code];
+    if (!game || !game.finalMode) return;
+
+    game.finalAnswers[socket.id] = String(answer || "").trim();
+    sendGameUpdate(code);
+  });
+
+  socket.on("markFinalCorrect", ({ code, playerId }) => {
+    if (!socket.data.isAdmin) return;
+
+    const game = games[code];
+    if (!game || !game.finalMode) return;
+    if (game.finalMarked[playerId]) return;
+    game.finalMarked[playerId] = true;
+    const wager = game.finalWagers[playerId] || 0;
+    game.scores[playerId] = (game.scores[playerId] || 0) + wager;
+
+    sendGameUpdate(code);
+  });
+
+  socket.on("markFinalWrong", ({ code, playerId }) => {
+    if (!socket.data.isAdmin) return;
+
+    const game = games[code];
+    if (!game || !game.finalMode) return;
+    if (game.finalMarked[playerId]) return;
+    game.finalMarked[playerId] = true;
+    const wager = game.finalWagers[playerId] || 0;
+    game.scores[playerId] = (game.scores[playerId] || 0) - wager;
+
+    sendGameUpdate(code);
+  });
+
   socket.on("disconnect", () => {
     const code = socket.data.code;
     const game = games[code];
@@ -498,6 +579,13 @@ io.on("connection", (socket) => {
       buzzUnlocksAt: null,
       answerEndsAt: null,
       timerInterval: null,
+      finalMode: snapshot.finalMode || false,
+      finalRevealed: snapshot.finalRevealed || false,
+      finalWagers: snapshot.finalWagers || {},
+      finalAnswers: snapshot.finalAnswers || {},
+      finalMarked: snapshot.finalMarked || {},
+      finalJeopardy: snapshot.finalJeopardy || null,
+      currentRound: snapshot.currentRound || "jeopardy",
     };
 
     socket.join(snapshot.code);
