@@ -1,214 +1,214 @@
 [
   {
-    "id": "FRIENDS-J",
-    "name": "Friends Game - Jeopardy",
+    "id": "9580-J",
+    "name": "Show #9580 - 2026-06-05 - Jeopardy",
     "board": [
       {
-        "category": "MOVIES",
+        "category": "THAT'S EGREGIOUS!",
         "questions": [
           {
             "value": 200,
-            "clue": "This toy cowboy is best friends with Buzz Lightyear",
-            "answer": "Woody",
+            "clue": "Archaically, it meant fiery hot; NBA-ically, it is a particularly hard type of foul, 1 or 2",
+            "answer": "flagrant",
             "used": false
           },
           {
             "value": 400,
-            "clue": "This wizard attended Hogwarts School of Witchcraft and Wizardry",
-            "answer": "Harry Potter",
+            "clue": "\"Supercalifragilistic-expialidocious! even though the sound of it is something quite\" this; horrifying! but so catchy!",
+            "answer": "atrocious",
             "used": false
           },
           {
             "value": 600,
-            "clue": "This blue alien was adopted by a Hawaiian girl named Lilo",
-            "answer": "Stitch",
-            "used": false
-          },
-          {
-            "value": 800,
-            "clue": "This superhero famously said 'I am Iron Man'",
-            "answer": "Tony Stark",
+            "clue": "It's radical! It's maximum! Take it to the this, using 3 E's as its sole vowel!",
+            "answer": "extreme",
             "used": false
           },
           {
             "value": 1000,
-            "clue": "This James Cameron film follows Jack and Rose aboard a doomed ship",
-            "answer": "Titanic",
+            "clue": "It's also abominable! This \"H\" word can be found before \"crime\" in Black's Law Dictionary",
+            "answer": "heinous",
+            "used": false
+          },
+          {
+            "value": 2400,
+            "clue": "Unbearable,like the acts that in part asked for restitution for the Boston Tea Party",
+            "answer": "intolerable",
             "used": false
           }
         ]
       },
       {
-        "category": "VIDEO GAMES",
+        "category": "FOR A GOOD TIME CALL",
         "questions": [
           {
             "value": 200,
-            "clue": "This plumber often rescues Princess Peach",
-            "answer": "Mario",
+            "clue": "+49 89 233-96500 is tourist info for Munich, handy if you're heading to the September 19 opening day of this festival",
+            "answer": "Oktoberfest",
             "used": false
           },
           {
             "value": 400,
-            "clue": "Creepers explode in this block-building game",
-            "answer": "Minecraft",
+            "clue": "808-667-1998 is the number for Maui's Old Lahaina this show, back strong after the tragic 2023 fires",
+            "answer": "a luau",
             "used": false
           },
           {
             "value": 600,
-            "clue": "Pikachu belongs to this franchise",
-            "answer": "Pokemon",
+            "clue": "Call 207-879-9500 for tix to see the Portland (Maine) Sea Dogs, a minor-league affiliate of this nearest MLB franchise",
+            "answer": "the Boston Red Sox",
             "used": false
           },
           {
             "value": 800,
-            "clue": "Master Chief is the main hero of this series",
-            "answer": "Halo",
+            "clue": "Want to hike California's John Muir wilderness with this club? Call 415-977-5522",
+            "answer": "the Sierra Club",
             "used": false
           },
           {
             "value": 1000,
-            "clue": "Link explores Hyrule in this game series",
-            "answer": "The Legend of Zelda",
+            "clue": "612-377-2224 is the box office for the Guthrie Theater overlooking the Mississippi in this beautiful Upper Midwest city",
+            "answer": "Minneapolis",
             "used": false
           }
         ]
       },
       {
-        "category": "GEOGRAPHY",
+        "category": "TV, RECENTLY",
         "questions": [
           {
             "value": 200,
-            "clue": "The capital city of New Zealand",
-            "answer": "Wellington",
+            "clue": "In 2025, 23 women hit the playing field with 66-year-old ex-NFLer Mel Owens , who suited up in this title role",
+            "answer": "the Golden Bachelor",
             "used": false
           },
           {
             "value": 400,
-            "clue": "This country is famous for its boot-like shape",
-            "answer": "Italy",
+            "clue": "Going down in a plane crash was only the start of Xavier Collins' Season 2 troubles; just another day in this Hulu drama",
+            "answer": "Paradise",
             "used": false
           },
           {
             "value": 600,
-            "clue": "The world's largest desert outside the polar regions",
-            "answer": "Sahara",
+            "clue": "This HBO series finally returned for Season 3 in 2026, featuring Eric Dane's last role, playing Jacob Elordi's dad",
+            "answer": "Euphoria",
             "used": false
           },
           {
             "value": 800,
-            "clue": "Mount Everest lies partly within this country",
-            "answer": "Nepal",
+            "clue": "Breaking news... well, at least recent news: In 2024 this actress was up for an Emmy for playing Alex Levy on \"The Morning Show\"",
+            "answer": "Aniston",
             "used": false
           },
           {
             "value": 1000,
-            "clue": "This river flows through Egypt",
-            "answer": "Nile",
+            "clue": "To exclude unwanted events from his documentary, this Tracy Morgan guy has his phone play The Beatles because that ain't in the budget",
+            "answer": "Reggie Dinkins",
             "used": false
           }
         ]
       },
       {
-        "category": "FOOD",
+        "category": "THE KING IS UNWELL",
         "questions": [
           {
             "value": 200,
-            "clue": "This Italian dish is typically covered in cheese and tomato sauce",
-            "answer": "Pizza",
+            "clue": "Kalakaua, king of these islands, died of kidney disease in San Francisco in 1891",
+            "answer": "Hawaii",
             "used": false
           },
           {
             "value": 400,
-            "clue": "Guacamole is made primarily from this fruit",
-            "answer": "Avocado",
+            "clue": "The Hapsburg Dynasty in this country ended in 1700 with the death of Charles II, whose ill health has been linked to inbreeding",
+            "answer": "Spain",
             "used": false
           },
           {
             "value": 600,
-            "clue": "Sushi is traditionally made with this grain",
-            "answer": "Rice",
+            "clue": "New research on this French king's death in 1715 after a very long reign says it wasn't bacterial gangrene but a fungal infection",
+            "answer": "Louis XIV",
             "used": false
           },
           {
             "value": 800,
-            "clue": "The main ingredient in hummus",
-            "answer": "Chickpeas",
+            "clue": "A WikiLeaks cable revealed that King Bhumibol of this country suffered from depression, a clinical symptom of Parkinson's disease",
+            "answer": "Thailand",
             "used": false
           },
           {
             "value": 1000,
-            "clue": "This flaky French pastry is shaped like a crescent",
-            "answer": "Croissant",
+            "clue": "England's Henry V didn't die in battle but of this awful intestinal disease also known as the bloody flux",
+            "answer": "dysentery",
             "used": false
           }
         ]
       },
       {
-        "category": "SCIENCE",
+        "category": "THAT SHELLFISH",
         "questions": [
           {
             "value": 200,
-            "clue": "Humans need this gas to breathe",
-            "answer": "Oxygen",
+            "clue": "People love to fry up these crabs named for the fact that they just molted",
+            "answer": "soft-shell crabs",
             "used": false
           },
           {
             "value": 400,
-            "clue": "The closest star to Earth",
-            "answer": "The Sun",
+            "clue": "Amandes de mer in French, these little bivalves that are great in pasta may just warm a part of your heart",
+            "answer": "cockles",
             "used": false
           },
           {
             "value": 600,
-            "clue": "Water freezes at this temperature on the Celsius scale",
-            "answer": "0",
+            "clue": "Angels on horseback is a classic recipe featuring these shellfish wrapped in bacon & broiled",
+            "answer": "oysters",
             "used": false
           },
           {
             "value": 800,
-            "clue": "The largest planet in our solar system",
-            "answer": "Jupiter",
+            "clue": "If you're feeling lucky, take a gamble on this alliterative dish, a New England classic",
+            "answer": "clams casino",
             "used": false
           },
           {
             "value": 1000,
-            "clue": "The chemical symbol for gold",
-            "answer": "Au",
+            "clue": "A great way to prepare lobster is this one, also a month of the French Revolutionary calendar",
+            "answer": "Thermidor",
             "used": false
           }
         ]
       },
       {
-        "category": "ODD ONE OUT",
+        "category": "DIDN'T AGREE WITH HIM",
         "questions": [
           {
             "value": 200,
-            "clue": "Dog, Cat, Goldfish, Car",
-            "answer": "Car",
+            "clue": "Sir Arthur Eddington with Subrahmanyan Chandrasekhar : That these ultimately can collapse into new, very dense objects",
+            "answer": "stars",
             "used": false
           },
           {
             "value": 400,
-            "clue": "Red, Blue, Green, Elephant",
-            "answer": "Elephant",
+            "clue": "Edmund Burke: With this man who cheered the French Revolution; a book by Yuval Levin says their debate began left vs. right",
+            "answer": "Thomas Paine",
             "used": false
           },
           {
             "value": 600,
-            "clue": "January, February, Tuesday, March",
-            "answer": "Tuesday",
+            "clue": "Historian Fritz Fischer: With the view associated with P.M. Lloyd George that the major powers \"slithered\" into this war",
+            "answer": "World War I",
             "used": false
           },
           {
             "value": 800,
-            "clue": "Fork, Spoon, Knife, Bicycle",
-            "answer": "Bicycle",
+            "clue": "Frederick Crews: In many books, with this Austrian, for example with his treatment of his patient Dora",
+            "answer": "Sigmund Freud",
             "used": false
           },
           {
             "value": 1000,
-            "clue": "Earth, Mars, Jupiter, Auckland",
-            "answer": "Auckland",
+            "clue": "William F. Buckley Jr. about pretty much everything with this writer in 1968 televised debates",
+            "answer": "Gore Vidal",
             "used": false
           }
         ]
@@ -216,215 +216,215 @@
     ]
   },
   {
-    "id": "FRIENDS-DJ",
-    "name": "Friends Game - Double Jeopardy",
+    "id": "9580-DJ",
+    "name": "Show #9580 - 2026-06-05 - Double Jeopardy",
     "board": [
       {
-        "category": "MUSIC",
+        "category": "YOU IN DANGER, LITERARY GIRL",
         "questions": [
           {
             "value": 400,
-            "clue": "The Eras Tour belongs to this singer",
-            "answer": "Taylor Swift",
+            "clue": "It's both the color & then her name after she chews some gum & Mrs. Beauregarde yells, \"You're turning\" this, this!",
+            "answer": "violet, Violet",
             "used": false
           },
           {
             "value": 800,
-            "clue": "This King of Pop recorded Thriller",
-            "answer": "Michael Jackson",
+            "clue": "In \"The Hunchback of Notre Dame\", she \"was sleeping at the moment when the outcasts assailed the church\"",
+            "answer": "Esmeralda",
             "used": false
           },
           {
             "value": 1200,
-            "clue": "Bohemian Rhapsody was recorded by this band",
-            "answer": "Queen",
+            "clue": "This teen detective dealt with \"The Invisible Intruder\" & \"The Mysterious Mannequin\", both of which actually do sound terrifying",
+            "answer": "Nancy Drew",
             "used": false
           },
           {
             "value": 1600,
-            "clue": "This instrument typically has 88 keys",
-            "answer": "Piano",
+            "clue": "\"Effie Trinket... smoothes the slip of paper, and reads out the name in a clear voice. And it's not me. It's\" this character",
+            "answer": "Prim Everdeen",
             "used": false
           },
           {
             "value": 2000,
-            "clue": "The Beatles were formed in this English city",
-            "answer": "Liverpool",
+            "clue": "After she sets Thornfield ablaze, it doesn't end well for Mr. Rochester's unstable first wife, named this",
+            "answer": "Bertha (Mason)",
             "used": false
           }
         ]
       },
       {
-        "category": "TV SHOWS",
+        "category": "COINING SOME WORDS",
         "questions": [
           {
             "value": 400,
-            "clue": "This yellow cartoon family lives in Springfield",
-            "answer": "The Simpsons",
+            "clue": "On the reverse of a 2026 nickel, this name appears directly under a certain building",
+            "answer": "Monticello",
             "used": false
           },
           {
             "value": 800,
-            "clue": "Ross, Rachel and Chandler appear in this sitcom",
-            "answer": "Friends",
+            "clue": "The name of this institution that issues British paper money was on a 1994 2-pound coin marking its 300th anniversary",
+            "answer": "the Bank of England",
             "used": false
           },
           {
             "value": 1200,
-            "clue": "The Upside Down appears in this Netflix series",
-            "answer": "Stranger Things",
+            "clue": "Oui, many Canadian maple leaf bullion coins proclaim they're both fine silver & this PUR",
+            "answer": "argent",
             "used": false
           },
           {
             "value": 1600,
-            "clue": "This fantasy series featured the Iron Throne",
-            "answer": "Game of Thrones",
+            "clue": "Its 2-euro coin was designed by Raimo Heino & includes the word \"suomi\" (the country's name in its own language)",
+            "answer": "Finland",
             "used": false
           },
           {
             "value": 2000,
-            "clue": "Michael Scott manages a paper company in this sitcom",
-            "answer": "The Office",
+            "clue": "On a 1995 German coin, this man's name appears above a big \"X\" & 2 images of a hand, one showing just the bone",
+            "answer": "Röntgen",
             "used": false
           }
         ]
       },
       {
-        "category": "HISTORY",
+        "category": "IS THERE A DOC-UMENTARY IN THE HOUSE?",
         "questions": [
           {
             "value": 400,
-            "clue": "This ship sank on its maiden voyage in 1912",
-            "answer": "Titanic",
+            "clue": "This American doc who gave us a vaccine for polio was the focus of \"The Shot Felt 'Round the World\"",
+            "answer": "(Jonas) Salk",
             "used": false
           },
           {
             "value": 800,
-            "clue": "The first person to walk on the Moon",
-            "answer": "Neil Armstrong",
+            "clue": "Ken Burns directed a PBS documentary about this place begun by a British immigrant in Rochester, Minnesota in the 19th century",
+            "answer": "Mayo Clinic",
             "used": false
           },
           {
             "value": 1200,
-            "clue": "This wall divided East and West Berlin",
-            "answer": "Berlin Wall",
+            "clue": "\"Hero with a Thousand Faces\" documents the doctors & nurses struggling in Africa with this 5-letter hemorrhagic fever",
+            "answer": "Ebola",
             "used": false
           },
           {
             "value": 1600,
-            "clue": "This civilization built Machu Picchu",
-            "answer": "Inca",
+            "clue": "An HBO documentary on this man, aka Doctor Death, showed his life after prison, including a 2008 Congressional run",
+            "answer": "Kevorkian",
             "used": false
           },
           {
             "value": 2000,
-            "clue": "The famous Egyptian queen who allied with Julius Caesar",
-            "answer": "Cleopatra",
+            "clue": "This doctor who wrote \"Awakenings\" was given the documentary treatment in one subtitled \"His Own Life\"",
+            "answer": "Oliver Sacks",
             "used": false
           }
         ]
       },
       {
-        "category": "SPORTS",
+        "category": "\"H\"ODGEPODGE",
         "questions": [
           {
             "value": 400,
-            "clue": "This sport uses a bat, ball and wickets",
-            "answer": "Cricket",
+            "clue": "1912 Nobel Peace Prize winner Elihu Root helped originate the permanent Court of Intl. Justice in this Dutch city",
+            "answer": "The Hague",
             "used": false
           },
           {
             "value": 800,
-            "clue": "A standard rugby union team has this many players on the field",
-            "answer": "15",
+            "clue": "Hamlet tells this friend, \"There are more things in heaven and earth... than are dreamt of in your philosophy\"",
+            "answer": "Horatio",
             "used": false
           },
           {
             "value": 1200,
-            "clue": "This country won the first Rugby World Cup in 1987",
-            "answer": "New Zealand",
+            "clue": "This German painter came from a family of artists; you hear more about his dad the Elder than his Uncle Sigmund",
+            "answer": "Holbein",
             "used": false
           },
           {
             "value": 1600,
-            "clue": "The NBA is associated with this sport",
-            "answer": "Basketball",
+            "clue": "Uterine prolapse & fibroids are reasons for this surgery; a total one does not include removal of the ovaries",
+            "answer": "a hysterectomy",
             "used": false
           },
           {
             "value": 2000,
-            "clue": "Usain Bolt became famous in this event",
-            "answer": "Sprinting",
+            "clue": "The raven & eagle represent two groups in the social hierarchy of this indigenous people of the Pacific Northwest Coast",
+            "answer": "the Haida",
             "used": false
           }
         ]
       },
       {
-        "category": "BEFORE & AFTER",
+        "category": "WORLD CITIES",
         "questions": [
           {
             "value": 400,
-            "clue": "A Disney queen plus a tropical fruit",
-            "answer": "Elsa Mango",
+            "clue": "This was the name of St. Petersburg from 1924 to 1991",
+            "answer": "Leningrad",
             "used": false
           },
           {
             "value": 800,
-            "clue": "A famous detective plus an alien visitor",
-            "answer": "Sherlock E.T.",
-            "used": false
-          },
-          {
-            "value": 1200,
-            "clue": "A Pokemon mascot plus a mountain summit",
-            "answer": "Pikachu Peak",
+            "clue": "Built for a 1929 intl. exhibition, the Palau Nacional in this city is now home to the National Art Museum of Catalonia",
+            "answer": "Barcelona",
             "used": false
           },
           {
             "value": 1600,
-            "clue": "A Jedi master plus a yoga position",
-            "answer": "Yoda Pose",
+            "clue": "This Kenyan city situated partly on an island in the Indian Ocean was once the capital of British East Africa",
+            "answer": "Mombasa",
             "used": false
           },
           {
             "value": 2000,
-            "clue": "A wizard school plus a citrus fruit",
-            "answer": "Hogwarts Orange",
+            "clue": "This Middle Eastern city, alphabetically first in national capitals, was once a pearl-fishing port",
+            "answer": "Abu Dhabi",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "This capital of India's Tamil Nadu state was formerly called Madras",
+            "answer": "Chennai",
             "used": false
           }
         ]
       },
       {
-        "category": "RANDOM KNOWLEDGE",
+        "category": "BACK-FORMATIONS",
         "questions": [
           {
             "value": 400,
-            "clue": "A leap year contains this many days",
-            "answer": "366",
+            "clue": "Take a word that many are about horror movies or blood, drop \"ish\" & you get this, meaning a qualm",
+            "answer": "squeam",
             "used": false
           },
           {
             "value": 800,
-            "clue": "The opposite direction of north",
-            "answer": "South",
+            "clue": "This verb that never was a verb before comes from a type of thief who enters a dwelling",
+            "answer": "burgling",
             "used": false
           },
           {
             "value": 1200,
-            "clue": "The fastest land animal",
-            "answer": "Cheetah",
+            "clue": "Back-forming from a majestic type of event, this verb sometimes replaces \"to crown\"",
+            "answer": "coronate",
             "used": false
           },
           {
             "value": 1600,
-            "clue": "The largest ocean on Earth",
-            "answer": "Pacific Ocean",
+            "clue": "As a lover of beauty, Oscar Wilde was called this, back-formed from a word one syllable longer",
+            "answer": "an aesthete",
             "used": false
           },
           {
             "value": 2000,
-            "clue": "The language with the most native speakers in the world",
-            "answer": "Mandarin Chinese",
+            "clue": "Disliked by some as business jargon, this verb is back-formed from what Valmont & the Marquise de Merteuil had together",
+            "answer": "liaise",
             "used": false
           }
         ]
