@@ -70,9 +70,22 @@ function isValidBoard(board) {
   );
 }
 
+function ensureScores(game) {
+  if (!game.scores) {
+    game.scores = {};
+  }
+
+  game.players.forEach((player) => {
+    if (typeof game.scores[player.id] !== "number") {
+      game.scores[player.id] = 0;
+    }
+  });
+}
+
 function sendGameUpdate(code) {
   const game = games[code];
   if (!game) return;
+  ensureScores(game);
 
   io.to(code).emit("gameUpdate", {
     code,
@@ -321,7 +334,8 @@ io.on("connection", (socket) => {
     if (!game) return;
     if (!game.currentQuestion || !game.buzzedPlayerId) return;
 
-    game.scores[game.buzzedPlayerId] += game.currentQuestion.value;
+    game.scores[game.buzzedPlayerId] =
+      (game.scores[game.buzzedPlayerId] || 0) + game.currentQuestion.value;
 
     const playerIndex = game.players.findIndex(
       (p) => p.id === game.buzzedPlayerId,
@@ -349,7 +363,8 @@ io.on("connection", (socket) => {
     if (!game) return;
     if (!game.currentQuestion || !game.buzzedPlayerId) return;
 
-    game.scores[game.buzzedPlayerId] -= game.currentQuestion.value;
+    game.scores[game.buzzedPlayerId] =
+      (game.scores[game.buzzedPlayerId] || 0) - game.currentQuestion.value;
     game.buzzedPlayerId = null;
     game.answerEndsAt = null;
     sendGameUpdate(code);

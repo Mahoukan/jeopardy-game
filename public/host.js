@@ -347,7 +347,7 @@ function renderPlayers(players, scores, currentTurnIndex) {
         <input 
           class="score-input"
           type="number"
-          value="${scores[player.id]}"
+          value="${scores[player.id] ?? 0}"
           data-player-id="${player.id}"
         >
         <span>${turnLabel}${connectionLabel}</span>
