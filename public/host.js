@@ -92,7 +92,6 @@ function renderSavedBoards() {
     <div class="saved-board">
       <strong>${escapeHtml(board.name)}</strong>
       <button class="load-board-btn" data-id="${board.id}">Load</button>
-      <button class="delete-board-btn" data-id="${board.id}">Delete</button>
     </div>
   `,
     )
@@ -122,14 +121,6 @@ function renderSavedBoards() {
       selectedGame = JSON.parse(JSON.stringify(savedBoard));
       boardNameInput.value = savedBoard.name;
       alert("Game loaded. Click Start Selected Game.");
-    });
-  });
-
-  document.querySelectorAll(".delete-board-btn").forEach((button) => {
-    button.addEventListener("click", () => {
-      socket.emit("deleteBoard", {
-        id: button.dataset.id,
-      });
     });
   });
 }

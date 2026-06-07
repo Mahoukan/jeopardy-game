@@ -31,11 +31,6 @@ function loadBoards() {
   return JSON.parse(fs.readFileSync(BOARDS_FILE, "utf8"));
 }
 
-function saveBoards(boards) {
-  ensureBoardsFile();
-  fs.writeFileSync(BOARDS_FILE, JSON.stringify(boards, null, 2));
-}
-
 function makeCode() {
   let code;
   do {
@@ -154,51 +149,6 @@ io.on("connection", (socket) => {
       return;
     }
     socket.emit("savedBoardsUpdated", loadBoards());
-  });
-
-  socket.on("saveBoard", ({ name, board }) => {
-    if (!socket.data.isAdmin) {
-      socket.emit("errorMessage", "Admin login required.");
-      return;
-    }
-    if (!name || name.trim() === "") {
-      socket.emit("errorMessage", "Please enter a board name.");
-      return;
-    }
-
-    const isFullGame = board.jeopardy && board.doubleJeopardy;
-
-    if (
-      (isFullGame && !isValidBoard(board.jeopardy.board)) ||
-      (!isFullGame && !isValidBoard(board))
-    ) {
-      socket.emit("errorMessage", "Board is incomplete.");
-      return;
-    }
-
-    const boards = loadBoards();
-
-    const savedBoard = {
-      id: Date.now().toString(),
-      name: name.trim(),
-      board: cleanBoard(board),
-    };
-
-    boards.push(savedBoard);
-    saveBoards(boards);
-
-    socket.emit("savedBoardsUpdated", boards);
-    socket.emit("successMessage", "Board saved.");
-  });
-
-  socket.on("deleteBoard", ({ id }) => {
-    if (!socket.data.isAdmin) {
-      socket.emit("errorMessage", "Admin login required.");
-      return;
-    }
-    const boards = loadBoards().filter((board) => board.id !== id);
-    saveBoards(boards);
-    socket.emit("savedBoardsUpdated", boards);
   });
 
   socket.on("createGame", ({ board }) => {
