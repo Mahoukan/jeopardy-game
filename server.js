@@ -4,7 +4,7 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 const { Server } = require("socket.io");
-
+const crypto = require("crypto");
 const ANSWER_TIME_MS = 15000;
 const BUZZ_LOCKOUT_MS = 5000;
 
@@ -29,6 +29,11 @@ function ensureBoardsFile() {
 function loadBoards() {
   ensureBoardsFile();
   return JSON.parse(fs.readFileSync(BOARDS_FILE, "utf8"));
+}
+
+function saveBoards(boards) {
+  ensureBoardsFile();
+  fs.writeFileSync(BOARDS_FILE, JSON.stringify(boards, null, 2));
 }
 
 function makeCode() {
@@ -645,6 +650,27 @@ io.on("connection", (socket) => {
     game.currentQuestion.value = numericWager;
 
     sendGameUpdate(code);
+  });
+
+  socket.on("importBoard", ({ board }) => {
+    if (!socket.data.isAdmin) {
+      socket.emit("errorMessage", "Admin login required.");
+      return;
+    }
+
+    const boards = loadBoards();
+
+    const importedBoard = {
+      id: crypto.randomUUID(),
+      ...board,
+    };
+
+    boards.push(importedBoard);
+
+    saveBoards(boards);
+
+    socket.emit("savedBoardsUpdated", boards);
+    socket.emit("successMessage", "Board imported.");
   });
 });
 

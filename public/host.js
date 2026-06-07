@@ -7,6 +7,9 @@ const setDailyDoubleWagerBtn = document.getElementById(
   "setDailyDoubleWagerBtn",
 );
 
+const importJsonBtn = document.getElementById("importJsonBtn");
+const jsonImportInput = document.getElementById("jsonImportInput");
+
 const startFinalBtn = document.getElementById("startFinalBtn");
 const revealFinalBtn = document.getElementById("revealFinalBtn");
 
@@ -410,4 +413,26 @@ setDailyDoubleWagerBtn.addEventListener("click", () => {
     code: currentCode,
     wager: dailyDoubleWagerInput.value,
   });
+});
+
+importJsonBtn.addEventListener("click", () => {
+  jsonImportInput.click();
+});
+
+jsonImportInput.addEventListener("change", async (event) => {
+  const file = event.target.files?.[0];
+  if (!file) return;
+
+  try {
+    const text = await file.text();
+    const importedGame = JSON.parse(text);
+
+    socket.emit("importBoard", {
+      board: importedGame,
+    });
+
+    jsonImportInput.value = "";
+  } catch (err) {
+    alert("Invalid JSON file.");
+  }
 });
