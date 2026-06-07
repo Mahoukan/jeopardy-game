@@ -82,7 +82,7 @@ socket.on("gameUpdate", (game) => {
 function renderPlayerInfo(game) {
   if (!playerInfo) return;
 
-  playerInfo.textContent = `${playerName} | Game Code: ${game.code}`;
+  playerInfo.textContent = `${playerName} • Game ${game.code} • Turn: ${currentPlayer?.name ?? "-"}`;
 
   const currentPlayer = game.players[game.currentTurnIndex];
 
@@ -180,7 +180,7 @@ socket.on("connect", () => {
     socket.emit("joinGame", {
       code: currentCode,
       name: playerName,
-      playerToken
+      playerToken,
     });
   }
 });
