@@ -155,9 +155,15 @@ function renderQuestion(game) {
     ${
       !game.finalRevealed
         ? `
-          <input id="finalWagerInput" type="number" placeholder="Your wager">
-          <button id="submitFinalWagerBtn">Submit Wager</button>
-        `
+    <input
+      id="finalWagerInput"
+      type="number"
+      min="0"
+      max="${game.scores[playerId] ?? 0}"
+      placeholder="Your wager"
+    >
+    <button id="submitFinalWagerBtn">Submit Wager</button>
+  `
         : `
           <p><strong>Clue:</strong> ${final.clue}</p>
           <input id="finalAnswerInput" placeholder="Your answer">

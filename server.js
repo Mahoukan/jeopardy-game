@@ -540,7 +540,19 @@ io.on("connection", (socket) => {
     const game = games[code];
     if (!game || !game.finalMode) return;
 
-    game.finalWagers[socket.id] = Number(wager) || 0;
+    const amount = Number(wager);
+    const playerScore = game.scores[socket.id] || 0;
+
+    if (!Number.isFinite(amount) || amount < 0 || amount > playerScore) {
+      socket.emit(
+        "errorMessage",
+        `Final Jeopardy wager must be between 0 and ${playerScore}.`,
+      );
+      return;
+    }
+
+    game.finalWagers[socket.id] = amount;
+
     sendGameUpdate(code);
   });
 
