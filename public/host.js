@@ -1,20 +1,18 @@
 const socket = io();
 
+let selectedGame = null;
+
+const startDoubleBtn = document.getElementById("startDoubleBtn");
+
 const rejoinCodeInput = document.getElementById("rejoinCodeInput");
 const rejoinGameBtn = document.getElementById("rejoinGameBtn");
 const restoreGameBtn = document.getElementById("restoreGameBtn");
 
-const importJsonBtn = document.getElementById("importJsonBtn");
-const jsonImportInput = document.getElementById("jsonImportInput");
-
 const boardNameInput = document.getElementById("boardNameInput");
-const saveBoardBtn = document.getElementById("saveBoardBtn");
 const createGameBtn = document.getElementById("createGameBtn");
-const addCategoryBtn = document.getElementById("addCategoryBtn");
 
 const savedBoardsDiv = document.getElementById("savedBoards");
 const gameCodeText = document.getElementById("gameCodeText");
-const boardEditor = document.getElementById("boardEditor");
 const boardDiv = document.getElementById("board");
 const playersDiv = document.getElementById("players");
 const questionBox = document.getElementById("questionBox");
@@ -32,48 +30,14 @@ const adminLoginMessage = document.getElementById("adminLoginMessage");
 let currentCode = null;
 let savedBoards = [];
 
-let editorBoard = [
-  {
-    category: "Category 1",
-    questions: [
-      { value: 100, clue: "", answer: "" },
-      { value: 200, clue: "", answer: "" },
-      { value: 300, clue: "", answer: "" },
-    ],
-  },
-];
-
-renderEditor();
-
-saveBoardBtn.addEventListener("click", () => {
-  updateBoardFromEditor();
-
-  socket.emit("saveBoard", {
-    name: boardNameInput.value,
-    board: editorBoard,
-  });
-});
-
-addCategoryBtn.addEventListener("click", () => {
-  updateBoardFromEditor();
-
-  editorBoard.push({
-    category: `Category ${editorBoard.length + 1}`,
-    questions: [
-      { value: 100, clue: "", answer: "" },
-      { value: 200, clue: "", answer: "" },
-      { value: 300, clue: "", answer: "" },
-    ],
-  });
-
-  renderEditor();
-});
-
 createGameBtn.addEventListener("click", () => {
-  updateBoardFromEditor();
+  if (!selectedGame) {
+    alert("Load a game first.");
+    return;
+  }
 
   socket.emit("createGame", {
-    board: editorBoard,
+    board: selectedGame,
   });
 });
 
@@ -132,9 +96,17 @@ function renderSavedBoards() {
       if (!savedBoard) return;
 
       boardNameInput.value = savedBoard.name;
-      editorBoard = JSON.parse(JSON.stringify(savedBoard.board));
 
-      renderEditor();
+      if (savedBoard.jeopardy && savedBoard.doubleJeopardy) {
+        selectedGame = JSON.parse(JSON.stringify(savedBoard));
+        boardNameInput.value = savedBoard.name;
+        alert("Game loaded. Click Create Game With This Board.");
+        return;
+      }
+
+      selectedGame = JSON.parse(JSON.stringify(savedBoard));
+      boardNameInput.value = savedBoard.name;
+      alert("Board loaded. Click Create Game With This Board.");
     });
   });
 
@@ -144,150 +116,6 @@ function renderSavedBoards() {
         id: button.dataset.id,
       });
     });
-  });
-}
-
-function renderEditor() {
-  boardEditor.innerHTML = "";
-
-  editorBoard.forEach((category, categoryIndex) => {
-    const categoryBox = document.createElement("div");
-    categoryBox.className = "category-editor";
-
-    categoryBox.innerHTML = `
-      <div class="editor-row">
-        <label>Category</label>
-        <input 
-          class="category-name-input" 
-          data-category-index="${categoryIndex}" 
-          value="${escapeHtml(category.category)}"
-        >
-        <button class="remove-category-btn" data-category-index="${categoryIndex}">
-          Remove Category
-        </button>
-      </div>
-
-      <div class="question-editor-list">
-        ${category.questions
-          .map(
-            (question, questionIndex) => `
-          <div class="question-editor">
-            <input 
-              class="value-input" 
-              data-category-index="${categoryIndex}" 
-              data-question-index="${questionIndex}" 
-              value="${question.value}" 
-              type="number"
-              placeholder="Points"
-            >
-
-            <input 
-              class="clue-input" 
-              data-category-index="${categoryIndex}" 
-              data-question-index="${questionIndex}" 
-              value="${escapeHtml(question.clue)}" 
-              placeholder="Question / clue"
-            >
-
-            <input 
-              class="answer-input" 
-              data-category-index="${categoryIndex}" 
-              data-question-index="${questionIndex}" 
-              value="${escapeHtml(question.answer)}" 
-              placeholder="Answer"
-            >
-
-            <button 
-              class="remove-question-btn" 
-              data-category-index="${categoryIndex}" 
-              data-question-index="${questionIndex}"
-            >
-              Remove
-            </button>
-          </div>
-        `,
-          )
-          .join("")}
-      </div>
-
-      <button class="add-question-btn" data-category-index="${categoryIndex}">
-        Add Question
-      </button>
-    `;
-
-    boardEditor.appendChild(categoryBox);
-  });
-
-  document.querySelectorAll(".add-question-btn").forEach((button) => {
-    button.addEventListener("click", () => {
-      updateBoardFromEditor();
-
-      const categoryIndex = Number(button.dataset.categoryIndex);
-      const questions = editorBoard[categoryIndex].questions;
-      const nextValue =
-        questions.length > 0
-          ? Number(questions[questions.length - 1].value) + 100
-          : 100;
-
-      questions.push({
-        value: nextValue,
-        clue: "",
-        answer: "",
-      });
-
-      renderEditor();
-    });
-  });
-
-  document.querySelectorAll(".remove-category-btn").forEach((button) => {
-    button.addEventListener("click", () => {
-      updateBoardFromEditor();
-
-      const categoryIndex = Number(button.dataset.categoryIndex);
-      editorBoard.splice(categoryIndex, 1);
-
-      renderEditor();
-    });
-  });
-
-  document.querySelectorAll(".remove-question-btn").forEach((button) => {
-    button.addEventListener("click", () => {
-      updateBoardFromEditor();
-
-      const categoryIndex = Number(button.dataset.categoryIndex);
-      const questionIndex = Number(button.dataset.questionIndex);
-
-      editorBoard[categoryIndex].questions.splice(questionIndex, 1);
-
-      renderEditor();
-    });
-  });
-}
-
-function updateBoardFromEditor() {
-  document.querySelectorAll(".category-name-input").forEach((input) => {
-    const categoryIndex = Number(input.dataset.categoryIndex);
-    editorBoard[categoryIndex].category = input.value;
-  });
-
-  document.querySelectorAll(".value-input").forEach((input) => {
-    const categoryIndex = Number(input.dataset.categoryIndex);
-    const questionIndex = Number(input.dataset.questionIndex);
-    editorBoard[categoryIndex].questions[questionIndex].value = Number(
-      input.value,
-    );
-  });
-
-  document.querySelectorAll(".clue-input").forEach((input) => {
-    const categoryIndex = Number(input.dataset.categoryIndex);
-    const questionIndex = Number(input.dataset.questionIndex);
-    editorBoard[categoryIndex].questions[questionIndex].clue = input.value;
-  });
-
-  document.querySelectorAll(".answer-input").forEach((input) => {
-    const categoryIndex = Number(input.dataset.categoryIndex);
-    const questionIndex = Number(input.dataset.questionIndex);
-    editorBoard[categoryIndex].questions[questionIndex].answer = input.value;
   });
 }
 
@@ -403,6 +231,25 @@ skipBtn.addEventListener("click", () => {
   socket.emit("skipQuestion", { code: currentCode });
 });
 
+startDoubleBtn.addEventListener("click", () => {
+  if (!currentCode) {
+    alert("Create or rejoin a game first.");
+    return;
+  }
+
+  if (
+    !confirm(
+      "Start Double Jeopardy? This will replace the current board but keep scores.",
+    )
+  ) {
+    return;
+  }
+
+  socket.emit("startDoubleJeopardy", {
+    code: currentCode,
+  });
+});
+
 function escapeHtml(text) {
   return String(text)
     .replaceAll("&", "&amp;")
@@ -434,52 +281,6 @@ socket.on("adminLoginError", (message) => {
   adminLoginMessage.textContent = message;
 });
 
-importJsonBtn.addEventListener("click", () => {
-  jsonImportInput.click();
-});
-
-jsonImportInput.addEventListener("change", (event) => {
-  const file = event.target.files[0];
-  if (!file) return;
-
-  const reader = new FileReader();
-
-  reader.onload = () => {
-    try {
-      const imported = JSON.parse(reader.result);
-
-      if (Array.isArray(imported)) {
-        editorBoard = imported;
-      } else if (imported.board && Array.isArray(imported.board)) {
-        editorBoard = imported.board;
-        if (imported.name) {
-          boardNameInput.value = imported.name;
-        }
-      } else {
-        alert("Invalid JSON format.");
-        return;
-      }
-
-      editorBoard = editorBoard.map((category) => ({
-        category: category.category || "Untitled Category",
-        questions: category.questions.map((question) => ({
-          value: Number(question.value) || 100,
-          clue: question.clue || "",
-          answer: question.answer || "",
-        })),
-      }));
-
-      renderEditor();
-      alert("Board imported.");
-    } catch (error) {
-      alert("Could not read JSON file.");
-    }
-  };
-
-  reader.readAsText(file);
-  jsonImportInput.value = "";
-});
-
 rejoinGameBtn.addEventListener("click", () => {
   const code = rejoinCodeInput.value.trim();
 
@@ -507,8 +308,7 @@ setInterval(() => {
 }, 30000);
 
 restoreGameBtn.addEventListener("click", () => {
-  const backup =
-    localStorage.getItem("jeopardyBackup");
+  const backup = localStorage.getItem("jeopardyBackup");
 
   if (!backup) {
     alert("No backup found.");
@@ -516,6 +316,6 @@ restoreGameBtn.addEventListener("click", () => {
   }
 
   socket.emit("restoreGame", {
-    snapshot: JSON.parse(backup)
+    snapshot: JSON.parse(backup),
   });
 });

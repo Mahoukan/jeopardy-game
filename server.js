@@ -89,6 +89,9 @@ function sendGameUpdate(code) {
 
   io.to(code).emit("gameUpdate", {
     code,
+    gameName: game.gameName,
+    currentRound: game.currentRound,
+    finalJeopardy: game.finalJeopardy,
     board: game.board,
     players: game.players,
     scores: game.scores,
@@ -153,7 +156,12 @@ io.on("connection", (socket) => {
       return;
     }
 
-    if (!isValidBoard(board)) {
+    const isFullGame = board.jeopardy && board.doubleJeopardy;
+
+    if (
+      (isFullGame && !isValidBoard(board.jeopardy.board)) ||
+      (!isFullGame && !isValidBoard(board))
+    ) {
       socket.emit("errorMessage", "Board is incomplete.");
       return;
     }
@@ -188,7 +196,12 @@ io.on("connection", (socket) => {
       socket.emit("errorMessage", "Admin login required.");
       return;
     }
-    if (!isValidBoard(board)) {
+    const isFullGame = board.jeopardy && board.doubleJeopardy;
+
+    if (
+      (isFullGame && !isValidBoard(board.jeopardy.board)) ||
+      (!isFullGame && !isValidBoard(board))
+    ) {
       socket.emit("errorMessage", "Board is incomplete.");
       return;
     }
@@ -197,7 +210,13 @@ io.on("connection", (socket) => {
 
     games[code] = {
       hostId: socket.id,
-      board: cleanBoard(board),
+      gameName: board.name || "Untitled Game",
+      jeopardy: isFullGame ? board.jeopardy : null,
+      doubleJeopardy: isFullGame ? board.doubleJeopardy : null,
+      finalJeopardy: isFullGame ? board.finalJeopardy : null,
+      currentRound: "jeopardy",
+
+      board: isFullGame ? cleanBoard(board.jeopardy.board) : cleanBoard(board),
       players: [],
       scores: {},
       currentTurnIndex: 0,
@@ -406,6 +425,34 @@ io.on("connection", (socket) => {
 
     if (game.players.length > 0) {
       game.currentTurnIndex = (game.currentTurnIndex + 1) % game.players.length;
+    }
+
+    sendGameUpdate(code);
+  });
+
+  socket.on("startDoubleJeopardy", ({ code }) => {
+    if (!socket.data.isAdmin) {
+      socket.emit("errorMessage", "Admin login required.");
+      return;
+    }
+
+    const game = games[code];
+    if (!game || !game.doubleJeopardy) {
+      socket.emit("errorMessage", "No Double Jeopardy round found.");
+      return;
+    }
+
+    game.currentRound = "doubleJeopardy";
+    game.board = cleanBoard(game.doubleJeopardy.board);
+
+    game.currentQuestion = null;
+    game.buzzedPlayerId = null;
+    game.buzzUnlocksAt = null;
+    game.answerEndsAt = null;
+
+    if (game.timerInterval) {
+      clearInterval(game.timerInterval);
+      game.timerInterval = null;
     }
 
     sendGameUpdate(code);

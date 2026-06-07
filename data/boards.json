@@ -1,8 +1,9 @@
 [
   {
-    "id": "POP-J",
-    "name": "Pop Culture Jeopardy! Round",
-    "board": [
+    "id": "POP-GAME-1",
+    "name": "Pop Culture Jeopardy!",
+    "jeopardy": {
+      "board": [
       {
         "category": "MARVEL MOVIES",
         "questions": [
@@ -179,11 +180,9 @@
         ]
       }
     ]
-  },
-  {
-    "id": "POP-DJ",
-    "name": "Pop Culture Jeopardy! Double Jeopardy",
-    "board": [
+    },
+    "doubleJeopardy": {
+      "board": [
       {
         "category": "SITCOMS",
         "questions": [
@@ -360,11 +359,18 @@
         ]
       }
     ]
+    },
+    "finalJeopardy": {
+      "category": "POP CULTURE RECORDS",
+      "clue": "This media franchise became the highest-grossing franchise in history despite beginning as a pair of Game Boy games released in 1996.",
+      "answer": "What is Pokémon?"
+    }
   },
   {
-    "id": "POP3-J",
-    "name": "Pop Culture Game 3 - Jeopardy",
-    "board": [
+    "id": "POP-GAME-3",
+    "name": "Pop Culture Game 3",
+    "jeopardy": {
+      "board": [
       {
         "category": "DC COMICS",
         "questions": [
@@ -576,11 +582,9 @@
         ]
       }
     ]
-  },
-  {
-    "id": "POP3-DJ",
-    "name": "Pop Culture Game 3 - Double Jeopardy",
-    "board": [
+    },
+    "doubleJeopardy": {
+      "board": [
       {
         "category": "WONDERS OF THE WORLD",
         "questions": [
@@ -792,5 +796,11 @@
         ]
       }
     ]
+    },
+    "finalJeopardy": {
+      "category": "VIDEO GAMES",
+      "clue": "This game's final boss is named Ganon, but the title refers to the princess players are trying to save.",
+      "answer": "What is The Legend of Zelda?"
+    }
   }
 ]
