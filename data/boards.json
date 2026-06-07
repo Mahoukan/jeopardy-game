@@ -360,5 +360,437 @@
         ]
       }
     ]
+  },
+  {
+    "id": "POP3-J",
+    "name": "Pop Culture Game 3 - Jeopardy",
+    "board": [
+      {
+        "category": "DC COMICS",
+        "questions": [
+          {
+            "value": 200,
+            "clue": "This Gotham City vigilante fights crime with no superpowers, relying instead on gadgets, training, and detective skills.",
+            "answer": "Batman",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "Superman's Fortress of Solitude is traditionally located in this region of the Earth.",
+            "answer": "The Arctic",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "This villain was once a psychiatrist at Arkham Asylum before becoming one of Batman's greatest enemies.",
+            "answer": "Scarecrow",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "This Green Lantern from Earth was chosen to succeed Abin Sur after the Lantern crashed on Earth.",
+            "answer": "Hal Jordan",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "This Anti-Monitor-created event from 1985 was designed to simplify DC's increasingly complex multiverse.",
+            "answer": "Crisis on Infinite Earths",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "ARTISTS",
+        "questions": [
+          {
+            "value": 200,
+            "clue": "This British artist created the albums ÷ (Divide), × (Multiply), and + (Plus).",
+            "answer": "Ed Sheeran",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "Born Stefani Germanotta, this artist is known for hits including \"Poker Face\" and \"Bad Romance\".",
+            "answer": "Lady Gaga",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "This Canadian artist released the albums After Hours and Dawn FM under a stage name.",
+            "answer": "The Weeknd",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "This rapper became the first solo artist to win the Pulitzer Prize for Music.",
+            "answer": "Kendrick Lamar",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "Known for her alter ego Sasha Fierce, this artist became the most-awarded artist in Grammy history in 2023.",
+            "answer": "Beyoncé",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "LAWS",
+        "questions": [
+          {
+            "value": 200,
+            "clue": "This law states that what goes up must come down due to the force that keeps us on Earth.",
+            "answer": "The Law of Gravity",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "This law states that for every action, there is an equal and opposite reaction.",
+            "answer": "Newton's Third Law of Motion",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "This law states that energy cannot be created or destroyed, only transformed from one form to another.",
+            "answer": "The Law of Conservation of Energy",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "This law states that the pressure of a gas decreases as its volume increases, provided temperature remains constant.",
+            "answer": "Boyle's Law",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "This law states that the current through a conductor is directly proportional to the voltage across it and inversely proportional to its resistance.",
+            "answer": "Ohm's Law",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "CARD GAMES",
+        "questions": [
+          {
+            "value": 200,
+            "clue": "In Poker, this hand ranks above a Full House but below a Royal Flush.",
+            "answer": "Straight Flush",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "In Pokémon TCG, this card type is attached to Pokémon to allow them to use attacks.",
+            "answer": "Energy Cards",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "In Yu-Gi-Oh!, Exodia can instantly win the duel if a player has all five of these in their hand.",
+            "answer": "Pieces of Exodia",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "In Magic: The Gathering, these cards represent the primary resource used to cast most spells.",
+            "answer": "Lands",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "In Cards Against Humanity, one player each round serves in this role, selecting the winning response.",
+            "answer": "Card Czar",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "WEIRD FOODS",
+        "questions": [
+          {
+            "value": 200,
+            "clue": "This Australian spread made from brewer's yeast is famously loved by locals and hated by many tourists.",
+            "answer": "Vegemite",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "This traditional Scottish dish combines sheep's heart, liver, and lungs with oats and spices inside a sheep's stomach.",
+            "answer": "Haggis",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "Often considered one of the world's smelliest foods, this Swedish delicacy consists of fermented Baltic herring.",
+            "answer": "Surströmming",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "This Icelandic dish consists of fermented Greenland shark that is buried and cured for months before being eaten.",
+            "answer": "Hákarl",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "This Filipino delicacy is a fertilized duck egg containing a partially developed embryo.",
+            "answer": "Balut",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "GENERAL KNOWLEDGE",
+        "questions": [
+          {
+            "value": 200,
+            "clue": "This company created the iPhone.",
+            "answer": "Apple",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "This city is known as the City of Canals.",
+            "answer": "Venice",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "This planet has the most moons in the Solar System.",
+            "answer": "Saturn",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "This Shakespeare play features the characters Rosencrantz and Guildenstern.",
+            "answer": "Hamlet",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "This scientist's 1905 papers earned the nickname \"Annus Mirabilis\" or \"Miracle Year.\"",
+            "answer": "Albert Einstein",
+            "used": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "POP3-DJ",
+    "name": "Pop Culture Game 3 - Double Jeopardy",
+    "board": [
+      {
+        "category": "WONDERS OF THE WORLD",
+        "questions": [
+          {
+            "value": 400,
+            "clue": "Located in Egypt, this ancient wonder is the only one of the original Seven Wonders still standing today.",
+            "answer": "The Great Pyramid of Giza",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "This wonder in India was built by Emperor Shah Jahan as a mausoleum for his wife Mumtaz Mahal.",
+            "answer": "The Taj Mahal",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "The ancient city of Petra, famous for structures carved into rose-colored rock, is located in this modern-day country.",
+            "answer": "Jordan",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "Standing on the Greek island of Rhodes, this ancient wonder was a giant bronze statue of this sun god.",
+            "answer": "Helios",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "Destroyed by earthquakes and finally abandoned in antiquity, this wonder was a massive temple dedicated to the goddess Artemis in this city.",
+            "answer": "Ephesus",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "HOT TAKES",
+        "questions": [
+          {
+            "value": 400,
+            "clue": "Some fans argue this long-running sitcom should have ended several seasons earlier, rather than continuing after Michael Scott left.",
+            "answer": "The Office",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "Many gamers claim this open-world RPG is great despite players spending more time installing mods than actually playing it.",
+            "answer": "Skyrim",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "Some food critics argue this fruit ruins any pizza it touches.",
+            "answer": "Pineapple",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "A common movie hot take is that this Star Wars film is either one of the franchise's best entries or its absolute worst.",
+            "answer": "The Last Jedi",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "One of the internet's most persistent gaming hot takes is that this 2016 Game of the Year winner didn't deserve the award over Doom or Uncharted 4.",
+            "answer": "Overwatch",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "IS IT A MEDICAL CONDITION?",
+        "questions": [
+          {
+            "value": 400,
+            "clue": "This term refers to an irrational fear of long words.",
+            "answer": "Hippopotomonstrosesquippedaliophobia",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "This condition causes sufferers to believe they are secretly a werewolf.",
+            "answer": "Clinical Lycanthropy",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "This syndrome causes people to believe they are dead, missing organs, or no longer exist.",
+            "answer": "Cotard's Syndrome",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "This condition causes people to compulsively collect garden gnomes.",
+            "answer": "Gnomomania",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "This syndrome causes people to believe familiar people have been replaced by identical imposters.",
+            "answer": "Capgras Syndrome",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "BADLY DESCRIBED PLOTS",
+        "questions": [
+          {
+            "value": 400,
+            "clue": "Lunatic enslaves chocolate-making entertainers and slowly kills children in front of their parents.",
+            "answer": "Charlie and the Chocolate Factory",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "Abused orphan drops out of school to kill a man with no nose and accidentally starts a war.",
+            "answer": "Harry Potter and the Deathly Hallows",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "Divorced man discovers he is trans and loses custody of his children.",
+            "answer": "Mrs. Doubtfire",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "Emo teen can't live up to his grandfather's legacy and takes it out on his dad.",
+            "answer": "Star Wars: The Force Awakens",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "Invite your friends to your secret fantasy kingdom or they'll drown.",
+            "answer": "Bridge to Terabithia",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "POP CULTURE",
+        "questions": [
+          {
+            "value": 400,
+            "clue": "This singer's Eras Tour became the first tour in history to gross over $1 billion.",
+            "answer": "Taylor Swift",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "This Netflix series introduced millions of viewers to a deadly game of Red Light, Green Light.",
+            "answer": "Squid Game",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "The phrase \"Netflix and chill\" originally referred to watching this type of media.",
+            "answer": "Movies/TV shows",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "This social media app, originally launched internationally by ByteDance in 2017, became the world's most downloaded app during the COVID-19 pandemic.",
+            "answer": "TikTok",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "This Netflix show featured the main character dancing to \"Goo Goo Muck.\"",
+            "answer": "Wednesday",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "LONG WORDS",
+        "questions": [
+          {
+            "value": 400,
+            "clue": "Mary Poppins famously sings this made-up 34-letter word.",
+            "answer": "Supercalifragilisticexpialidocious",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "This 28-letter word is the fear of long words.",
+            "answer": "Hippopotomonstrosesquippedaliophobia",
+            "used": false
+          },
+          {
+            "value": 1200,
+            "clue": "This 45-letter lung disease is often cited as one of the longest words in major dictionaries.",
+            "answer": "Pneumonoultramicroscopicsilicovolcanoconiosis",
+            "used": false
+          },
+          {
+            "value": 1600,
+            "clue": "This protein's full chemical name contains nearly 190,000 letters, making it the longest word ever recorded.",
+            "answer": "Titin",
+            "used": false
+          },
+          {
+            "value": 2000,
+            "clue": "This 29-letter word means the act of considering something worthless.",
+            "answer": "Floccinaucinihilipilification",
+            "used": false
+          }
+        ]
+      }
+    ]
   }
 ]
