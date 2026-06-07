@@ -1,214 +1,179 @@
 [
   {
-    "id": "9580-J",
-    "name": "Show #9580 - 2026-06-05 - Jeopardy",
+    "id": "POP-J",
+    "name": "Pop Culture Jeopardy! Round",
     "board": [
       {
-        "category": "THAT'S EGREGIOUS!",
+        "category": "MARVEL MOVIES",
         "questions": [
           {
             "value": 200,
-            "clue": "Archaically, it meant fiery hot; NBA-ically, it is a particularly hard type of foul, 1 or 2",
-            "answer": "flagrant",
+            "clue": "This hero's first MCU film debuted in 2008 and launched the franchise.",
+            "answer": "Iron Man",
             "used": false
           },
           {
             "value": 400,
-            "clue": "\"Supercalifragilistic-expialidocious! even though the sound of it is something quite\" this; horrifying! but so catchy!",
-            "answer": "atrocious",
+            "clue": "This actor played both Human Torch in Fantastic Four and Captain America in the MCU.",
+            "answer": "Chris Evans",
             "used": false
           },
           {
             "value": 600,
-            "clue": "It's radical! It's maximum! Take it to the this, using 3 E's as its sole vowel!",
-            "answer": "extreme",
-            "used": false
-          },
-          {
-            "value": 1000,
-            "clue": "It's also abominable! This \"H\" word can be found before \"crime\" in Black's Law Dictionary",
-            "answer": "heinous",
-            "used": false
-          },
-          {
-            "value": 2400,
-            "clue": "Unbearable,like the acts that in part asked for restitution for the Boston Tea Party",
-            "answer": "intolerable",
-            "used": false
-          }
-        ]
-      },
-      {
-        "category": "FOR A GOOD TIME CALL",
-        "questions": [
-          {
-            "value": 200,
-            "clue": "+49 89 233-96500 is tourist info for Munich, handy if you're heading to the September 19 opening day of this festival",
-            "answer": "Oktoberfest",
-            "used": false
-          },
-          {
-            "value": 400,
-            "clue": "808-667-1998 is the number for Maui's Old Lahaina this show, back strong after the tragic 2023 fires",
-            "answer": "a luau",
-            "used": false
-          },
-          {
-            "value": 600,
-            "clue": "Call 207-879-9500 for tix to see the Portland (Maine) Sea Dogs, a minor-league affiliate of this nearest MLB franchise",
-            "answer": "the Boston Red Sox",
+            "clue": "Before becoming Vision, this AI assistant was voiced by Paul Bettany.",
+            "answer": "J.A.R.V.I.S.",
             "used": false
           },
           {
             "value": 800,
-            "clue": "Want to hike California's John Muir wilderness with this club? Call 415-977-5522",
-            "answer": "the Sierra Club",
+            "clue": "This MCU film was the first superhero movie nominated for the Academy Award for Best Picture.",
+            "answer": "Black Panther",
             "used": false
           },
           {
             "value": 1000,
-            "clue": "612-377-2224 is the box office for the Guthrie Theater overlooking the Mississippi in this beautiful Upper Midwest city",
-            "answer": "Minneapolis",
+            "clue": "This actor portrayed the villain Mysterio in Spider-Man: Far From Home.",
+            "answer": "Jake Gyllenhaal",
             "used": false
           }
         ]
       },
       {
-        "category": "TV, RECENTLY",
+        "category": "TV CATCHPHRASES",
         "questions": [
           {
             "value": 200,
-            "clue": "In 2025, 23 women hit the playing field with 66-year-old ex-NFLer Mel Owens , who suited up in this title role",
-            "answer": "the Golden Bachelor",
+            "clue": "\"How you doin'?\" is the signature pickup line of this sitcom character.",
+            "answer": "Joey Tribbiani",
             "used": false
           },
           {
             "value": 400,
-            "clue": "Going down in a plane crash was only the start of Xavier Collins' Season 2 troubles; just another day in this Hulu drama",
-            "answer": "Paradise",
+            "clue": "\"Bazinga!\" was made famous by this character.",
+            "answer": "Sheldon Cooper",
             "used": false
           },
           {
             "value": 600,
-            "clue": "This HBO series finally returned for Season 3 in 2026, featuring Eric Dane's last role, playing Jacob Elordi's dad",
-            "answer": "Euphoria",
+            "clue": "\"Cool. Cool cool cool.\" is repeatedly said by this Brooklyn Nine-Nine character.",
+            "answer": "Jake Peralta",
             "used": false
           },
           {
             "value": 800,
-            "clue": "Breaking news... well, at least recent news: In 2024 this actress was up for an Emmy for playing Alex Levy on \"The Morning Show\"",
-            "answer": "Aniston",
+            "clue": "\"Suit up!\" is the catchphrase of this character from How I Met Your Mother.",
+            "answer": "Barney Stinson",
             "used": false
           },
           {
             "value": 1000,
-            "clue": "To exclude unwanted events from his documentary, this Tracy Morgan guy has his phone play The Beatles because that ain't in the budget",
-            "answer": "Reggie Dinkins",
+            "clue": "This The Office regional manager said, \"I'm not superstitious, but I am a little stitious.\"",
+            "answer": "Michael Scott",
             "used": false
           }
         ]
       },
       {
-        "category": "THE KING IS UNWELL",
+        "category": "VIDEO GAMES",
         "questions": [
           {
             "value": 200,
-            "clue": "Kalakaua, king of these islands, died of kidney disease in San Francisco in 1891",
-            "answer": "Hawaii",
+            "clue": "This plumber's first appearance was in Donkey Kong.",
+            "answer": "Mario",
             "used": false
           },
           {
             "value": 400,
-            "clue": "The Hapsburg Dynasty in this country ended in 1700 with the death of Charles II, whose ill health has been linked to inbreeding",
+            "clue": "Released in 2011, this game begins with a prisoner riding in a cart toward execution.",
+            "answer": "Skyrim",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "The Master Sword is most closely associated with this hero.",
+            "answer": "Link",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "In Pokémon Red and Blue, this city contains the eighth Gym.",
+            "answer": "Viridian City",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "In The Legend of Zelda: Ocarina of Time, this song allows Link to travel instantly to the Temple of Time.",
+            "answer": "Prelude of Light",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "DISNEY SONGS",
+        "questions": [
+          {
+            "value": 200,
+            "clue": "\"Let It Go\" comes from this Disney film.",
+            "answer": "Frozen",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "\"A Whole New World\" is sung by these two characters.",
+            "answer": "Aladdin and Jasmine",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "\"I'll Make a Man Out of You\" appears in this Disney film.",
+            "answer": "Mulan",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "This villain sings \"Be Prepared.\"",
+            "answer": "Scar",
+            "used": false
+          },
+          {
+            "value": 1000,
+            "clue": "This Disney song won the Academy Award for Best Original Song in 1995.",
+            "answer": "Colors of the Wind",
+            "used": false
+          }
+        ]
+      },
+      {
+        "category": "INTERNET CULTURE",
+        "questions": [
+          {
+            "value": 200,
+            "clue": "This image format is commonly used for memes and supports animation.",
+            "answer": "GIF",
+            "used": false
+          },
+          {
+            "value": 400,
+            "clue": "The Rickroll prank typically redirects people to this song.",
+            "answer": "Never Gonna Give You Up",
+            "used": false
+          },
+          {
+            "value": 600,
+            "clue": "The phrase \"Press F to pay respects\" originated from this video game franchise.",
+            "answer": "Call of Duty",
+            "used": false
+          },
+          {
+            "value": 800,
+            "clue": "The Distracted Boyfriend meme originated from a stock photo taken in this country.",
             "answer": "Spain",
             "used": false
           },
           {
-            "value": 600,
-            "clue": "New research on this French king's death in 1715 after a very long reign says it wasn't bacterial gangrene but a fungal infection",
-            "answer": "Louis XIV",
-            "used": false
-          },
-          {
-            "value": 800,
-            "clue": "A WikiLeaks cable revealed that King Bhumibol of this country suffered from depression, a clinical symptom of Parkinson's disease",
-            "answer": "Thailand",
-            "used": false
-          },
-          {
             "value": 1000,
-            "clue": "England's Henry V didn't die in battle but of this awful intestinal disease also known as the bloody flux",
-            "answer": "dysentery",
-            "used": false
-          }
-        ]
-      },
-      {
-        "category": "THAT SHELLFISH",
-        "questions": [
-          {
-            "value": 200,
-            "clue": "People love to fry up these crabs named for the fact that they just molted",
-            "answer": "soft-shell crabs",
-            "used": false
-          },
-          {
-            "value": 400,
-            "clue": "Amandes de mer in French, these little bivalves that are great in pasta may just warm a part of your heart",
-            "answer": "cockles",
-            "used": false
-          },
-          {
-            "value": 600,
-            "clue": "Angels on horseback is a classic recipe featuring these shellfish wrapped in bacon & broiled",
-            "answer": "oysters",
-            "used": false
-          },
-          {
-            "value": 800,
-            "clue": "If you're feeling lucky, take a gamble on this alliterative dish, a New England classic",
-            "answer": "clams casino",
-            "used": false
-          },
-          {
-            "value": 1000,
-            "clue": "A great way to prepare lobster is this one, also a month of the French Revolutionary calendar",
-            "answer": "Thermidor",
-            "used": false
-          }
-        ]
-      },
-      {
-        "category": "DIDN'T AGREE WITH HIM",
-        "questions": [
-          {
-            "value": 200,
-            "clue": "Sir Arthur Eddington with Subrahmanyan Chandrasekhar : That these ultimately can collapse into new, very dense objects",
-            "answer": "stars",
-            "used": false
-          },
-          {
-            "value": 400,
-            "clue": "Edmund Burke: With this man who cheered the French Revolution; a book by Yuval Levin says their debate began left vs. right",
-            "answer": "Thomas Paine",
-            "used": false
-          },
-          {
-            "value": 600,
-            "clue": "Historian Fritz Fischer: With the view associated with P.M. Lloyd George that the major powers \"slithered\" into this war",
-            "answer": "World War I",
-            "used": false
-          },
-          {
-            "value": 800,
-            "clue": "Frederick Crews: In many books, with this Austrian, for example with his treatment of his patient Dora",
-            "answer": "Sigmund Freud",
-            "used": false
-          },
-          {
-            "value": 1000,
-            "clue": "William F. Buckley Jr. about pretty much everything with this writer in 1968 televised debates",
-            "answer": "Gore Vidal",
+            "clue": "The term copypasta comes from a modification of these two computer actions.",
+            "answer": "Copy and Paste",
             "used": false
           }
         ]
@@ -216,215 +181,180 @@
     ]
   },
   {
-    "id": "9580-DJ",
-    "name": "Show #9580 - 2026-06-05 - Double Jeopardy",
+    "id": "POP-DJ",
+    "name": "Pop Culture Jeopardy! Double Jeopardy",
     "board": [
       {
-        "category": "YOU IN DANGER, LITERARY GIRL",
+        "category": "SITCOMS",
         "questions": [
           {
             "value": 400,
-            "clue": "It's both the color & then her name after she chews some gum & Mrs. Beauregarde yells, \"You're turning\" this, this!",
-            "answer": "violet, Violet",
+            "clue": "Ross works as this profession in Friends.",
+            "answer": "Paleontologist",
             "used": false
           },
           {
             "value": 800,
-            "clue": "In \"The Hunchback of Notre Dame\", she \"was sleeping at the moment when the outcasts assailed the church\"",
-            "answer": "Esmeralda",
+            "clue": "This character says \"Pivot!\" while moving a couch.",
+            "answer": "Ross Geller",
             "used": false
           },
           {
             "value": 1200,
-            "clue": "This teen detective dealt with \"The Invisible Intruder\" & \"The Mysterious Mannequin\", both of which actually do sound terrifying",
-            "answer": "Nancy Drew",
+            "clue": "This Parks and Recreation character is known for her love of waffles.",
+            "answer": "Leslie Knope",
             "used": false
           },
           {
             "value": 1600,
-            "clue": "\"Effie Trinket... smoothes the slip of paper, and reads out the name in a clear voice. And it's not me. It's\" this character",
-            "answer": "Prim Everdeen",
+            "clue": "This Community character frequently shouts \"Troy and Abed in the Morning!\" with Troy.",
+            "answer": "Abed Nadir",
             "used": false
           },
           {
             "value": 2000,
-            "clue": "After she sets Thornfield ablaze, it doesn't end well for Mr. Rochester's unstable first wife, named this",
-            "answer": "Bertha (Mason)",
+            "clue": "This fictional paper company is the setting for The Office.",
+            "answer": "Dunder Mifflin",
             "used": false
           }
         ]
       },
       {
-        "category": "COINING SOME WORDS",
+        "category": "HARRY POTTER",
         "questions": [
           {
             "value": 400,
-            "clue": "On the reverse of a 2026 nickel, this name appears directly under a certain building",
-            "answer": "Monticello",
+            "clue": "This Hogwarts founder valued intelligence above all else.",
+            "answer": "Rowena Ravenclaw",
             "used": false
           },
           {
             "value": 800,
-            "clue": "The name of this institution that issues British paper money was on a 1994 2-pound coin marking its 300th anniversary",
-            "answer": "the Bank of England",
+            "clue": "This spell summons a Patronus.",
+            "answer": "Expecto Patronum",
             "used": false
           },
           {
             "value": 1200,
-            "clue": "Oui, many Canadian maple leaf bullion coins proclaim they're both fine silver & this PUR",
-            "answer": "argent",
+            "clue": "This was the name of Voldemort's snake.",
+            "answer": "Nagini",
             "used": false
           },
           {
             "value": 1600,
-            "clue": "Its 2-euro coin was designed by Raimo Heino & includes the word \"suomi\" (the country's name in its own language)",
-            "answer": "Finland",
+            "clue": "This Horcrux was destroyed with a basilisk fang in the Chamber of Secrets.",
+            "answer": "Tom Riddle's Diary",
             "used": false
           },
           {
             "value": 2000,
-            "clue": "On a 1995 German coin, this man's name appears above a big \"X\" & 2 images of a hand, one showing just the bone",
-            "answer": "Röntgen",
+            "clue": "The only known spell to repair a broken wand is this one.",
+            "answer": "Reparo",
             "used": false
           }
         ]
       },
       {
-        "category": "IS THERE A DOC-UMENTARY IN THE HOUSE?",
+        "category": "MUSIC",
         "questions": [
           {
             "value": 400,
-            "clue": "This American doc who gave us a vaccine for polio was the focus of \"The Shot Felt 'Round the World\"",
-            "answer": "(Jonas) Salk",
+            "clue": "This artist's 1989 album includes Blank Space.",
+            "answer": "Taylor Swift",
             "used": false
           },
           {
             "value": 800,
-            "clue": "Ken Burns directed a PBS documentary about this place begun by a British immigrant in Rochester, Minnesota in the 19th century",
-            "answer": "Mayo Clinic",
+            "clue": "This band released Bohemian Rhapsody.",
+            "answer": "Queen",
             "used": false
           },
           {
             "value": 1200,
-            "clue": "\"Hero with a Thousand Faces\" documents the doctors & nurses struggling in Africa with this 5-letter hemorrhagic fever",
-            "answer": "Ebola",
+            "clue": "This singer performed the halftime show at Super Bowl LVII.",
+            "answer": "Rihanna",
             "used": false
           },
           {
             "value": 1600,
-            "clue": "An HBO documentary on this man, aka Doctor Death, showed his life after prison, including a 2008 Congressional run",
-            "answer": "Kevorkian",
+            "clue": "This artist became the first to occupy the entire Billboard Hot 100 Top 10 simultaneously.",
+            "answer": "Taylor Swift",
             "used": false
           },
           {
             "value": 2000,
-            "clue": "This doctor who wrote \"Awakenings\" was given the documentary treatment in one subtitled \"His Own Life\"",
-            "answer": "Oliver Sacks",
+            "clue": "This artist won Album of the Year at the Grammys for Golden Hour.",
+            "answer": "Kacey Musgraves",
             "used": false
           }
         ]
       },
       {
-        "category": "\"H\"ODGEPODGE",
+        "category": "REALITY TV",
         "questions": [
           {
             "value": 400,
-            "clue": "1912 Nobel Peace Prize winner Elihu Root helped originate the permanent Court of Intl. Justice in this Dutch city",
-            "answer": "The Hague",
+            "clue": "This chef hosts Hell's Kitchen.",
+            "answer": "Gordon Ramsay",
             "used": false
           },
           {
             "value": 800,
-            "clue": "Hamlet tells this friend, \"There are more things in heaven and earth... than are dreamt of in your philosophy\"",
-            "answer": "Horatio",
+            "clue": "This reality show features contestants stranded in remote locations competing for $1 million.",
+            "answer": "Survivor",
             "used": false
           },
           {
             "value": 1200,
-            "clue": "This German painter came from a family of artists; you hear more about his dad the Elder than his Uncle Sigmund",
-            "answer": "Holbein",
+            "clue": "This dating reality show gives out roses each week.",
+            "answer": "The Bachelor",
             "used": false
           },
           {
             "value": 1600,
-            "clue": "Uterine prolapse & fibroids are reasons for this surgery; a total one does not include removal of the ovaries",
-            "answer": "a hysterectomy",
+            "clue": "This drag competition series is hosted by RuPaul.",
+            "answer": "RuPaul's Drag Race",
             "used": false
           },
           {
             "value": 2000,
-            "clue": "The raven & eagle represent two groups in the social hierarchy of this indigenous people of the Pacific Northwest Coast",
-            "answer": "the Haida",
+            "clue": "The first season of The Amazing Race was won by a team with this relationship.",
+            "answer": "Friends",
             "used": false
           }
         ]
       },
       {
-        "category": "WORLD CITIES",
+        "category": "MOVIE QUOTES",
         "questions": [
           {
             "value": 400,
-            "clue": "This was the name of St. Petersburg from 1924 to 1991",
-            "answer": "Leningrad",
+            "clue": "\"May the Force be with you\" comes from this franchise.",
+            "answer": "Star Wars",
             "used": false
           },
           {
             "value": 800,
-            "clue": "Built for a 1929 intl. exhibition, the Palau Nacional in this city is now home to the National Art Museum of Catalonia",
-            "answer": "Barcelona",
-            "used": false
-          },
-          {
-            "value": 1600,
-            "clue": "This Kenyan city situated partly on an island in the Indian Ocean was once the capital of British East Africa",
-            "answer": "Mombasa",
-            "used": false
-          },
-          {
-            "value": 2000,
-            "clue": "This Middle Eastern city, alphabetically first in national capitals, was once a pearl-fishing port",
-            "answer": "Abu Dhabi",
-            "used": false
-          },
-          {
-            "value": 2000,
-            "clue": "This capital of India's Tamil Nadu state was formerly called Madras",
-            "answer": "Chennai",
-            "used": false
-          }
-        ]
-      },
-      {
-        "category": "BACK-FORMATIONS",
-        "questions": [
-          {
-            "value": 400,
-            "clue": "Take a word that many are about horror movies or blood, drop \"ish\" & you get this, meaning a qualm",
-            "answer": "squeam",
-            "used": false
-          },
-          {
-            "value": 800,
-            "clue": "This verb that never was a verb before comes from a type of thief who enters a dwelling",
-            "answer": "burgling",
+            "clue": "\"You can't handle the truth!\" is from this film.",
+            "answer": "A Few Good Men",
             "used": false
           },
           {
             "value": 1200,
-            "clue": "Back-forming from a majestic type of event, this verb sometimes replaces \"to crown\"",
-            "answer": "coronate",
+            "clue": "\"Life finds a way\" was spoken by this character in Jurassic Park.",
+            "answer": "Dr. Ian Malcolm",
             "used": false
           },
           {
             "value": 1600,
-            "clue": "As a lover of beauty, Oscar Wilde was called this, back-formed from a word one syllable longer",
-            "answer": "an aesthete",
+            "clue": "\"As if!\" is the iconic line from this 1995 teen comedy.",
+            "answer": "Clueless",
             "used": false
           },
           {
             "value": 2000,
-            "clue": "Disliked by some as business jargon, this verb is back-formed from what Valmont & the Marquise de Merteuil had together",
-            "answer": "liaise",
+            "clue": "This quote concludes Some Like It Hot: \"Nobody's...\"",
+            "answer": "Perfect",
             "used": false
           }
         ]
