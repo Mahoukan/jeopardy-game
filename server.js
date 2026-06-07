@@ -52,6 +52,7 @@ function cleanBoard(board) {
       clue: question.clue.trim(),
       answer: question.answer.trim(),
       used: false,
+      dailyDouble: Boolean(question.dailyDouble),
     })),
   }));
 }
@@ -100,6 +101,10 @@ function sendGameUpdate(code) {
     board: game.board,
     players: game.players,
     scores: game.scores,
+    dailyDoubleMode: game.dailyDoubleMode,
+    dailyDoublePlayerId: game.dailyDoublePlayerId,
+    dailyDoubleWager: game.dailyDoubleWager,
+    dailyDoubleWagerSet: game.dailyDoubleWagerSet,
     currentTurnIndex: game.currentTurnIndex,
     currentQuestion: game.currentQuestion,
     buzzedPlayerId: game.buzzedPlayerId,
@@ -225,6 +230,10 @@ io.on("connection", (socket) => {
       finalRevealed: false,
       finalWagers: {},
       finalAnswers: {},
+      dailyDoubleMode: false,
+      dailyDoublePlayerId: null,
+      dailyDoubleWager: null,
+      dailyDoubleWagerSet: false,
 
       board: isFullGame ? cleanBoard(board.jeopardy.board) : cleanBoard(board),
       players: [],
@@ -312,7 +321,24 @@ io.on("connection", (socket) => {
       clue: question.clue,
       answer: question.answer,
       value: question.value,
+      dailyDouble: question.dailyDouble || false,
     };
+
+    if (question.dailyDouble) {
+      const currentPlayer = game.players[game.currentTurnIndex];
+
+      game.dailyDoubleMode = true;
+      game.dailyDoublePlayerId = currentPlayer ? currentPlayer.id : null;
+      game.dailyDoubleWager = null;
+      game.dailyDoubleWagerSet = false;
+
+      game.buzzedPlayerId = game.dailyDoublePlayerId;
+      game.buzzUnlocksAt = null;
+      game.answerEndsAt = null;
+
+      sendGameUpdate(code);
+      return;
+    }
 
     game.buzzUnlocksAt = Date.now() + BUZZ_LOCKOUT_MS;
 
@@ -379,6 +405,10 @@ io.on("connection", (socket) => {
     }
     game.answerEndsAt = null;
     game.buzzUnlocksAt = null;
+    game.dailyDoubleMode = false;
+    game.dailyDoublePlayerId = null;
+    game.dailyDoubleWager = null;
+    game.dailyDoubleWagerSet = false;
 
     sendGameUpdate(code);
   });
@@ -396,6 +426,10 @@ io.on("connection", (socket) => {
       (game.scores[game.buzzedPlayerId] || 0) - game.currentQuestion.value;
     game.buzzedPlayerId = null;
     game.answerEndsAt = null;
+    game.dailyDoubleMode = false;
+    game.dailyDoublePlayerId = null;
+    game.dailyDoubleWager = null;
+    game.dailyDoubleWagerSet = false;
     sendGameUpdate(code);
   });
 
@@ -436,6 +470,11 @@ io.on("connection", (socket) => {
     if (game.players.length > 0) {
       game.currentTurnIndex = (game.currentTurnIndex + 1) % game.players.length;
     }
+
+    game.dailyDoubleMode = false;
+    game.dailyDoublePlayerId = null;
+    game.dailyDoubleWager = null;
+    game.dailyDoubleWagerSet = false;
 
     sendGameUpdate(code);
   });
@@ -586,6 +625,10 @@ io.on("connection", (socket) => {
       finalMarked: snapshot.finalMarked || {},
       finalJeopardy: snapshot.finalJeopardy || null,
       currentRound: snapshot.currentRound || "jeopardy",
+      dailyDoubleMode: snapshot.dailyDoubleMode || false,
+      dailyDoublePlayerId: snapshot.dailyDoublePlayerId || null,
+      dailyDoubleWager: snapshot.dailyDoubleWager || null,
+      dailyDoubleWagerSet: snapshot.dailyDoubleWagerSet || false,
     };
 
     socket.join(snapshot.code);
@@ -593,6 +636,40 @@ io.on("connection", (socket) => {
     sendGameUpdate(snapshot.code);
 
     socket.emit("successMessage", "Game restored.");
+  });
+
+  socket.on("setDailyDoubleWager", ({ code, wager }) => {
+    if (!socket.data.isAdmin) {
+      socket.emit("errorMessage", "Admin login required.");
+      return;
+    }
+
+    const game = games[code];
+    if (!game || !game.dailyDoubleMode || !game.currentQuestion) return;
+
+    const numericWager = Number(wager);
+    const playerScore = game.scores[game.dailyDoublePlayerId] || 0;
+
+    const maxWager = Math.max(
+      playerScore,
+      game.currentRound === "doubleJeopardy" ? 2000 : 1000,
+    );
+
+    if (numericWager > maxWager) {
+      socket.emit("errorMessage", `Maximum wager is ${maxWager}.`);
+      return;
+    }
+
+    if (!Number.isFinite(numericWager) || numericWager < 0) {
+      socket.emit("errorMessage", "Invalid wager.");
+      return;
+    }
+
+    game.dailyDoubleWager = numericWager;
+    game.dailyDoubleWagerSet = true;
+    game.currentQuestion.value = numericWager;
+
+    sendGameUpdate(code);
   });
 });
 

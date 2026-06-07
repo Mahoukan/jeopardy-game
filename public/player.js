@@ -87,8 +87,7 @@ function renderPlayerInfo(game) {
 
   const currentPlayer = game.players[game.currentTurnIndex];
 
-  playerInfo.textContent =
-    `${playerName} • Game ${game.code} • Turn: ${currentPlayer?.name ?? "-"}`;
+  playerInfo.textContent = `${playerName} • Game ${game.code} • Turn: ${currentPlayer?.name ?? "-"}`;
 
   if (turnText) {
     turnText.textContent = currentPlayer
@@ -147,9 +146,9 @@ function renderPlayers(players, scores, currentTurnIndex) {
 
 function renderQuestion(game) {
   if (game.finalMode) {
-  const final = game.finalJeopardy;
+    const final = game.finalJeopardy;
 
-  questionBox.innerHTML = `
+    questionBox.innerHTML = `
     <h2>Final Jeopardy</h2>
     <p><strong>Category:</strong> ${final.category}</p>
 
@@ -167,36 +166,62 @@ function renderQuestion(game) {
     }
   `;
 
-  if (buzzBtn) buzzBtn.disabled = true;
+    if (buzzBtn) buzzBtn.disabled = true;
 
-  const wagerBtn = document.getElementById("submitFinalWagerBtn");
-  if (wagerBtn) {
-    wagerBtn.addEventListener("click", () => {
-      const wager = document.getElementById("finalWagerInput").value;
-      socket.emit("submitFinalWager", {
-        code: currentCode,
-        wager,
+    const wagerBtn = document.getElementById("submitFinalWagerBtn");
+    if (wagerBtn) {
+      wagerBtn.addEventListener("click", () => {
+        const wager = document.getElementById("finalWagerInput").value;
+        socket.emit("submitFinalWager", {
+          code: currentCode,
+          wager,
+        });
+        wagerBtn.disabled = true;
+        wagerBtn.textContent = "Wager Submitted";
       });
-      wagerBtn.disabled = true;
-      wagerBtn.textContent = "Wager Submitted";
-    });
-  }
+    }
 
-  const answerBtn = document.getElementById("submitFinalAnswerBtn");
-  if (answerBtn) {
-    answerBtn.addEventListener("click", () => {
-      const answer = document.getElementById("finalAnswerInput").value;
-      socket.emit("submitFinalAnswer", {
-        code: currentCode,
-        answer,
+    const answerBtn = document.getElementById("submitFinalAnswerBtn");
+    if (answerBtn) {
+      answerBtn.addEventListener("click", () => {
+        const answer = document.getElementById("finalAnswerInput").value;
+        socket.emit("submitFinalAnswer", {
+          code: currentCode,
+          answer,
+        });
+        answerBtn.disabled = true;
+        answerBtn.textContent = "Answer Submitted";
       });
-      answerBtn.disabled = true;
-      answerBtn.textContent = "Answer Submitted";
-    });
-  }
+    }
 
-  return;
-}
+    return;
+  }
+  if (game.dailyDoubleMode) {
+    const ddPlayer = game.players.find(
+      (p) => p.id === game.dailyDoublePlayerId,
+    );
+    const isMe = ddPlayer && ddPlayer.id === playerId;
+
+    questionBox.innerHTML = `
+    <h2>Daily Double!</h2>
+    <p><strong>Player:</strong> ${ddPlayer ? ddPlayer.name : "No player selected"}</p>
+    <p><strong>Wager:</strong> ${
+      game.dailyDoubleWagerSet ? game.dailyDoubleWager : "Waiting for wager..."
+    }</p>
+    ${
+      game.dailyDoubleWagerSet
+        ? `<p>${game.currentQuestion.clue}</p>`
+        : `<p>Waiting for the host to set the wager...</p>`
+    }
+    <p>${isMe ? "You answer this question." : "Only the selected player answers."}</p>
+  `;
+
+    if (buzzBtn) {
+      buzzBtn.disabled = true;
+    }
+
+    return;
+  }
   if (!questionBox) return;
 
   if (!game.currentQuestion) {

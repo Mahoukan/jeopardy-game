@@ -1,6 +1,11 @@
 const socket = io();
-
+window.socket = socket;
 let selectedGame = null;
+
+const dailyDoubleWagerInput = document.getElementById("dailyDoubleWagerInput");
+const setDailyDoubleWagerBtn = document.getElementById(
+  "setDailyDoubleWagerBtn",
+);
 
 const startFinalBtn = document.getElementById("startFinalBtn");
 const revealFinalBtn = document.getElementById("revealFinalBtn");
@@ -242,6 +247,33 @@ function renderQuestion(game) {
     questionBox.innerHTML = "No question selected.";
     return;
   }
+  if (game.dailyDoubleMode) {
+    const ddPlayer = game.players.find(
+      (p) => p.id === game.dailyDoublePlayerId,
+    );
+
+    questionBox.innerHTML = `
+    <h2>Daily Double!</h2>
+    <p><strong>Player:</strong> ${
+      ddPlayer ? escapeHtml(ddPlayer.name) : "No player selected"
+    }</p>
+    <p><strong>Original value:</strong> ${game.currentQuestion.value}</p>
+    <p><strong>Wager:</strong> ${
+      game.dailyDoubleWagerSet ? game.dailyDoubleWager : "Not set"
+    }</p>
+    ${
+      game.dailyDoubleWagerSet
+        ? `
+          <hr>
+          <p><strong>Clue:</strong> ${escapeHtml(game.currentQuestion.clue)}</p>
+          <p><strong>Answer:</strong> ${escapeHtml(game.currentQuestion.answer)}</p>
+        `
+        : `<p>Enter a wager, then click Set Daily Double Wager.</p>`
+    }
+  `;
+    return;
+  }
+
   const answerTimeLeft = game.answerTimeLeft;
   const lockoutLeft = game.buzzLockoutLeft || 0;
   const buzzLocked = lockoutLeft > 0;
@@ -373,4 +405,16 @@ startFinalBtn.addEventListener("click", () => {
 
 revealFinalBtn.addEventListener("click", () => {
   socket.emit("revealFinalClue", { code: currentCode });
+});
+
+setDailyDoubleWagerBtn.addEventListener("click", () => {
+  if (!currentCode) {
+    alert("Create or rejoin a game first.");
+    return;
+  }
+
+  socket.emit("setDailyDoubleWager", {
+    code: currentCode,
+    wager: dailyDoubleWagerInput.value,
+  });
 });
