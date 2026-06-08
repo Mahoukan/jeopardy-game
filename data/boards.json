@@ -1,6 +1,6 @@
 [
   {
-    "id": "POP-GAME-1",
+    "id": "POP-GAME-3",
     "name": "Pop Culture Jeopardy!",
     "jeopardy": {
       "board": [
@@ -50,561 +50,182 @@
               "media": {
                 "type": "image",
                 "url": "https://quizizz.com/_optimized/_media/quizzes/f00a56f7-05e6-4980-812e-fd60321ce674.webp"
-              }
-            }
-          ]
-        },
-        {
-          "category": "TV CATCHPHRASES",
-          "questions": [
-            {
-              "value": 200,
-              "clue": "\"How you doin'?\" is the signature pickup line of this sitcom character.",
-              "answer": "Joey Tribbiani",
-              "used": false
-            },
-            {
-              "value": 400,
-              "clue": "\"Bazinga!\" was made famous by this character.",
-              "answer": "Sheldon Cooper",
-              "used": false
-            },
-            {
-              "value": 600,
-              "clue": "\"Cool. Cool cool cool.\" is repeatedly said by this Brooklyn Nine-Nine character.",
-              "answer": "Jake Peralta",
-              "used": false
-            },
-            {
-              "value": 800,
-              "clue": "\"Suit up!\" is the catchphrase of this character from How I Met Your Mother.",
-              "answer": "Barney Stinson",
-              "used": false
-            },
-            {
-              "value": 1000,
-              "clue": "This The Office regional manager said, \"I'm not superstitious, but I am a little stitious.\"",
-              "answer": "Michael Scott",
-              "used": false
-            }
-          ]
-        },
-        {
-          "category": "VIDEO GAMES",
-          "questions": [
-            {
-              "value": 200,
-              "clue": "This plumber's first appearance was in Donkey Kong.",
-              "answer": "Mario",
-              "media": {
-                "type": "youtube",
-                "id": "iaoydCd7Fv8",
-                "start": 45
               },
-              "used": false
-            },
-            {
-              "value": 400,
-              "clue": "Released in 2011, this game begins with a prisoner riding in a cart toward execution.",
-              "answer": "Skyrim",
-              "used": false
-            },
-            {
-              "value": 600,
-              "clue": "The Master Sword is most closely associated with this hero.",
-              "answer": "Link",
-              "media": {
-                "type": "image",
-                "url": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/the-legend-of-zelda-breath-of-the-wild-2/e/ee/TotK_MasterSword3.jpg?width=1280"
-              },
-              "used": false
-            },
-            {
-              "value": 800,
-              "clue": "In Pokémon Red and Blue, this city contains the eighth Gym.",
-              "answer": "Viridian City",
-              "used": false,
               "dailyDouble": true
-            },
-            {
-              "value": 1000,
-              "clue": "In The Legend of Zelda: Ocarina of Time, this song allows Link to travel instantly to the Temple of Time.",
-              "answer": "Prelude of Light",
-              "used": false
             }
           ]
         },
         {
-          "category": "DISNEY SONGS",
+          "category": "NAME THE FANDOM",
           "questions": [
             {
               "value": 200,
-              "clue": "\"Let It Go\" comes from this Disney film.",
-              "answer": "Frozen",
+              "clue": "SW_FT_ES",
+              "answer": "Swifties",
               "used": false
             },
             {
               "value": 400,
-              "clue": "\"A Whole New World\" is sung by these two characters.",
-              "answer": "Aladdin and Jasmine",
+              "clue": "P_TT_RH_ADS",
+              "answer": "Potterheads",
               "used": false
             },
             {
               "value": 600,
-              "clue": "\"I'll Make a Man Out of You\" appears in this Disney film.",
-              "answer": "Mulan",
+              "clue": "WH_VI_NS",
+              "answer": "Whovians",
               "used": false
             },
             {
               "value": 800,
-              "clue": "This villain sings \"Be Prepared.\"",
-              "answer": "Scar",
+              "clue": "D_R_CT_ON_RS",
+              "answer": "Directioners",
               "used": false
             },
             {
               "value": 1000,
-              "clue": "This Disney song won the Academy Award for Best Original Song in 1995.",
-              "answer": "Colors of the Wind",
+              "clue": "BR_N_ES",
+              "answer": "Bronies",
               "used": false
             }
           ]
         },
         {
-          "category": "INTERNET CULTURE",
+          "category": "HORRIBLE LIFE ADVICE",
           "questions": [
             {
               "value": 200,
-              "clue": "This image format is commonly used for memes and supports animation.",
-              "answer": "GIF",
+              "clue": "If a magical ring starts talking to you, keep carrying it for several thousand kilometres.",
+              "answer": "The Lord of the Rings",
               "used": false
             },
             {
               "value": 400,
-              "clue": "The Rickroll prank typically redirects people to this song.",
-              "answer": "Never Gonna Give You Up",
-              "used": false
-            },
-            {
-              "value": 600,
-              "clue": "The phrase \"Press F to pay respects\" originated from this video game franchise.",
-              "answer": "Call of Duty",
-              "used": false
-            },
-            {
-              "value": 800,
-              "clue": "The Distracted Boyfriend meme originated from a stock photo taken in this country.",
-              "answer": "Spain",
-              "used": false
-            },
-            {
-              "value": 1000,
-              "clue": "The term copypasta comes from a modification of these two computer actions.",
-              "answer": "Copy and Paste",
-              "used": false
-            }
-          ]
-        }
-      ]
-    },
-    "doubleJeopardy": {
-      "board": [
-        {
-          "category": "SITCOMS",
-          "questions": [
-            {
-              "value": 400,
-              "clue": "Ross works as this profession in Friends.",
-              "answer": "Paleontologist",
-              "used": false
-            },
-            {
-              "value": 800,
-              "clue": "This character says \"Pivot!\" while moving a couch.",
-              "answer": "Ross Geller",
-              "used": false
-            },
-            {
-              "value": 1200,
-              "clue": "This Parks and Recreation character is known for her love of waffles.",
-              "answer": "Leslie Knope",
-              "used": false
-            },
-            {
-              "value": 1600,
-              "clue": "This Community character frequently shouts \"Troy and Abed in the Morning!\" with Troy.",
-              "answer": "Abed Nadir",
-              "used": false
-            },
-            {
-              "value": 2000,
-              "clue": "This fictional paper company is the setting for The Office.",
-              "answer": "Dunder Mifflin",
-              "used": false
-            }
-          ]
-        },
-        {
-          "category": "HARRY POTTER",
-          "questions": [
-            {
-              "value": 400,
-              "clue": "This Hogwarts founder valued intelligence above all else.",
-              "answer": "Rowena Ravenclaw",
-              "used": false
-            },
-            {
-              "value": 800,
-              "clue": "This spell summons a Patronus.",
-              "answer": "Expecto Patronum",
-              "used": false
-            },
-            {
-              "value": 1200,
-              "clue": "This was the name of Voldemort's snake.",
-              "answer": "Nagini",
-              "used": false
-            },
-            {
-              "value": 1600,
-              "clue": "This Horcrux was destroyed with a basilisk fang in the Chamber of Secrets.",
-              "answer": "Tom Riddle's Diary",
-              "used": false
-            },
-            {
-              "value": 2000,
-              "clue": "The only known spell to repair a broken wand is this one.",
-              "answer": "Reparo",
-              "used": false,
-              "dailyDouble": true
-            }
-          ]
-        },
-        {
-          "category": "MUSIC",
-          "questions": [
-            {
-              "value": 400,
-              "clue": "This artist's 1989 album includes Blank Space.",
-              "answer": "Taylor Swift",
-              "used": false
-            },
-            {
-              "value": 800,
-              "clue": "This band released Bohemian Rhapsody.",
-              "answer": "Queen",
-              "used": false
-            },
-            {
-              "value": 1200,
-              "clue": "This singer performed the halftime show at Super Bowl LVII.",
-              "answer": "Rihanna",
-              "used": false
-            },
-            {
-              "value": 1600,
-              "clue": "This artist became the first to occupy the entire Billboard Hot 100 Top 10 simultaneously.",
-              "answer": "Taylor Swift",
-              "used": false
-            },
-            {
-              "value": 2000,
-              "clue": "This artist won Album of the Year at the Grammys for Golden Hour.",
-              "answer": "Kacey Musgraves",
-              "used": false
-            }
-          ]
-        },
-        {
-          "category": "REALITY TV",
-          "questions": [
-            {
-              "value": 400,
-              "clue": "This chef hosts Hell's Kitchen.",
-              "answer": "Gordon Ramsay",
-              "used": false
-            },
-            {
-              "value": 800,
-              "clue": "This reality show features contestants stranded in remote locations competing for $1 million.",
-              "answer": "Survivor",
-              "used": false
-            },
-            {
-              "value": 1200,
-              "clue": "This dating reality show gives out roses each week.",
-              "answer": "The Bachelor",
-              "used": false,
-              "dailyDouble": true
-            },
-            {
-              "value": 1600,
-              "clue": "This drag competition series is hosted by RuPaul.",
-              "answer": "RuPaul's Drag Race",
-              "used": false
-            },
-            {
-              "value": 2000,
-              "clue": "The first season of The Amazing Race was won by a team with this relationship.",
-              "answer": "Friends",
-              "used": false
-            }
-          ]
-        },
-        {
-          "category": "MOVIE QUOTES",
-          "questions": [
-            {
-              "value": 400,
-              "clue": "\"May the Force be with you\" comes from this franchise.",
+              "clue": "If your boss looks suspiciously evil, help him build a planet-killing superweapon.",
               "answer": "Star Wars",
               "used": false
             },
             {
-              "value": 800,
-              "clue": "\"You can't handle the truth!\" is from this film.",
-              "answer": "A Few Good Men",
-              "used": false
-            },
-            {
-              "value": 1200,
-              "clue": "\"Life finds a way\" was spoken by this character in Jurassic Park.",
-              "answer": "Dr. Ian Malcolm",
-              "used": false
-            },
-            {
-              "value": 1600,
-              "clue": "\"As if!\" is the iconic line from this 1995 teen comedy.",
-              "answer": "Clueless",
-              "used": false
-            },
-            {
-              "value": 2000,
-              "clue": "This quote concludes Some Like It Hot: \"Nobody's...\"",
-              "answer": "Perfect",
-              "used": false
-            }
-          ]
-        }
-      ]
-    },
-    "finalJeopardy": {
-      "category": "POP CULTURE RECORDS",
-      "clue": "This media franchise became the highest-grossing franchise in history despite beginning as a pair of Game Boy games released in 1996.",
-      "answer": "What is Pokémon?"
-    }
-  },
-  {
-    "id": "POP-GAME-3",
-    "name": "Pop Culture Game 3",
-    "jeopardy": {
-      "board": [
-        {
-          "category": "DC COMICS",
-          "questions": [
-            {
-              "value": 200,
-              "clue": "This Gotham City vigilante fights crime with no superpowers, relying instead on gadgets, training, and detective skills.",
-              "answer": "Batman",
-              "used": false
-            },
-            {
-              "value": 400,
-              "clue": "Superman's Fortress of Solitude is traditionally located in this region of the Earth.",
-              "answer": "The Arctic",
-              "used": false
-            },
-            {
               "value": 600,
-              "clue": "This villain was once a psychiatrist at Arkham Asylum before becoming one of Batman's greatest enemies.",
-              "answer": "Scarecrow",
+              "clue": "Trust the strange voice in the walls that nobody else can hear.",
+              "answer": "Harry Potter and the Chamber of Secrets",
               "used": false
             },
             {
               "value": 800,
-              "clue": "This Green Lantern from Earth was chosen to succeed Abin Sur after the Lantern crashed on Earth.",
-              "answer": "Hal Jordan",
+              "clue": "Take legal advice from a rabbit.",
+              "answer": "Alice in Wonderland",
               "used": false
             },
             {
               "value": 1000,
-              "clue": "This Anti-Monitor-created event from 1985 was designed to simplify DC's increasingly complex multiverse.",
-              "answer": "Crisis on Infinite Earths",
+              "clue": "Accept candy from a mysterious recluse you've never met.",
+              "answer": "Charlie and the Chocolate Factory",
               "used": false
             }
           ]
         },
         {
-          "category": "ARTISTS",
+          "category": "WHO'S OLDER?",
           "questions": [
             {
               "value": 200,
-              "clue": "This British artist created the albums ÷ (Divide), × (Multiply), and + (Plus).",
-              "answer": "Ed Sheeran",
+              "clue": "Which is older: YouTube or Minecraft?",
+              "answer": "YouTube",
               "used": false
             },
             {
               "value": 400,
-              "clue": "Born Stefani Germanotta, this artist is known for hits including \"Poker Face\" and \"Bad Romance\".",
-              "answer": "Lady Gaga",
+              "clue": "Which is older: Google or Netflix?",
+              "answer": "Netflix",
               "used": false
             },
             {
               "value": 600,
-              "clue": "This Canadian artist released the albums After Hours and Dawn FM under a stage name.",
-              "answer": "The Weeknd",
+              "clue": "Which is older: The Nintendo Wii or the first iPhone?",
+              "answer": "Nintendo Wii",
               "used": false
             },
             {
               "value": 800,
-              "clue": "This rapper became the first solo artist to win the Pulitzer Prize for Music.",
-              "answer": "Kendrick Lamar",
+              "clue": "Which is older: The Eiffel Tower or Coca-Cola?",
+              "answer": "Coca-Cola",
               "used": false
             },
             {
               "value": 1000,
-              "clue": "Known for her alter ego Sasha Fierce, this artist became the most-awarded artist in Grammy history in 2023.",
-              "answer": "Beyoncé",
+              "clue": "Which is older: Oxford University or the Aztec Empire?",
+              "answer": "Oxford University",
               "used": false
             }
           ]
         },
         {
-          "category": "LAWS",
+          "category": "OUT OF CONTEXT WIKIPEDIA",
           "questions": [
             {
               "value": 200,
-              "clue": "This law states that what goes up must come down due to the force that keeps us on Earth.",
-              "answer": "The Law of Gravity",
+              "clue": "\"After a dispute over pigs, military forces were deployed.\"",
+              "answer": "The Pig War",
               "used": false
             },
             {
               "value": 400,
-              "clue": "This law states that for every action, there is an equal and opposite reaction.",
-              "answer": "Newton's Third Law of Motion",
+              "clue": "\"The birds won.\"",
+              "answer": "The Emu War",
               "used": false
             },
             {
               "value": 600,
-              "clue": "This law states that energy cannot be created or destroyed, only transformed from one form to another.",
-              "answer": "The Law of Conservation of Energy",
+              "clue": "\"Several people danced until they collapsed from exhaustion.\"",
+              "answer": "The Dancing Plague",
               "used": false
             },
             {
               "value": 800,
-              "clue": "This law states that the pressure of a gas decreases as its volume increases, provided temperature remains constant.",
-              "answer": "Boyle's Law",
+              "clue": "\"A flood of molasses moved at approximately 56 km/h.\"",
+              "answer": "The Great Molasses Flood",
               "used": false
             },
             {
               "value": 1000,
-              "clue": "This law states that the current through a conductor is directly proportional to the voltage across it and inversely proportional to its resistance.",
-              "answer": "Ohm's Law",
+              "clue": "\"The attack was ultimately repelled with carrots.\"",
+              "answer": "Napoleon's Rabbit Hunt",
               "used": false
             }
           ]
         },
         {
-          "category": "CARD GAMES",
+          "category": "WAIT, THAT'S THE SAME PERSON?",
           "questions": [
             {
               "value": 200,
-              "clue": "In Poker, this hand ranks above a Full House but below a Royal Flush.",
-              "answer": "Straight Flush",
+              "clue": "Mufasa and Darth Vader.",
+              "answer": "James Earl Jones",
               "used": false
             },
             {
               "value": 400,
-              "clue": "In Pokémon TCG, this card type is attached to Pokémon to allow them to use attacks.",
-              "answer": "Energy Cards",
+              "clue": "Gandalf and Magneto.",
+              "answer": "Ian McKellen",
               "used": false
             },
             {
               "value": 600,
-              "clue": "In Yu-Gi-Oh!, Exodia can instantly win the duel if a player has all five of these in their hand.",
-              "answer": "Pieces of Exodia",
-              "used": false,
-              "dailyDouble": true
-            },
-            {
-              "value": 800,
-              "clue": "In Magic: The Gathering, these cards represent the primary resource used to cast most spells.",
-              "answer": "Lands",
-              "used": false
-            },
-            {
-              "value": 1000,
-              "clue": "In Cards Against Humanity, one player each round serves in this role, selecting the winning response.",
-              "answer": "Card Czar",
-              "used": false
-            }
-          ]
-        },
-        {
-          "category": "WEIRD FOODS",
-          "questions": [
-            {
-              "value": 200,
-              "clue": "This Australian spread made from brewer's yeast is famously loved by locals and hated by many tourists.",
-              "answer": "Vegemite",
-              "used": false
-            },
-            {
-              "value": 400,
-              "clue": "This traditional Scottish dish combines sheep's heart, liver, and lungs with oats and spices inside a sheep's stomach.",
-              "answer": "Haggis",
-              "used": false
-            },
-            {
-              "value": 600,
-              "clue": "Often considered one of the world's smelliest foods, this Swedish delicacy consists of fermented Baltic herring.",
-              "answer": "Surströmming",
+              "clue": "Frodo Baggins and Happy Feet.",
+              "answer": "Elijah Wood",
               "used": false
             },
             {
               "value": 800,
-              "clue": "This Icelandic dish consists of fermented Greenland shark that is buried and cured for months before being eaten.",
-              "answer": "Hákarl",
+              "clue": "Professor X, and the voice of the Poop Emoji in The Emoji Movie.",
+              "answer": "Patrick Stewart",
               "used": false
             },
             {
               "value": 1000,
-              "clue": "This Filipino delicacy is a fertilized duck egg containing a partially developed embryo.",
-              "answer": "Balut",
-              "used": false
-            }
-          ]
-        },
-        {
-          "category": "GENERAL KNOWLEDGE",
-          "questions": [
-            {
-              "value": 200,
-              "clue": "This company created the iPhone.",
-              "answer": "Apple",
-              "used": false
-            },
-            {
-              "value": 400,
-              "clue": "This city is known as the City of Canals.",
-              "answer": "Venice",
-              "used": false
-            },
-            {
-              "value": 600,
-              "clue": "This planet has the most moons in the Solar System.",
-              "answer": "Saturn",
-              "used": false
-            },
-            {
-              "value": 800,
-              "clue": "This Shakespeare play features the characters Rosencrantz and Guildenstern.",
-              "answer": "Hamlet",
-              "used": false
-            },
-            {
-              "value": 1000,
-              "clue": "This scientist's 1905 papers earned the nickname \"Annus Mirabilis\" or \"Miracle Year.\"",
-              "answer": "Albert Einstein",
+              "clue": "Prince George in Blackadder, and the father in Stuart Little.",
+              "answer": "Hugh Laurie",
               "used": false
             }
           ]
@@ -614,223 +235,236 @@
     "doubleJeopardy": {
       "board": [
         {
-          "category": "WONDERS OF THE WORLD",
+          "category": "MOVIES IN 3 EMOJIS",
           "questions": [
             {
               "value": 400,
-              "clue": "Located in Egypt, this ancient wonder is the only one of the original Seven Wonders still standing today.",
-              "answer": "The Great Pyramid of Giza",
+              "clue": "🦁👑🌅",
+              "answer": "The Lion King",
               "used": false
             },
             {
               "value": 800,
-              "clue": "This wonder in India was built by Emperor Shah Jahan as a mausoleum for his wife Mumtaz Mahal.",
-              "answer": "The Taj Mahal",
+              "clue": "🧙💍🌋",
+              "answer": "The Lord of the Rings",
               "used": false
             },
             {
               "value": 1200,
-              "clue": "The ancient city of Petra, famous for structures carved into rose-colored rock, is located in this modern-day country.",
-              "answer": "Jordan",
+              "clue": "🦖🏝️🚁",
+              "answer": "Jurassic Park",
               "used": false
             },
             {
               "value": 1600,
-              "clue": "Standing on the Greek island of Rhodes, this ancient wonder was a giant bronze statue of this sun god.",
-              "answer": "Helios",
+              "clue": "💊🕶️🤖",
+              "answer": "The Matrix",
               "used": false
             },
             {
               "value": 2000,
-              "clue": "Destroyed by earthquakes and finally abandoned in antiquity, this wonder was a massive temple dedicated to the goddess Artemis in this city.",
-              "answer": "Ephesus",
+              "clue": "🤡🎈🚲",
+              "answer": "IT",
               "used": false
             }
           ]
         },
         {
-          "category": "HOT TAKES",
+          "category": "WEIRD FLEX BUT OKAY",
           "questions": [
             {
               "value": 400,
-              "clue": "Some fans argue this long-running sitcom should have ended several seasons earlier, rather than continuing after Michael Scott left.",
-              "answer": "The Office",
+              "clue": "This actor learned to spin nunchucks so well that they had to slow down footage to make it visible on screen.",
+              "answer": "Bruce Lee",
               "used": false
             },
             {
               "value": 800,
-              "clue": "Many gamers claim this open-world RPG is great despite players spending more time installing mods than actually playing it.",
-              "answer": "Skyrim",
+              "clue": "This conqueror controlled territory stretching from Korea to Eastern Europe.",
+              "answer": "Genghis Khan",
               "used": false
             },
             {
               "value": 1200,
-              "clue": "Some food critics argue this fruit ruins any pizza it touches.",
-              "answer": "Pineapple",
+              "clue": "This actor broke his toe during filming and stayed in character, with the footage making it into the movie.",
+              "answer": "Viggo Mortensen",
               "used": false
             },
             {
               "value": 1600,
-              "clue": "A common movie hot take is that this Star Wars film is either one of the franchise's best entries or its absolute worst.",
-              "answer": "The Last Jedi",
+              "clue": "This man was struck by lightning seven times and lived to tell the tale.",
+              "answer": "Roy Sullivan",
               "used": false
             },
             {
               "value": 2000,
-              "clue": "One of the internet's most persistent gaming hot takes is that this 2016 Game of the Year winner didn't deserve the award over Doom or Uncharted 4.",
-              "answer": "Overwatch",
+              "clue": "This man survived both the Hiroshima and Nagasaki atomic bombings.",
+              "answer": "Tsutomu Yamaguchi",
               "used": false
             }
           ]
         },
         {
-          "category": "IS IT A MEDICAL CONDITION?",
+          "category": "HOW IS THIS A REAL HEADLINE?",
           "questions": [
             {
               "value": 400,
-              "clue": "This term refers to an irrational fear of long words.",
-              "answer": "Hippopotomonstrosesquippedaliophobia",
+              "clue": "\"Town forced to cancel annual event after competitive cheating scandal involving giant ________.\"",
+              "answer": "Pumpkins",
               "used": false
             },
             {
               "value": 800,
-              "clue": "This condition causes sufferers to believe they are secretly a werewolf.",
-              "answer": "Clinical Lycanthropy",
+              "clue": "\"Thousands flee as giant wheel of ______ rolls down hill at high speed.\"",
+              "answer": "Cheese",
               "used": false
             },
             {
               "value": 1200,
-              "clue": "This syndrome causes people to believe they are dead, missing organs, or no longer exist.",
-              "answer": "Cotard's Syndrome",
+              "clue": "\"_______ steals GoPro, accidentally films its own migration.\"",
+              "answer": "Seagull",
               "used": false
             },
             {
               "value": 1600,
-              "clue": "This condition causes people to compulsively collect garden gnomes.",
-              "answer": "Gnomomania",
+              "clue": "\"Village terrorized by aggressive ______.\"",
+              "answer": "Swan",
               "used": false
             },
             {
               "value": 2000,
-              "clue": "This syndrome causes people to believe familiar people have been replaced by identical imposters.",
-              "answer": "Capgras Syndrome",
+              "clue": "\"Police called after residents report suspicious tiger roaming neighbourhood, turns out to be a _____ _______ ___.\"",
+              "answer": "A large stuffed toy",
               "used": false
             }
           ]
         },
         {
-          "category": "BADLY DESCRIBED PLOTS",
+          "category": "THEY HAD ONE JOB",
           "questions": [
             {
               "value": 400,
-              "clue": "Lunatic enslaves chocolate-making entertainers and slowly kills children in front of their parents.",
-              "answer": "Charlie and the Chocolate Factory",
+              "clue": "This supposedly unsinkable ship hit an iceberg on its maiden voyage.",
+              "answer": "Titanic",
               "used": false
             },
             {
               "value": 800,
-              "clue": "Abused orphan drops out of school to kill a man with no nose and accidentally starts a war.",
-              "answer": "Harry Potter and the Deathly Hallows",
+              "clue": "This city accepted a giant wooden horse from an enemy army.",
+              "answer": "Troy",
               "used": false
             },
             {
               "value": 1200,
-              "clue": "Divorced man discovers he is trans and loses custody of his children.",
-              "answer": "Mrs. Doubtfire",
+              "clue": "This security team failed to stop two men from reaching the complex in 1972.",
+              "answer": "Watergate",
               "used": false
             },
             {
               "value": 1600,
-              "clue": "Emo teen can't live up to his grandfather's legacy and takes it out on his dad.",
-              "answer": "Star Wars: The Force Awakens",
+              "clue": "This theme park spared no expense except for making sure its attractions couldn't reproduce.",
+              "answer": "Jurassic Park",
               "used": false
             },
             {
               "value": 2000,
-              "clue": "Invite your friends to your secret fantasy kingdom or they'll drown.",
-              "answer": "Bridge to Terabithia",
+              "clue": "This company lost a 4 billion dollar Mars mission because one team used metric units and the other used imperial units.",
+              "answer": "NASA",
               "used": false
             }
           ]
         },
         {
-          "category": "POP CULTURE",
+          "category": "INVENTED BY ACCIDENT",
           "questions": [
             {
               "value": 400,
-              "clue": "This singer's Eras Tour became the first tour in history to gross over $1 billion.",
-              "answer": "Taylor Swift",
+              "clue": "This snack food was invented when a chef sarcastically sliced potatoes impossibly thin to annoy a customer.",
+              "answer": "Potato Chips",
               "used": false
             },
             {
               "value": 800,
-              "clue": "This Netflix series introduced millions of viewers to a deadly game of Red Light, Green Light.",
-              "answer": "Squid Game",
+              "clue": "Alexander Fleming accidentally discovered this life-saving antibiotic.",
+              "answer": "Penicillin",
               "used": false
             },
             {
               "value": 1200,
-              "clue": "The phrase \"Netflix and chill\" originally referred to watching this type of media.",
-              "answer": "Movies/TV shows",
-              "used": false,
-              "dailyDouble": true
+              "clue": "These office supplies were created after a scientist failed to make a strong adhesive.",
+              "answer": "Post-it Notes",
+              "used": false
             },
             {
               "value": 1600,
-              "clue": "This social media app, originally launched internationally by ByteDance in 2017, became the world's most downloaded app during the COVID-19 pandemic.",
-              "answer": "TikTok",
+              "clue": "This drink was originally marketed as a medicinal tonic.",
+              "answer": "Coca-Cola",
               "used": false
             },
             {
               "value": 2000,
-              "clue": "This Netflix show featured the main character dancing to \"Goo Goo Muck.\"",
-              "answer": "Wednesday",
+              "clue": "Percy Spencer accidentally invented this kitchen appliance after a chocolate bar melted in his pocket.",
+              "answer": "Microwave Oven",
               "used": false
             }
           ]
         },
         {
-          "category": "LONG WORDS",
+          "category": "GUESS THAT LOGO",
           "questions": [
             {
+              "value": 200,
+              "clue": "Name this logo.",
+              "answer": "McDonald's",
+              "media": {
+                "type": "image",
+                "url": "https://www.jetpunk.com/img/user-img/17/172b27c63b-450.webp"
+              }
+            },
+            {
               "value": 400,
-              "clue": "Mary Poppins famously sings this made-up 34-letter word.",
-              "answer": "Supercalifragilisticexpialidocious",
-              "used": false
+              "clue": "Name this logo.",
+              "answer": "LG",
+              "media": {
+                "type": "image",
+                "url": "https://www.jetpunk.com/img/user-img/10/10f607512f-450.webp"
+              }
+            },
+            {
+              "value": 600,
+              "clue": "Name this logo.",
+              "answer": "DreamWorks",
+              "media": {
+                "type": "image",
+                "url": "https://www.jetpunk.com/img/user-img/a7/a7dd6d4025-450.webp"
+              }
             },
             {
               "value": 800,
-              "clue": "This 28-letter word is the fear of long words.",
-              "answer": "Hippopotomonstrosesquippedaliophobia",
-              "used": false
+              "clue": "Name this logo.",
+              "answer": "Lacoste",
+              "media": {
+                "type": "image",
+                "url": "https://www.jetpunk.com/img/user-img/a1/a1ca4c4b0b-450.webp"
+              }
             },
             {
-              "value": 1200,
-              "clue": "This 45-letter lung disease is often cited as one of the longest words in major dictionaries.",
-              "answer": "Pneumonoultramicroscopicsilicovolcanoconiosis",
-              "used": false
-            },
-            {
-              "value": 1600,
-              "clue": "This protein's full chemical name contains nearly 190,000 letters, making it the longest word ever recorded.",
-              "answer": "Titin",
-              "used": false,
-              "dailyDouble": true
-            },
-            {
-              "value": 2000,
-              "clue": "This 29-letter word means the act of considering something worthless.",
-              "answer": "Floccinaucinihilipilification",
-              "used": false
+              "value": 1000,
+              "clue": "Name this logo.",
+              "answer": "AOL",
+              "media": {
+                "type": "image",
+                "url": "https://www.jetpunk.com/img/user-img/5a/5a8919165e-450.webp"
+              }
             }
           ]
         }
       ]
     },
     "finalJeopardy": {
-      "category": "VIDEO GAMES",
-      "clue": "This game's final boss is named Ganon, but the title refers to the princess players are trying to save.",
-      "answer": "What is The Legend of Zelda?"
+      "category": "RECORD BREAKERS",
+      "clue": "This music video became the first YouTube video to reach one billion views.",
+      "answer": "What is Gangnam Style?"
     }
   }
 ]
