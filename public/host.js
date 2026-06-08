@@ -261,6 +261,7 @@ function renderQuestion(game) {
       game.dailyDoubleWagerSet
         ? `
           <hr>
+          ${renderMedia(game.currentQuestion.media)}
           <p><strong>Clue:</strong> ${escapeHtml(game.currentQuestion.clue)}</p>
           <p><strong>Answer:</strong> ${escapeHtml(game.currentQuestion.answer)}</p>
         `
@@ -278,7 +279,8 @@ function renderQuestion(game) {
 
   questionBox.innerHTML = `
   <p><strong>For ${game.currentQuestion.value} points</strong></p>
-  <p>${escapeHtml(game.currentQuestion.clue)}</p>
+  ${renderMedia(game.currentQuestion.media)}
+<p>${escapeHtml(game.currentQuestion.clue)}</p>
   <p><strong>Answer timer:</strong> ${
     answerTimeLeft !== null ? `${answerTimeLeft}s` : "Not started"
   }</p>
@@ -326,6 +328,35 @@ function escapeHtml(text) {
     .replaceAll('"', "&quot;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;");
+}
+
+function renderMedia(media) {
+  if (!media || !media.type) return "";
+
+  if (media.type === "image" && media.url) {
+    return `
+      <img
+        class="question-media"
+        src="${escapeHtml(media.url)}"
+        alt="Question image"
+      >
+    `;
+  }
+
+  if (media.type === "youtube" && media.id) {
+    const start = media.start ? `?start=${Number(media.start)}` : "";
+
+    return `
+      <iframe
+        class="question-media youtube-media"
+        src="https://www.youtube.com/embed/${escapeHtml(media.id)}${start}"
+        title="YouTube video"
+        allowfullscreen
+      ></iframe>
+    `;
+  }
+
+  return "";
 }
 
 adminLoginBtn.addEventListener("click", () => {

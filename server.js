@@ -53,6 +53,7 @@ function cleanBoard(board) {
       answer: question.answer.trim(),
       used: false,
       dailyDouble: Boolean(question.dailyDouble),
+      media: question.media || null,
     })),
   }));
 }
@@ -277,6 +278,7 @@ io.on("connection", (socket) => {
       answer: question.answer,
       value: question.value,
       dailyDouble: question.dailyDouble || false,
+      media: question.media || null,
     };
 
     if (question.dailyDouble) {

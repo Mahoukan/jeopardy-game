@@ -81,6 +81,11 @@
               "value": 200,
               "clue": "This plumber's first appearance was in Donkey Kong.",
               "answer": "Mario",
+              "media": {
+                "type": "youtube",
+                "id": "iaoydCd7Fv8",
+                "start": 45
+              },
               "used": false
             },
             {
@@ -93,6 +98,10 @@
               "value": 600,
               "clue": "The Master Sword is most closely associated with this hero.",
               "answer": "Link",
+              "media": {
+                "type": "image",
+                "url": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/the-legend-of-zelda-breath-of-the-wild-2/e/ee/TotK_MasterSword3.jpg?width=1280"
+              },
               "used": false
             },
             {

@@ -95,6 +95,43 @@ function renderPlayerInfo(game) {
   }
 }
 
+function escapeHtml(text) {
+  return String(text)
+    .replaceAll("&", "&amp;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
+}
+
+function renderMedia(media) {
+  if (!media || !media.type) return "";
+
+  if (media.type === "image" && media.url) {
+    return `
+      <img
+        class="question-media"
+        src="${escapeHtml(media.url)}"
+        alt="Question image"
+      >
+    `;
+  }
+
+  if (media.type === "youtube" && media.id) {
+    const start = media.start ? `?start=${Number(media.start)}` : "";
+
+    return `
+      <iframe
+        class="question-media youtube-media"
+        src="https://www.youtube.com/embed/${escapeHtml(media.id)}${start}"
+        title="YouTube video"
+        allowfullscreen
+      ></iframe>
+    `;
+  }
+
+  return "";
+}
+
 function renderBoard(board) {
   if (!boardDiv) return;
 
@@ -155,7 +192,7 @@ function renderQuestion(game) {
     ${
       !game.finalRevealed
         ? alreadyWagered
-         ? `<p><strong>Wager submitted.</strong></p>`
+          ? `<p><strong>Wager submitted.</strong></p>`
           : `
             <input
               id="finalWagerInput"
@@ -171,7 +208,7 @@ function renderQuestion(game) {
             <p><strong>Clue:</strong> ${final.clue}</p>
             <p><strong>Answer submitted.</strong></p>
           `
-        : `
+          : `
             <p><strong>Clue:</strong> ${final.clue}</p>
             <input id="finalAnswerInput" placeholder="Your answer">
             <button id="submitFinalAnswerBtn">Submit Answer</button>
@@ -232,7 +269,8 @@ function renderQuestion(game) {
     }</p>
     ${
       game.dailyDoubleWagerSet
-        ? `<p>${game.currentQuestion.clue}</p>`
+        ? `${renderMedia(game.currentQuestion.media)}
+          <p>${game.currentQuestion.clue}</p>`
         : `<p>Waiting for the host to set the wager...</p>`
     }
     <p>${isMe ? "You answer this question." : "Only the selected player answers."}</p>
@@ -258,7 +296,8 @@ function renderQuestion(game) {
 
   questionBox.innerHTML = `
   <p><strong>For ${game.currentQuestion.value} points</strong></p>
-  <p>${game.currentQuestion.clue}</p>
+  ${renderMedia(game.currentQuestion.media)}
+<p>${game.currentQuestion.clue}</p>
   <p><strong>Answer timer:</strong> ${
     answerTimeLeft !== null ? `${answerTimeLeft}s` : "Not started"
   }</p>
