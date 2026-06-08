@@ -21,6 +21,8 @@ const games = {};
 const DATA_DIR = path.join(__dirname, "data");
 const BOARDS_FILE = path.join(DATA_DIR, "boards.json");
 
+console.log("ADMIN_PASSWORD =", process.env.ADMIN_PASSWORD);
+
 function ensureBoardsFile() {
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR);
   if (!fs.existsSync(BOARDS_FILE)) fs.writeFileSync(BOARDS_FILE, "[]");
