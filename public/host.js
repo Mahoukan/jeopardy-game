@@ -251,10 +251,25 @@ function renderQuestion(game) {
     value: game.currentQuestion.value,
     media: game.currentQuestion.media,
     dailyDoubleMode: game.dailyDoubleMode,
+    dailyDoubleWagerSet: game.dailyDoubleWagerSet,
     finalMode: game.finalMode,
   });
 
   if (questionKey === lastQuestionKey) {
+    const buzzText = document.getElementById("buzzStatusText");
+    if (buzzText) {
+      buzzText.textContent =
+        (game.buzzLockoutLeft || 0) > 0
+          ? `Locked for ${game.buzzLockoutLeft}s`
+          : "Open";
+    }
+    const timerText = document.getElementById("answerTimerText");
+    if (timerText) {
+      timerText.textContent =
+        game.answerTimeLeft !== null
+          ? `${game.answerTimeLeft}s`
+          : "Not started";
+    }
     return;
   }
 
@@ -297,10 +312,10 @@ function renderQuestion(game) {
   <p><strong>For ${game.currentQuestion.value} points</strong></p>
   ${renderMedia(game.currentQuestion.media)}
 <p>${escapeHtml(game.currentQuestion.clue)}</p>
-  <p><strong>Answer timer:</strong> ${
+  <p><strong>Answer timer:</strong> <span id="answerTimerText">${
     answerTimeLeft !== null ? `${answerTimeLeft}s` : "Not started"
-  }</p>
-  <p><strong>Buzz:</strong> ${buzzLocked ? `Locked for ${lockoutLeft}s` : "Open"}</p>
+  }</span></p>
+  <p><strong>Buzz:</strong> <span id="buzzStatusText">${buzzLocked ? `Locked for ${lockoutLeft}s` : "Open"}</span></p>
   <hr>
   <p><strong>Answer:</strong> ${escapeHtml(game.currentQuestion.answer)}</p>
   <p><strong>Buzzed:</strong> ${buzzedPlayer ? escapeHtml(buzzedPlayer.name) : "No one yet"}</p>

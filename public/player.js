@@ -256,6 +256,49 @@ function renderQuestion(game) {
 
     return;
   }
+  if (!questionBox) return;
+
+  if (!game.currentQuestion) {
+    lastQuestionKey = null;
+    questionBox.innerHTML = "Waiting for host...";
+    if (buzzBtn) buzzBtn.disabled = true;
+    return;
+  }
+
+  const questionKey = JSON.stringify({
+    clue: game.currentQuestion.clue,
+    value: game.currentQuestion.value,
+    media: game.currentQuestion.media,
+    buzzedPlayerId: game.buzzedPlayerId,
+    dailyDoubleMode: game.dailyDoubleMode,
+    dailyDoubleWagerSet: game.dailyDoubleWagerSet,
+  });
+
+  if (questionKey === lastQuestionKey) {
+    if (buzzBtn) {
+      const lockoutLeft = game.buzzLockoutLeft || 0;
+      const buzzLocked = lockoutLeft > 0;
+      buzzBtn.disabled = Boolean(game.buzzedPlayerId) || buzzLocked;
+    }
+    const timerText = document.getElementById("answerTimerText");
+    if (timerText) {
+      timerText.textContent =
+        game.answerTimeLeft !== null
+          ? `${game.answerTimeLeft}s`
+          : "Not started";
+    }
+
+    const buzzText = document.getElementById("buzzStatusText");
+    if (buzzText) {
+      buzzText.textContent =
+        (game.buzzLockoutLeft || 0) > 0
+          ? `Locked for ${game.buzzLockoutLeft}s`
+          : "Open";
+    }
+    return;
+  }
+
+  lastQuestionKey = questionKey;
   if (game.dailyDoubleMode) {
     const ddPlayer = game.players.find(
       (p) => p.id === game.dailyDoublePlayerId,
@@ -283,32 +326,6 @@ function renderQuestion(game) {
 
     return;
   }
-  if (!questionBox) return;
-
-  if (!game.currentQuestion) {
-    lastQuestionKey = null;
-    questionBox.innerHTML = "Waiting for host...";
-    if (buzzBtn) buzzBtn.disabled = true;
-    return;
-  }
-
-  const questionKey = JSON.stringify({
-    clue: game.currentQuestion.clue,
-    value: game.currentQuestion.value,
-    media: game.currentQuestion.media,
-    buzzedPlayerId: game.buzzedPlayerId,
-  });
-
-  if (questionKey === lastQuestionKey) {
-    if (buzzBtn) {
-      const lockoutLeft = game.buzzLockoutLeft || 0;
-      const buzzLocked = lockoutLeft > 0;
-      buzzBtn.disabled = Boolean(game.buzzedPlayerId) || buzzLocked;
-    }
-    return;
-  }
-
-  lastQuestionKey = questionKey;
   const answerTimeLeft = game.answerTimeLeft;
   const lockoutLeft = game.buzzLockoutLeft || 0;
   const buzzLocked = lockoutLeft > 0;
@@ -318,10 +335,10 @@ function renderQuestion(game) {
   <p><strong>For ${game.currentQuestion.value} points</strong></p>
   ${renderMedia(game.currentQuestion.media)}
 <p>${game.currentQuestion.clue}</p>
-  <p><strong>Answer timer:</strong> ${
+  <p><strong>Answer timer:</strong> <span id="answerTimerText">${
     answerTimeLeft !== null ? `${answerTimeLeft}s` : "Not started"
-  }</p>
-  <p><strong>Buzz:</strong> ${buzzLocked ? `Locked for ${lockoutLeft}s` : "Open"}</p>
+  }</span></p>
+  <p><strong>Buzz:</strong> <span id="buzzStatusText">${buzzLocked ? `Locked for ${lockoutLeft}s` : "Open"}</span></p>
   <p><strong>Buzzed:</strong> ${buzzedPlayer ? buzzedPlayer.name : "No one yet"}</p>
 `;
 
