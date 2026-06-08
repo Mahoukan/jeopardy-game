@@ -1,6 +1,7 @@
 const socket = io();
 window.socket = socket;
 let selectedGame = null;
+let lastQuestionKey = null;
 
 const dailyDoubleWagerInput = document.getElementById("dailyDoubleWagerInput");
 const setDailyDoubleWagerBtn = document.getElementById(
@@ -240,9 +241,24 @@ function renderQuestion(game) {
     return;
   }
   if (!game.currentQuestion) {
+    lastQuestionKey = null;
     questionBox.innerHTML = "No question selected.";
     return;
   }
+
+  const questionKey = JSON.stringify({
+    clue: game.currentQuestion.clue,
+    value: game.currentQuestion.value,
+    media: game.currentQuestion.media,
+    dailyDoubleMode: game.dailyDoubleMode,
+    finalMode: game.finalMode,
+  });
+
+  if (questionKey === lastQuestionKey) {
+    return;
+  }
+
+  lastQuestionKey = questionKey;
   if (game.dailyDoubleMode) {
     const ddPlayer = game.players.find(
       (p) => p.id === game.dailyDoublePlayerId,

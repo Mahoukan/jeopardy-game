@@ -1,5 +1,6 @@
 const socket = io();
 
+let lastQuestionKey = null;
 const path = window.location.pathname;
 
 const nameInput = document.getElementById("nameInput");
@@ -285,10 +286,29 @@ function renderQuestion(game) {
   if (!questionBox) return;
 
   if (!game.currentQuestion) {
+    lastQuestionKey = null;
     questionBox.innerHTML = "Waiting for host...";
     if (buzzBtn) buzzBtn.disabled = true;
     return;
   }
+
+  const questionKey = JSON.stringify({
+    clue: game.currentQuestion.clue,
+    value: game.currentQuestion.value,
+    media: game.currentQuestion.media,
+    buzzedPlayerId: game.buzzedPlayerId,
+  });
+
+  if (questionKey === lastQuestionKey) {
+    if (buzzBtn) {
+      const lockoutLeft = game.buzzLockoutLeft || 0;
+      const buzzLocked = lockoutLeft > 0;
+      buzzBtn.disabled = Boolean(game.buzzedPlayerId) || buzzLocked;
+    }
+    return;
+  }
+
+  lastQuestionKey = questionKey;
   const answerTimeLeft = game.answerTimeLeft;
   const lockoutLeft = game.buzzLockoutLeft || 0;
   const buzzLocked = lockoutLeft > 0;
