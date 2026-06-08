@@ -10,63 +10,75 @@ Players join from their phones using a game code, while the host controls the bo
 
 ### Multiplayer Gameplay
 
-- Join games using a 4-digit game code
-- Real-time updates via Socket.IO
-- Unlimited players
-- Buzz-in system
-- Turn tracking
-- Score tracking
-- Manual score adjustment by host
+* Join games using a 4-digit game code
+* Real-time updates via Socket.IO
+* Unlimited players
+* Buzz-in system
+* Turn tracking
+* Score tracking
+* Manual score adjustment by host
+
+### Full Jeopardy Game Flow
+
+* Jeopardy Round
+* Double Jeopardy Round
+* Daily Doubles
+* Final Jeopardy
+* Wager submission
+* Final answer submission
+* End-game scoring
 
 ### Question System
 
-- Custom categories and questions
-- Variable point values
-- Question reveal system
-- Used questions automatically disabled
-- Skip questions
-- Correct/Wrong scoring
+* Custom categories and questions
+* Variable point values
+* Question reveal system
+* Used questions automatically disabled
+* Skip questions
+* Correct/Wrong scoring
+* Daily Double support
+* Final Jeopardy support
 
 ### Buzzing
 
-- 5-second buzz lockout when a question opens
-- 15-second answer timer after a player buzzes
-- Server-synchronised countdown timers
-- Prevents timer desync between players
+* 5-second buzz lockout when a question opens
+* 15-second answer timer after a player buzzes
+* Server-synchronised countdown timers
+* Prevents timer desync between players
 
 ### Board Management
 
-- Built-in board editor
-- Save boards
-- Delete boards
-- Load saved boards
-- Import JSON boards
-- Supports J-Archive generated boards
+* Load saved boards
+* Delete saved boards
+* Import JSON boards
+* Supports J-Archive generated boards
+* Multiple saved game boards
+* No browser-based board editor required
 
 ### Reliability
 
-- Player reconnect support
-- Host reconnect support
-- Automatic socket reconnection
-- Heartbeat system to reduce idle disconnects
-- Host-side game backup
-- Manual game restore system
-- Recovery after Render/server restarts
+* Player reconnect support
+* Host reconnect support
+* Automatic socket reconnection
+* Heartbeat system to reduce idle disconnects
+* Host-side game backup
+* Manual game restore system
+* Recovery after Render/server restarts
 
 ### Mobile Friendly
 
-- Large mobile buzzer
-- Responsive layout
-- Compact game header
-- Long category name protection
-- Improved portrait mode layout
+* Large mobile buzzer
+* Responsive layout
+* Compact game header
+* Long category name protection
+* Improved portrait mode layout
 
 ### PWA Support
 
-- Installable on phones
-- Home screen icon support
-- Standalone app mode
-- Service Worker support
+* Installable on phones
+* Home screen icon support
+* Standalone app mode
+* Service Worker support
 
 ---
 
@@ -158,23 +170,36 @@ jeopardy-game/
 
 ---
 
-## JSON Board Format
+## JSON Game Format
 
 ```json
 {
-  "name": "General Knowledge",
-  "board": [
-    {
-      "category": "Science",
-      "questions": [
-        {
-          "value": 100,
-          "clue": "The closest planet to the Sun.",
-          "answer": "Mercury"
-        }
-      ]
-    }
-  ]
+  "id": "GAME-001",
+  "name": "Pop Culture Jeopardy",
+  "jeopardy": {
+    "board": []
+  },
+  "doubleJeopardy": {
+    "board": []
+  },
+  "finalJeopardy": {
+    "category": "VIDEO GAMES",
+    "clue": "This game's final boss is named Ganon.",
+    "answer": "The Legend of Zelda"
+  }
+}
+```
+
+### Daily Doubles
+
+Mark any clue as a Daily Double:
+
+```json
+{
+  "value": 800,
+  "clue": "Question text",
+  "answer": "Answer text",
+  "dailyDouble": true
 }
 ```
 
@@ -184,22 +209,22 @@ jeopardy-game/
 
 ### Admin Features
 
-- Create boards
-- Edit boards
-- Save boards
-- Load boards
-- Delete boards
-- Import JSON boards
+* Load boards
+* Delete boards
+* Import JSON boards
 
 ### Game Controls
 
-- Create game
-- Rejoin game
-- Restore game
-- Mark correct
-- Mark wrong
-- Skip question
-- Edit player scores
+* Create game
+* Rejoin game
+* Restore game
+* Mark correct
+* Mark wrong
+* Skip question
+* Edit player scores
+* Advance to Double Jeopardy
+* Start Final Jeopardy
+* Resolve Final Jeopardy answers
 
 ---
 
@@ -231,28 +256,29 @@ Clients periodically send heartbeat messages to help maintain active connections
 
 ---
 
-## Future Ideas
+## Importing Boards
 
-- Daily Double
-- Final Jeopardy
-- Double Jeopardy round support
-- Searchable board library
-- J-Archive episode importer
-- Statistics tracking
-- Tournament mode
-- Team play
+Boards can be imported directly from JSON files.
+
+Supported formats include:
+
+* Custom boards
+* J-Archive generated boards
+* Full Jeopardy + Double Jeopardy + Final Jeopardy game files
+
+Imported boards are stored in `data/boards.json` and become available in the Saved Boards list.
 
 ---
 
 ## Tech Stack
 
-- Node.js
-- Express
-- Socket.IO
-- HTML
-- CSS
-- JavaScript
-- PWA
+* Node.js
+* Express
+* Socket.IO
+* HTML
+* CSS
+* JavaScript
+* Progressive Web App (PWA)
 
 ---
 
