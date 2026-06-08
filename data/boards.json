@@ -5,37 +5,52 @@
     "jeopardy": {
       "board": [
         {
-          "category": "MARVEL MOVIES",
+          "category": "WHO'S THAT POKÉMON?",
           "questions": [
             {
               "value": 200,
-              "clue": "This hero's first MCU film debuted in 2008 and launched the franchise.",
-              "answer": "Iron Man",
-              "used": false
+              "clue": "Who's that Pokémon?",
+              "answer": "Charmander",
+              "media": {
+                "type": "image",
+                "url": "https://quizizz.com/_optimized/_media/quizzes/a303d001-3846-4ed0-8279-6d20eb639f38.webp"
+              }
             },
             {
               "value": 400,
-              "clue": "This actor played both Human Torch in Fantastic Four and Captain America in the MCU.",
-              "answer": "Chris Evans",
-              "used": false
+              "clue": "Who's that Pokémon?",
+              "answer": "Squirtle",
+              "media": {
+                "type": "image",
+                "url": "https://quizizz.com/_media/quizzes/fb453f7c-c00d-4dad-9a71-09419e043536"
+              }
             },
             {
               "value": 600,
-              "clue": "Before becoming Vision, this AI assistant was voiced by Paul Bettany.",
-              "answer": "J.A.R.V.I.S.",
-              "used": false
+              "clue": "Who's that Pokémon?",
+              "answer": "Meowth",
+              "media": {
+                "type": "image",
+                "url": "https://quizizz.com/_optimized/_media/quizzes/735b9553-2db0-4ed3-a9e7-3760e1365a71.webp"
+              }
             },
             {
               "value": 800,
-              "clue": "This MCU film was the first superhero movie nominated for the Academy Award for Best Picture.",
-              "answer": "Black Panther",
-              "used": false
+              "clue": "Who's that Pokémon?",
+              "answer": "Togepi",
+              "media": {
+                "type": "image",
+                "url": "https://quizizz.com/_media/quizzes/74d4bffa-b278-4637-948d-02e626e1a366"
+              }
             },
             {
               "value": 1000,
-              "clue": "This actor portrayed the villain Mysterio in Spider-Man: Far From Home.",
-              "answer": "Jake Gyllenhaal",
-              "used": false
+              "clue": "Who's that Pokémon?",
+              "answer": "Rayquaza",
+              "media": {
+                "type": "image",
+                "url": "https://quizizz.com/_optimized/_media/quizzes/f00a56f7-05e6-4980-812e-fd60321ce674.webp"
+              }
             }
           ]
         },
