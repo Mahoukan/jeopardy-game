@@ -294,7 +294,8 @@
               "value": 1600,
               "clue": "This man was struck by lightning seven times and lived to tell the tale.",
               "answer": "Roy Sullivan",
-              "used": false
+              "used": false,
+              "dailyDouble": true
             },
             {
               "value": 2000,
@@ -364,7 +365,8 @@
               "value": 1600,
               "clue": "This theme park spared no expense except for making sure its attractions couldn't reproduce.",
               "answer": "Jurassic Park",
-              "used": false
+              "used": false,
+              "dailyDouble": true
             },
             {
               "value": 2000,
