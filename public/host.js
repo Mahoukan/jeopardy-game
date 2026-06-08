@@ -270,6 +270,15 @@ function renderQuestion(game) {
           ? `${game.answerTimeLeft}s`
           : "Not started";
     }
+    const buzzedPlayerText = document.getElementById("buzzedPlayerText");
+    if (buzzedPlayerText) {
+      const buzzedPlayer = game.players.find(
+        (p) => p.id === game.buzzedPlayerId,
+      );
+      buzzedPlayerText.textContent = buzzedPlayer
+        ? buzzedPlayer.name
+        : "No one yet";
+    }
     return;
   }
 
@@ -318,7 +327,7 @@ function renderQuestion(game) {
   <p><strong>Buzz:</strong> <span id="buzzStatusText">${buzzLocked ? `Locked for ${lockoutLeft}s` : "Open"}</span></p>
   <hr>
   <p><strong>Answer:</strong> ${escapeHtml(game.currentQuestion.answer)}</p>
-  <p><strong>Buzzed:</strong> ${buzzedPlayer ? escapeHtml(buzzedPlayer.name) : "No one yet"}</p>
+  <p><strong>Buzzed:</strong> <span id="buzzedPlayerText">${buzzedPlayer ? escapeHtml(buzzedPlayer.name) : "No one yet"}</span></p>
 `;
 }
 
