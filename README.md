@@ -38,6 +38,9 @@ Players join from their phones using a game code, while the host controls the bo
 * Correct/Wrong scoring
 * Daily Double support
 * Final Jeopardy support
+* Image questions
+* YouTube video questions
+* Embedded media support
 
 ### Buzzing
 
@@ -63,7 +66,9 @@ Players join from their phones using a game code, while the host controls the bo
 * Heartbeat system to reduce idle disconnects
 * Host-side game backup
 * Manual game restore system
-* Recovery after Render/server restarts
+* Recovery after server restarts
+* Media-safe question rendering
+* Stable YouTube playback during timer updates
 
 ### Mobile Friendly
 
@@ -122,21 +127,25 @@ http://localhost:3000
 
 ## Hosting
 
-### Render
+### Railway
 
-Current deployment target:
+Recommended deployment platform.
 
-```text
-Render Web Service
+Required environment variables:
+
+```env
+ADMIN_PASSWORD=yourpassword
 ```
 
-Recommended settings:
+Build command:
 
 ```text
-Build Command:
 npm install
+```
 
-Start Command:
+Start command:
+
+```text
 node server.js
 ```
 
@@ -203,6 +212,51 @@ Mark any clue as a Daily Double:
 }
 ```
 
+### Media Questions
+
+#### Images
+
+```json
+{
+  "value": 600,
+  "clue": "Name this weapon.",
+  "answer": "The Master Sword",
+  "media": {
+    "type": "image",
+    "url": "https://example.com/image.jpg"
+  }
+}
+```
+
+#### YouTube Videos
+
+```json
+{
+  "value": 800,
+  "clue": "Name this game.",
+  "answer": "The Legend of Zelda: Tears of the Kingdom",
+  "media": {
+    "type": "youtube",
+    "id": "iaoydCd7Fv8",
+    "start": 45
+  }
+}
+```
+
+### Example Question
+
+```json
+{
+  "value": 1000,
+  "clue": "Who's that Pokémon?",
+  "answer": "Rayquaza",
+  "media": {
+    "type": "image",
+    "url": "https://example.com/rayquaza.webp"
+  }
+}
+```
+
 ---
 
 ## Host Controls
@@ -222,8 +276,10 @@ Mark any clue as a Daily Double:
 * Mark wrong
 * Skip question
 * Edit player scores
+* Set Daily Double wagers
 * Advance to Double Jeopardy
 * Start Final Jeopardy
+* Reveal Final Jeopardy clue
 * Resolve Final Jeopardy answers
 
 ---
@@ -265,6 +321,8 @@ Supported formats include:
 * Custom boards
 * J-Archive generated boards
 * Full Jeopardy + Double Jeopardy + Final Jeopardy game files
+* Image-based questions
+* YouTube video questions
 
 Imported boards are stored in `data/boards.json` and become available in the Saved Boards list.
 
