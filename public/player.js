@@ -200,7 +200,7 @@ function renderPlayers(players, scores, currentTurnIndex) {
 
 function renderQuestion(game) {
   if (game.finalMode) {
-    if (boardDiv) boardDiv.classList.add("hidden");
+    //if (boardDiv) boardDiv.classList.add("hidden");
     document.body.classList.add("player-question-active");
 
     const standings = getFinalStandings(game);
@@ -304,7 +304,7 @@ function renderQuestion(game) {
   if (!game.currentQuestion) {
     lastQuestionKey = null;
 
-    if (boardDiv) boardDiv.classList.remove("hidden");
+    //if (boardDiv) boardDiv.classList.remove("hidden");
     document.body.classList.remove("player-question-active");
 
     questionBox.innerHTML = "Waiting for host...";

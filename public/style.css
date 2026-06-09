@@ -486,3 +486,7 @@ body {
   font-size: 36px;
   color: #ffd447;
 }
+.player-question-active #board {
+  visibility: hidden;
+  pointer-events: none;
+}
