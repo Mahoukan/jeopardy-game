@@ -386,10 +386,6 @@ body {
   padding: 8px;
 }
 
-.question-box {
-  animation: revealQuestion 0.25s ease;
-}
-
 @keyframes revealQuestion {
   from {
     opacity: 0;
