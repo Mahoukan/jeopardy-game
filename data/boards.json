@@ -487,51 +487,143 @@
         {
           "category": "ODD ONE OUT",
           "questions": [
-            { "value": 200, "clue": "Dog, Cat, Rabbit, Lion", "answer": "Lion" },
-            { "value": 400, "clue": "Apple, Banana, Carrot, Orange", "answer": "Carrot" },
-            { "value": 600, "clue": "Fortnite, Minecraft, Roblox, FIFA", "answer": "FIFA" },
-            { "value": 800, "clue": "Snapchat, TikTok, Instagram, YouTube", "answer": "YouTube" },
-            { "value": 1000, "clue": "Taylor Swift, Billie Eilish, Drake, The Beatles", "answer": "The Beatles" }
+            {
+              "value": 200,
+              "clue": "Dog, Cat, Rabbit, Lion",
+              "answer": "Lion"
+            },
+            {
+              "value": 400,
+              "clue": "Apple, Banana, Carrot, Orange",
+              "answer": "Carrot"
+            },
+            {
+              "value": 600,
+              "clue": "Fortnite, Minecraft, Roblox, FIFA",
+              "answer": "FIFA"
+            },
+            {
+              "value": 800,
+              "clue": "Snapchat, TikTok, Instagram, YouTube",
+              "answer": "YouTube"
+            },
+            {
+              "value": 1000,
+              "clue": "Taylor Swift, Billie Eilish, Drake, The Beatles",
+              "answer": "The Beatles"
+            }
           ]
         },
         {
           "category": "WHICH IS REAL?",
           "questions": [
-            { "value": 200, "clue": "Flying snake / Invisible frog / Giant sand hamster", "answer": "Flying snake" },
-            { "value": 400, "clue": "Professional sleeper / Cloud watcher / Pillow tester", "answer": "Professional sleeper" },
-            { "value": 600, "clue": "Most socks on one foot / Eating a wall / Longest blink", "answer": "Most socks on one foot" },
-            { "value": 800, "clue": "Goat Simulator / Bread Jump Arena / Frog Dentist Pro", "answer": "Goat Simulator" },
-            { "value": 1000, "clue": "Rabbits invade town / Volcano survival / Exploding whale", "answer": "Exploding whale" }
+            {
+              "value": 200,
+              "clue": "Flying snake / Invisible frog / Giant sand hamster",
+              "answer": "Flying snake"
+            },
+            {
+              "value": 400,
+              "clue": "Professional sleeper / Cloud watcher / Pillow tester",
+              "answer": "Professional sleeper"
+            },
+            {
+              "value": 600,
+              "clue": "Most socks on one foot / Eating a wall / Longest blink",
+              "answer": "Most socks on one foot"
+            },
+            {
+              "value": 800,
+              "clue": "Goat Simulator / Bread Jump Arena / Frog Dentist Pro",
+              "answer": "Goat Simulator"
+            },
+            {
+              "value": 1000,
+              "clue": "Rabbits invade town / Volcano survival / Exploding whale",
+              "answer": "Exploding whale"
+            }
           ]
         },
         {
           "category": "GENERAL KNOWLEDGE",
           "questions": [
-            { "value": 200, "clue": "What planet do we live on?", "answer": "Earth" },
-            { "value": 400, "clue": "How many days are in a week?", "answer": "7" },
-            { "value": 600, "clue": "Largest animal on Earth?", "answer": "Blue whale" },
-            { "value": 800, "clue": "Country famous for kangaroos?", "answer": "Australia" },
-            { "value": 1000, "clue": "Capital city of New Zealand?", "answer": "Wellington" }
+            {
+              "value": 200,
+              "clue": "What planet do we live on?",
+              "answer": "Earth"
+            },
+            {
+              "value": 400,
+              "clue": "How many days are in a week?",
+              "answer": "7"
+            },
+            {
+              "value": 600,
+              "clue": "Largest animal on Earth?",
+              "answer": "Blue whale"
+            },
+            {
+              "value": 800,
+              "clue": "Country famous for kangaroos?",
+              "answer": "Australia"
+            },
+            {
+              "value": 1000,
+              "clue": "Capital city of New Zealand?",
+              "answer": "Wellington"
+            }
           ]
         },
         {
           "category": "FASTEST FIRST",
           "questions": [
             { "value": 200, "clue": "Colour of bananas?", "answer": "Yellow" },
-            { "value": 400, "clue": "How many legs does a spider have?", "answer": "8" },
-            { "value": 600, "clue": "Capital of Australia?", "answer": "Canberra" },
+            {
+              "value": 400,
+              "clue": "How many legs does a spider have?",
+              "answer": "8"
+            },
+            {
+              "value": 600,
+              "clue": "Capital of Australia?",
+              "answer": "Canberra"
+            },
             { "value": 800, "clue": "9 × 7?", "answer": "63" },
-            { "value": 1000, "clue": "Fastest land animal?", "answer": "Cheetah" }
+            {
+              "value": 1000,
+              "clue": "Fastest land animal?",
+              "answer": "Cheetah"
+            }
           ]
         },
         {
           "category": "GUESS THE CHARACTER",
           "questions": [
-            { "value": 200, "clue": "Lives in a pineapple under the sea", "answer": "SpongeBob SquarePants" },
-            { "value": 400, "clue": "Red and blue superhero who shoots webs", "answer": "Spider-Man" },
-            { "value": 600, "clue": "Wizard with a lightning bolt scar", "answer": "Harry Potter" },
-            { "value": 800, "clue": "Green ogre living in a swamp", "answer": "Shrek" },
-            { "value": 1000, "clue": "Blue alien, 'Ohana means family'", "answer": "Stitch" }
+            {
+              "value": 200,
+              "clue": "Lives in a pineapple under the sea",
+              "answer": "SpongeBob SquarePants"
+            },
+            {
+              "value": 400,
+              "clue": "Red and blue superhero who shoots webs",
+              "answer": "Spider-Man"
+            },
+            {
+              "value": 600,
+              "clue": "Wizard with a lightning bolt scar",
+              "answer": "Harry Potter"
+            },
+            {
+              "value": 800,
+              "clue": "Green ogre living in a swamp",
+              "answer": "Shrek"
+            },
+            {
+              "value": 1000,
+              "clue": "Blue alien, 'Ohana means family'",
+              "answer": "Stitch"
+            }
           ]
         }
       ]
@@ -551,11 +643,31 @@
         {
           "category": "GUESS THE CELEBRITY",
           "questions": [
-            { "value": 400, "clue": "Singer of 'Bad Guy'", "answer": "Billie Eilish" },
-            { "value": 800, "clue": "Eras Tour pop star", "answer": "Taylor Swift" },
-            { "value": 1200, "clue": "Plays Wednesday Addams", "answer": "Jenna Ortega" },
-            { "value": 1600, "clue": "Singer of 'Espresso'", "answer": "Sabrina Carpenter" },
-            { "value": 2000, "clue": "Rapper known for 'Munch'", "answer": "Ice Spice" }
+            {
+              "value": 400,
+              "clue": "Singer of 'Bad Guy'",
+              "answer": "Billie Eilish"
+            },
+            {
+              "value": 800,
+              "clue": "Eras Tour pop star",
+              "answer": "Taylor Swift"
+            },
+            {
+              "value": 1200,
+              "clue": "Plays Wednesday Addams",
+              "answer": "Jenna Ortega"
+            },
+            {
+              "value": 1600,
+              "clue": "Singer of 'Espresso'",
+              "answer": "Sabrina Carpenter"
+            },
+            {
+              "value": 2000,
+              "clue": "Rapper known for 'Munch'",
+              "answer": "Ice Spice"
+            }
           ]
         },
         {
@@ -565,37 +677,93 @@
             { "value": 800, "clue": "Cloud skin", "answer": "Real" },
             { "value": 1200, "clue": "Glow cloud fashion", "answer": "Fake" },
             { "value": 1600, "clue": "Clean girl aesthetic", "answer": "Real" },
-            { "value": 2000, "clue": "Digital freckles filter challenge", "answer": "Real" }
+            {
+              "value": 2000,
+              "clue": "Digital freckles filter challenge",
+              "answer": "Real"
+            }
           ]
         },
         {
           "category": "FACT OR CAP",
           "questions": [
-            { "value": 400, "clue": "Octopuses have three hearts", "answer": "Fact" },
-            { "value": 800, "clue": "You can sneeze while asleep", "answer": "Cap" },
+            {
+              "value": 400,
+              "clue": "Octopuses have three hearts",
+              "answer": "Fact"
+            },
+            {
+              "value": 800,
+              "clue": "You can sneeze while asleep",
+              "answer": "Cap"
+            },
             { "value": 1200, "clue": "Bananas are berries", "answer": "Fact" },
-            { "value": 1600, "clue": "Goldfish have a 3-second memory", "answer": "Cap" },
-            { "value": 2000, "clue": "Sharks existed before trees", "answer": "Fact" }
+            {
+              "value": 1600,
+              "clue": "Goldfish have a 3-second memory",
+              "answer": "Cap"
+            },
+            {
+              "value": 2000,
+              "clue": "Sharks existed before trees",
+              "answer": "Fact"
+            }
           ]
         },
         {
           "category": "WHATS THE CONNECTION",
           "questions": [
             { "value": 400, "clue": "Dog, Cat, Rabbit", "answer": "Pets" },
-            { "value": 800, "clue": "Apple, Banana, Orange", "answer": "Fruits" },
-            { "value": 1200, "clue": "Snapchat, TikTok, Instagram", "answer": "Social media" },
-            { "value": 1600, "clue": "Taylor Swift, Billie Eilish, Olivia Rodrigo", "answer": "Female singers" },
-            { "value": 2000, "clue": "Mercury, Venus, Earth, Mars", "answer": "Inner planets" }
+            {
+              "value": 800,
+              "clue": "Apple, Banana, Orange",
+              "answer": "Fruits"
+            },
+            {
+              "value": 1200,
+              "clue": "Snapchat, TikTok, Instagram",
+              "answer": "Social media"
+            },
+            {
+              "value": 1600,
+              "clue": "Taylor Swift, Billie Eilish, Olivia Rodrigo",
+              "answer": "Female singers"
+            },
+            {
+              "value": 2000,
+              "clue": "Mercury, Venus, Earth, Mars",
+              "answer": "Inner planets"
+            }
           ]
         },
         {
           "category": "GUESS THE APP",
           "questions": [
-            { "value": 400, "clue": "Short videos and trends", "answer": "TikTok" },
-            { "value": 800, "clue": "Disappearing messages", "answer": "Snapchat" },
-            { "value": 1200, "clue": "Photos, reels, stories", "answer": "Instagram" },
-            { "value": 1600, "clue": "Videos and subscribers", "answer": "YouTube" },
-            { "value": 2000, "clue": "Save ideas to boards", "answer": "Pinterest" }
+            {
+              "value": 400,
+              "clue": "Short videos and trends",
+              "answer": "TikTok"
+            },
+            {
+              "value": 800,
+              "clue": "Disappearing messages",
+              "answer": "Snapchat"
+            },
+            {
+              "value": 1200,
+              "clue": "Photos, reels, stories",
+              "answer": "Instagram"
+            },
+            {
+              "value": 1600,
+              "clue": "Videos and subscribers",
+              "answer": "YouTube"
+            },
+            {
+              "value": 2000,
+              "clue": "Save ideas to boards",
+              "answer": "Pinterest"
+            }
           ]
         }
       ]
@@ -604,6 +772,235 @@
       "category": "TRICK QUESTION",
       "clue": "How many months have 28 days?",
       "answer": "All of them"
+    }
+  },
+  {
+    "id": "IB-CS-EXAM-1",
+    "name": "IB Computer Science Exam Jeopardy",
+    "doubleJeopardy": {
+      "board": [
+        {
+          "category": "EXPLAIN THE CONCEPT",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "Explain why client-side scripting is important in web browsers",
+              "answer": "Allows interaction, reduces server load, improves user experience",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "Explain how a web crawler indexes a page",
+              "answer": "Visits pages, scans content and keywords, stores indexed data",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "Explain how DNS and HTTP work together to load a webpage",
+              "answer": "DNS converts domain to IP, HTTP requests the webpage",
+              "used": false,
+              "dailyDouble": true
+            },
+            {
+              "value": 1600,
+              "clue": "Explain the difference between connection-oriented and connectionless communication",
+              "answer": "Connection-oriented establishes link first; connectionless sends packets without one",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "Explain why HTTPS is more secure than HTTP",
+              "answer": "Uses encryption (SSL/TLS), protects data from interception",
+              "used": false
+            }
+          ]
+        },
+        {
+          "category": "EVALUATE",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "Evaluate lossless vs lossy compression for text files",
+              "answer": "Lossless keeps data intact (best), lossy loses data so unsuitable",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "Evaluate lossy compression for music downloads",
+              "answer": "Smaller file size but reduced audio quality",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "Evaluate lossy compression for textbooks",
+              "answer": "Smaller files but loss of clarity makes it unsuitable",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "Evaluate parallel running vs direct changeover",
+              "answer": "Parallel safer but expensive; direct cheaper but risky",
+              "used": false,
+              "dailyDouble": true
+            },
+            {
+              "value": 2000,
+              "clue": "Evaluate login systems vs disabling save to protect media",
+              "answer": "Login restricts access but can be shared; disabling save is easily bypassed",
+              "used": false
+            }
+          ]
+        },
+        {
+          "category": "SCENARIO QUESTIONS",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "Identify two components of a URL",
+              "answer": "Protocol, domain, path",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "Identify two characteristics of HTTPS",
+              "answer": "Encryption and secure communication",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "Outline connectionless communication when requesting a webpage",
+              "answer": "Data sent in packets without a dedicated connection",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "Explain why using keywords improves search results",
+              "answer": "Matches indexed data and reduces irrelevant results",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "Discuss the impact of black hat SEO on students",
+              "answer": "Leads to misleading results, reduces reliability and research quality",
+              "used": false,
+              "dailyDouble": true
+            }
+          ]
+        },
+        {
+          "category": "NETWORKS & DATA",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "Identify two characteristics of fibre optic cables",
+              "answer": "High speed and low interference",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "Identify two characteristics of wireless transmission",
+              "answer": "Mobile but prone to interference",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "Describe how encryption protects data in transit",
+              "answer": "Data is converted to unreadable form and requires a key to decrypt",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "Explain how packet switching sends data across a network",
+              "answer": "Data split into packets, sent separately, reassembled at destination",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "Explain advantages and disadvantages of peer-to-peer networks",
+              "answer": "No central server but security risks and inconsistent performance",
+              "used": false,
+              "dailyDouble": true
+            }
+          ]
+        },
+        {
+          "category": "SYSTEMS & DEVELOPMENT",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "Identify one method to gather system requirements",
+              "answer": "Interview, observation or questionnaire",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "Explain why user roles are important when introducing a new system",
+              "answer": "Different users have different needs affecting design and training",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "Explain one issue that may occur during data migration",
+              "answer": "Data loss or incompatibility between systems",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "Evaluate one training method for system users",
+              "answer": "Training improves understanding but costs time and resources",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "Discuss one social impact of VPN use",
+              "answer": "Enables remote work but reduces interaction and affects work-life balance",
+              "used": false,
+              "dailyDouble": true
+            }
+          ]
+        },
+        {
+          "category": "ALGORITHMS & LOGIC",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "Explain the purpose of a trace table",
+              "answer": "Tracks variable values step-by-step to debug algorithms",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "Explain the purpose of counting odd values in an array",
+              "answer": "Counts values that are not divisible by 2",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "Compare linear search and binary search",
+              "answer": "Linear checks every value; binary splits sorted data making it faster",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "Explain why binary search requires sorted data",
+              "answer": "Because it eliminates half the dataset each step based on order",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "Explain one advantage and one disadvantage of bubble sort",
+              "answer": "Simple to implement but inefficient for large datasets",
+              "used": false,
+              "dailyDouble": true
+            }
+          ]
+        }
+      ]
+    },
+    "finalJeopardy": {
+      "category": "NETWORKS",
+      "clue": "Explain why packet switching is efficient for data transmission",
+      "answer": "Packets take different routes, improving efficiency and reliability"
     }
   }
 ]
