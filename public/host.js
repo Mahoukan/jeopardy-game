@@ -180,7 +180,7 @@ function renderPlayers(players, scores, currentTurnIndex) {
       const connectionLabel = player.connected ? "" : " (disconnected)";
 
       return `
-      <div class="player-score-row">
+      <div class="player-score-row ${index === currentTurnIndex ? "current-turn" : ""}">
         <strong>${escapeHtml(player.name)}</strong>
         <input 
           class="score-input"

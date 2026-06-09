@@ -175,8 +175,14 @@ function renderPlayers(players, scores, currentTurnIndex) {
 
   playersDiv.innerHTML = players
     .map((player, index) => {
-      const turnLabel = index === currentTurnIndex ? " ← turn" : "";
-      return `<p><strong>${player.name}</strong>: ${scores[player.id] ?? 0} ${turnLabel}</p>`;
+      const turnLabel = index === currentTurnIndex ? " ← TURN" : "";
+
+      return `
+      <p class="${index === currentTurnIndex ? "current-turn" : ""}">
+        <strong>${player.name}</strong>: ${scores[player.id] ?? 0}
+        ${turnLabel}
+      </p>
+    `;
     })
     .join("");
 }

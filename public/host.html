@@ -13,8 +13,7 @@
         <input
           id="adminPasswordInput"
           type="password"
-          placeholder="Admin password"
-        />
+          placeholder="Admin password" />
         <button id="adminLoginBtn">Login</button>
         <p id="adminLoginMessage"></p>
       </section>
@@ -30,8 +29,7 @@
             id="jsonImportInput"
             type="file"
             accept=".json"
-            class="hidden"
-          />
+            class="hidden" />
 
           <h2 id="gameCodeText">No game created yet</h2>
           <p>Share this code with your players.</p>
@@ -61,20 +59,30 @@
             </div>
 
             <div class="host-buttons">
-              <button id="correctBtn">Correct</button>
-              <button id="wrongBtn">Wrong</button>
-              <button id="skipBtn">Skip</button>
-              <button id="startDoubleBtn">Start Double Jeopardy</button>
-              <button id="startFinalBtn">Start Final Jeopardy</button>
-              <button id="revealFinalBtn">Reveal Final Clue</button>
-              <input
-                id="dailyDoubleWagerInput"
-                type="number"
-                placeholder="Daily Double wager"
-              />
-              <button id="setDailyDoubleWagerBtn">
-                Set Daily Double Wager
-              </button>
+              <div class="host-control-group">
+                <h3>Question Control</h3>
+                <button id="correctBtn">Correct</button>
+                <button id="wrongBtn">Wrong</button>
+                <button id="skipBtn">Skip</button>
+              </div>
+
+              <div class="host-control-group">
+                <h3>Round Control</h3>
+                <button id="startDoubleBtn">Start Double Jeopardy</button>
+                <button id="startFinalBtn">Start Final Jeopardy</button>
+                <button id="revealFinalBtn">Reveal Final Clue</button>
+              </div>
+
+              <div class="host-control-group">
+                <h3>Daily Double</h3>
+                <input
+                  id="dailyDoubleWagerInput"
+                  type="number"
+                  placeholder="Daily Double wager" />
+                <button id="setDailyDoubleWagerBtn">
+                  Set Daily Double Wager
+                </button>
+              </div>
             </div>
           </section>
         </section>
