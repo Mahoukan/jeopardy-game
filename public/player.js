@@ -104,7 +104,9 @@ function escapeHtml(text) {
 function getFinalStandings(game) {
   if (!game.finalMode || !game.players.length) return null;
 
-  const allMarked = game.players.every((player) => game.finalMarked?.[player.id]);
+  const allMarked = game.players.every(
+    (player) => game.finalMarked?.[player.id],
+  );
 
   if (!allMarked) return null;
 
@@ -198,13 +200,13 @@ function renderPlayers(players, scores, currentTurnIndex) {
 
 function renderQuestion(game) {
   if (game.finalMode) {
-  if (boardDiv) boardDiv.classList.add("hidden");
-  document.body.classList.add("player-question-active");
+    if (boardDiv) boardDiv.classList.add("hidden");
+    document.body.classList.add("player-question-active");
 
-  const standings = getFinalStandings(game);
+    const standings = getFinalStandings(game);
 
-  if (standings) {
-    questionBox.innerHTML = `
+    if (standings) {
+      questionBox.innerHTML = `
       <div class="winner-banner">
         <h1>🏆 FINAL STANDINGS 🏆</h1>
         ${standings
@@ -220,11 +222,11 @@ function renderQuestion(game) {
       </div>
     `;
 
-    if (buzzBtn) buzzBtn.disabled = true;
-    return;
-  }
+      if (buzzBtn) buzzBtn.disabled = true;
+      return;
+    }
 
-  const final = game.finalJeopardy;
+    const final = game.finalJeopardy;
     const alreadyWagered = game.finalWagers?.[playerId] !== undefined;
     const alreadyAnswered = game.finalAnswers?.[playerId] !== undefined;
     questionBox.innerHTML = `
