@@ -1,5 +1,6 @@
 const socket = io();
 
+let lastBoardState = "";
 let lastQuestionKey = null;
 const path = window.location.pathname;
 
@@ -74,7 +75,12 @@ socket.on("gameUpdate", (game) => {
   }
 
   renderPlayerInfo(game);
-  renderBoard(game.board);
+  const boardState = JSON.stringify(game.board);
+
+  if (boardState !== lastBoardState) {
+    lastBoardState = boardState;
+    renderBoard(game.board);
+  }
   renderPlayers(game.players, game.scores, game.currentTurnIndex);
   renderQuestion(game);
 });

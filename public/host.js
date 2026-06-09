@@ -2,7 +2,7 @@ const socket = io();
 window.socket = socket;
 let selectedGame = null;
 let lastQuestionKey = null;
-
+let lastBoardState = "";
 const dailyDoubleWagerInput = document.getElementById("dailyDoubleWagerInput");
 const setDailyDoubleWagerBtn = document.getElementById(
   "setDailyDoubleWagerBtn",
@@ -79,7 +79,12 @@ socket.on("gameUpdate", (game) => {
   localStorage.setItem("jeopardyBackup", JSON.stringify(game));
   gameCodeText.textContent = `Game Code: ${game.code}`;
 
-  renderBoard(game.board);
+  const boardState = JSON.stringify(game.board);
+
+  if (boardState !== lastBoardState) {
+    lastBoardState = boardState;
+    renderBoard(game.board);
+  }
   renderPlayers(game.players, game.scores, game.currentTurnIndex);
   renderQuestion(game);
 });
