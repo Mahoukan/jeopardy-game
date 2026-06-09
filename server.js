@@ -228,52 +228,20 @@ io.on("connection", (socket) => {
     );
 
     if (existingPlayer) {
-      const oldId = existingPlayer.id;
-      existingPlayer.id = socket.id;
+      existingPlayer.socketId = socket.id;
       existingPlayer.name = name.trim();
       existingPlayer.connected = true;
-
-      // Move score to new socket id
-      game.scores[socket.id] = game.scores[oldId] ?? 0;
-      delete game.scores[oldId];
-
-      // Move current buzz state
-      if (game.buzzedPlayerId === oldId) {
-        game.buzzedPlayerId = socket.id;
-      }
-
-      // Move Daily Double player state
-      if (game.dailyDoublePlayerId === oldId) {
-        game.dailyDoublePlayerId = socket.id;
-      }
-
-      // Move Final Jeopardy wager
-      if (game.finalWagers?.[oldId] !== undefined) {
-        game.finalWagers[socket.id] = game.finalWagers[oldId];
-        delete game.finalWagers[oldId];
-      }
-
-      // Move Final Jeopardy answer
-      if (game.finalAnswers?.[oldId] !== undefined) {
-        game.finalAnswers[socket.id] = game.finalAnswers[oldId];
-        delete game.finalAnswers[oldId];
-      }
-
-      // Move Final Jeopardy marked/correct-wrong state
-      if (game.finalMarked?.[oldId] !== undefined) {
-        game.finalMarked[socket.id] = game.finalMarked[oldId];
-        delete game.finalMarked[oldId];
-      }
     } else {
       const player = {
-        id: socket.id,
+        id: playerToken,
+        socketId: socket.id,
         token: playerToken,
         name: name.trim(),
         connected: true,
       };
 
       game.players.push(player);
-      game.scores[socket.id] = 0;
+      game.scores[playerToken] = 0;
     }
 
     socket.join(code);
@@ -281,7 +249,7 @@ io.on("connection", (socket) => {
     socket.data.name = name.trim();
     socket.data.playerToken = playerToken;
 
-    socket.emit("joinedGame", { code, playerId: socket.id });
+    socket.emit("joinedGame", { code, playerId: playerToken });
     sendGameUpdate(code);
   });
 
@@ -356,7 +324,10 @@ io.on("connection", (socket) => {
     if (Date.now() < game.buzzUnlocksAt) return;
 
     if (!game.buzzedPlayerId) {
-      game.buzzedPlayerId = socket.id;
+      const player = game.players.find((p) => p.socketId === socket.id);
+      if (!player) return;
+
+      game.buzzedPlayerId = player.id;
       game.answerEndsAt = Date.now() + ANSWER_TIME_MS;
       sendGameUpdate(code);
     }
