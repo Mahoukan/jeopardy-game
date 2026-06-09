@@ -450,3 +450,17 @@ body {
 .player-question-active .buzz-btn {
   box-shadow: 0 0 24px rgba(230, 57, 70, 0.5);
 }
+
+.player-question-active .layout {
+  display: block;
+}
+
+.player-question-active .side-panel {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.player-question-active .question-box {
+  width: 100%;
+  min-height: 360px;
+}
