@@ -490,3 +490,9 @@ body {
   visibility: hidden;
   pointer-events: none;
 }
+
+.question-button,
+.buzz-btn,
+button {
+  touch-action: manipulation;
+}
