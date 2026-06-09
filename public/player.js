@@ -189,6 +189,8 @@ function renderPlayers(players, scores, currentTurnIndex) {
 
 function renderQuestion(game) {
   if (game.finalMode) {
+    if (boardDiv) boardDiv.classList.add("hidden");
+    document.body.classList.add("player-question-active");
     const final = game.finalJeopardy;
     const alreadyWagered = game.finalWagers?.[playerId] !== undefined;
     const alreadyAnswered = game.finalAnswers?.[playerId] !== undefined;
@@ -266,10 +268,16 @@ function renderQuestion(game) {
 
   if (!game.currentQuestion) {
     lastQuestionKey = null;
+
+    if (boardDiv) boardDiv.classList.remove("hidden");
+    document.body.classList.remove("player-question-active");
+
     questionBox.innerHTML = "Waiting for host...";
     if (buzzBtn) buzzBtn.disabled = true;
     return;
   }
+  if (boardDiv) boardDiv.classList.add("hidden");
+  document.body.classList.add("player-question-active");
 
   const questionKey = JSON.stringify({
     clue: game.currentQuestion.clue,
