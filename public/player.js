@@ -15,9 +15,6 @@ const playersDiv = document.getElementById("players");
 const questionBox = document.getElementById("questionBox");
 const buzzBtn = document.getElementById("buzzBtn");
 
-let finalWagerSubmitted = false;
-let finalAnswerSubmitted = false;
-
 let currentCode = localStorage.getItem("gameCode");
 let playerName = localStorage.getItem("playerName");
 let playerId = localStorage.getItem("playerId");

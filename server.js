@@ -233,11 +233,36 @@ io.on("connection", (socket) => {
       existingPlayer.name = name.trim();
       existingPlayer.connected = true;
 
+      // Move score to new socket id
       game.scores[socket.id] = game.scores[oldId] ?? 0;
       delete game.scores[oldId];
 
+      // Move current buzz state
       if (game.buzzedPlayerId === oldId) {
         game.buzzedPlayerId = socket.id;
+      }
+
+      // Move Daily Double player state
+      if (game.dailyDoublePlayerId === oldId) {
+        game.dailyDoublePlayerId = socket.id;
+      }
+
+      // Move Final Jeopardy wager
+      if (game.finalWagers?.[oldId] !== undefined) {
+        game.finalWagers[socket.id] = game.finalWagers[oldId];
+        delete game.finalWagers[oldId];
+      }
+
+      // Move Final Jeopardy answer
+      if (game.finalAnswers?.[oldId] !== undefined) {
+        game.finalAnswers[socket.id] = game.finalAnswers[oldId];
+        delete game.finalAnswers[oldId];
+      }
+
+      // Move Final Jeopardy marked/correct-wrong state
+      if (game.finalMarked?.[oldId] !== undefined) {
+        game.finalMarked[socket.id] = game.finalMarked[oldId];
+        delete game.finalMarked[oldId];
       }
     } else {
       const player = {
