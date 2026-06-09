@@ -101,6 +101,18 @@ function escapeHtml(text) {
     .replaceAll(">", "&gt;");
 }
 
+function getFinalStandings(game) {
+  if (!game.finalMode || !game.players.length) return null;
+
+  const allMarked = game.players.every((player) => game.finalMarked?.[player.id]);
+
+  if (!allMarked) return null;
+
+  return [...game.players].sort(
+    (a, b) => (game.scores[b.id] ?? 0) - (game.scores[a.id] ?? 0),
+  );
+}
+
 function renderMedia(media) {
   if (!media || !media.type) return "";
 
