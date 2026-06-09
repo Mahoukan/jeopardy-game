@@ -198,9 +198,33 @@ function renderPlayers(players, scores, currentTurnIndex) {
 
 function renderQuestion(game) {
   if (game.finalMode) {
-    if (boardDiv) boardDiv.classList.add("hidden");
-    document.body.classList.add("player-question-active");
-    const final = game.finalJeopardy;
+  if (boardDiv) boardDiv.classList.add("hidden");
+  document.body.classList.add("player-question-active");
+
+  const standings = getFinalStandings(game);
+
+  if (standings) {
+    questionBox.innerHTML = `
+      <div class="winner-banner">
+        <h1>🏆 FINAL STANDINGS 🏆</h1>
+        ${standings
+          .map(
+            (player, index) => `
+              <p>
+                <strong>${index + 1}. ${escapeHtml(player.name)}</strong>
+                — $${(game.scores[player.id] ?? 0).toLocaleString()}
+              </p>
+            `,
+          )
+          .join("")}
+      </div>
+    `;
+
+    if (buzzBtn) buzzBtn.disabled = true;
+    return;
+  }
+
+  const final = game.finalJeopardy;
     const alreadyWagered = game.finalWagers?.[playerId] !== undefined;
     const alreadyAnswered = game.finalAnswers?.[playerId] !== undefined;
     questionBox.innerHTML = `
