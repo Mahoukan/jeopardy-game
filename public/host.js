@@ -228,7 +228,15 @@ function renderQuestion(game) {
         return `
           <div class="player-score-row">
             <strong>${escapeHtml(player.name)}</strong>
-            <span>Wager: ${escapeHtml(wager)}</span>
+            <span>
+              Wager:
+              <input
+                class="score-input final-wager-input"
+                type="number"
+                value="${wager === "No wager" ? "" : escapeHtml(wager)}"
+                data-player-id="${player.id}"
+              >
+            </span>
             <span>Answer: ${escapeHtml(answer)}</span>
             <button onclick="socket.emit('markFinalCorrect', { code: currentCode, playerId: '${player.id}' })">Correct</button>
             <button onclick="socket.emit('markFinalWrong', { code: currentCode, playerId: '${player.id}' })">Wrong</button>
@@ -237,7 +245,15 @@ function renderQuestion(game) {
       })
       .join("")}
   `;
-
+    document.querySelectorAll(".final-wager-input").forEach((input) => {
+      input.addEventListener("change", () => {
+        socket.emit("setFinalWager", {
+          code: currentCode,
+          playerId: input.dataset.playerId,
+          wager: input.value,
+        });
+      });
+    });
     return;
   }
   if (!game.currentQuestion) {

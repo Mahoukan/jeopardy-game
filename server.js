@@ -556,6 +556,26 @@ io.on("connection", (socket) => {
     sendGameUpdate(code);
   });
 
+  socket.on("setFinalWager", ({ code, playerId, wager }) => {
+    if (!socket.data.isAdmin) return;
+
+    const game = games[code];
+    if (!game || !game.finalMode) return;
+
+    const amount = Number(wager);
+
+    if (!Number.isFinite(amount) || amount < 0) {
+      socket.emit("errorMessage", "Invalid Final Jeopardy wager.");
+      return;
+    }
+
+    if (!game.players.some((p) => p.id === playerId)) return;
+
+    game.finalWagers[playerId] = amount;
+
+    sendGameUpdate(code);
+  });
+
   socket.on("disconnect", () => {
     const code = socket.data.code;
     const game = games[code];
