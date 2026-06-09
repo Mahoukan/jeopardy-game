@@ -3,6 +3,8 @@ window.socket = socket;
 let selectedGame = null;
 let lastQuestionKey = null;
 let lastBoardState = "";
+let lastPlayersState = "";
+
 const dailyDoubleWagerInput = document.getElementById("dailyDoubleWagerInput");
 const setDailyDoubleWagerBtn = document.getElementById(
   "setDailyDoubleWagerBtn",
@@ -76,7 +78,29 @@ socket.on("gameCreated", ({ code }) => {
 socket.on("gameUpdate", (game) => {
   currentCode = game.code;
   window.currentCode = currentCode;
-  localStorage.setItem("jeopardyBackup", JSON.stringify(game));
+  const backupState = JSON.stringify({
+    board: game.board,
+    players: game.players,
+    scores: game.scores,
+    currentTurnIndex: game.currentTurnIndex,
+    currentQuestion: game.currentQuestion,
+    finalMode: game.finalMode,
+    finalRevealed: game.finalRevealed,
+    finalWagers: game.finalWagers,
+    finalAnswers: game.finalAnswers,
+    finalMarked: game.finalMarked,
+    finalJeopardy: game.finalJeopardy,
+    currentRound: game.currentRound,
+    dailyDoubleMode: game.dailyDoubleMode,
+    dailyDoublePlayerId: game.dailyDoublePlayerId,
+    dailyDoubleWager: game.dailyDoubleWager,
+    dailyDoubleWagerSet: game.dailyDoubleWagerSet,
+  });
+
+  if (backupState !== localStorage.getItem("lastBackupState")) {
+    localStorage.setItem("lastBackupState", backupState);
+    localStorage.setItem("jeopardyBackup", JSON.stringify(game));
+  }
   gameCodeText.textContent = `Game Code: ${game.code}`;
 
   const boardState = JSON.stringify(game.board);
@@ -85,7 +109,16 @@ socket.on("gameUpdate", (game) => {
     lastBoardState = boardState;
     renderBoard(game.board);
   }
-  renderPlayers(game.players, game.scores, game.currentTurnIndex);
+  const playersState = JSON.stringify({
+    players: game.players,
+    scores: game.scores,
+    currentTurnIndex: game.currentTurnIndex,
+  });
+
+  if (playersState !== lastPlayersState) {
+    lastPlayersState = playersState;
+    renderPlayers(game.players, game.scores, game.currentTurnIndex);
+  }
   renderQuestion(game);
 });
 

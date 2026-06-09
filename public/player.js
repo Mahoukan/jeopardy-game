@@ -1,8 +1,9 @@
 const socket = io();
-
-let lastBoardState = "";
 let lastQuestionKey = null;
 const path = window.location.pathname;
+
+let lastBoardState = "";
+let lastPlayersState = "";
 
 const nameInput = document.getElementById("nameInput");
 const codeInput = document.getElementById("codeInput");
@@ -81,7 +82,16 @@ socket.on("gameUpdate", (game) => {
     lastBoardState = boardState;
     renderBoard(game.board);
   }
-  renderPlayers(game.players, game.scores, game.currentTurnIndex);
+  const playersState = JSON.stringify({
+    players: game.players,
+    scores: game.scores,
+    currentTurnIndex: game.currentTurnIndex,
+  });
+
+  if (playersState !== lastPlayersState) {
+    lastPlayersState = playersState;
+    renderPlayers(game.players, game.scores, game.currentTurnIndex);
+  }
   renderQuestion(game);
 });
 
