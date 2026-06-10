@@ -197,6 +197,7 @@ io.on("connection", (socket) => {
       currentTurnIndex: 0,
       currentQuestion: null,
       buzzedPlayerId: null,
+      buzzedAt: null,
       buzzUnlocksAt: null,
       timerInterval: null,
       answerEndsAt: null,
@@ -314,6 +315,8 @@ io.on("connection", (socket) => {
     }, 1000);
 
     game.buzzedPlayerId = null;
+    game.buzzedAt = null;
+    game.buzzedAt = null;
     sendGameUpdate(code);
   });
 
@@ -323,14 +326,24 @@ io.on("connection", (socket) => {
 
     if (Date.now() < game.buzzUnlocksAt) return;
 
-    if (!game.buzzedPlayerId) {
-      const player = game.players.find((p) => p.socketId === socket.id);
-      if (!player) return;
+    const player = game.players.find((p) => p.socketId === socket.id);
+    if (!player) return;
 
+    const now = Date.now();
+
+    if (!game.buzzedPlayerId) {
       game.buzzedPlayerId = player.id;
-      game.answerEndsAt = Date.now() + ANSWER_TIME_MS;
+      game.buzzedAt = now;
+      game.answerEndsAt = now + ANSWER_TIME_MS;
       sendGameUpdate(code);
+      return;
     }
+
+    const lateByMs = game.buzzedAt ? now - game.buzzedAt : null;
+
+    socket.emit("lateBuzz", {
+      lateByMs,
+    });
   });
 
   socket.on("markCorrect", ({ code }) => {
@@ -352,6 +365,7 @@ io.on("connection", (socket) => {
 
     game.currentQuestion = null;
     game.buzzedPlayerId = null;
+    game.buzzedAt = null;
     if (game.timerInterval) {
       clearInterval(game.timerInterval);
       game.timerInterval = null;
@@ -378,6 +392,7 @@ io.on("connection", (socket) => {
     game.scores[game.buzzedPlayerId] =
       (game.scores[game.buzzedPlayerId] || 0) - game.currentQuestion.value;
     game.buzzedPlayerId = null;
+    game.buzzedAt = null;
     game.answerEndsAt = null;
     game.dailyDoubleMode = false;
     game.dailyDoublePlayerId = null;
@@ -412,6 +427,7 @@ io.on("connection", (socket) => {
 
     game.currentQuestion = null;
     game.buzzedPlayerId = null;
+    game.buzzedAt = null;
     if (game.timerInterval) {
       clearInterval(game.timerInterval);
       game.timerInterval = null;
@@ -449,6 +465,7 @@ io.on("connection", (socket) => {
 
     game.currentQuestion = null;
     game.buzzedPlayerId = null;
+    game.buzzedAt = null;
     game.buzzUnlocksAt = null;
     game.answerEndsAt = null;
 
@@ -473,6 +490,7 @@ io.on("connection", (socket) => {
     game.finalRevealed = false;
     game.currentQuestion = null;
     game.buzzedPlayerId = null;
+    game.buzzedAt = null;
     game.finalWagers = {};
     game.finalAnswers = {};
     game.finalMarked = {};
