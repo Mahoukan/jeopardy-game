@@ -285,6 +285,8 @@ io.on("connection", (socket) => {
       game.dailyDoubleWagerSet = false;
 
       game.buzzedPlayerId = game.dailyDoublePlayerId;
+      game.buzzedAt = null;
+      game.lateBuzzShown = {};
       game.buzzUnlocksAt = null;
       game.answerEndsAt = null;
 
@@ -369,6 +371,8 @@ io.on("connection", (socket) => {
 
     game.currentQuestion = null;
     game.buzzedPlayerId = null;
+    game.buzzedAt = null;
+    game.lateBuzzShown = {};
 
     if (game.timerInterval) {
       clearInterval(game.timerInterval);
@@ -396,6 +400,8 @@ io.on("connection", (socket) => {
     game.scores[game.buzzedPlayerId] =
       (game.scores[game.buzzedPlayerId] || 0) - game.currentQuestion.value;
     game.buzzedPlayerId = null;
+    game.buzzedAt = null;
+    game.lateBuzzShown = {};
 
     game.answerEndsAt = null;
     game.dailyDoubleMode = false;
@@ -431,6 +437,8 @@ io.on("connection", (socket) => {
 
     game.currentQuestion = null;
     game.buzzedPlayerId = null;
+    game.buzzedAt = null;
+    game.lateBuzzShown = {};
 
     if (game.timerInterval) {
       clearInterval(game.timerInterval);
@@ -469,6 +477,8 @@ io.on("connection", (socket) => {
 
     game.currentQuestion = null;
     game.buzzedPlayerId = null;
+    game.buzzedAt = null;
+    game.lateBuzzShown = {};
 
     game.buzzUnlocksAt = null;
     game.answerEndsAt = null;
@@ -494,6 +504,8 @@ io.on("connection", (socket) => {
     game.finalRevealed = false;
     game.currentQuestion = null;
     game.buzzedPlayerId = null;
+    game.buzzedAt = null;
+    game.lateBuzzShown = {};
 
     game.finalWagers = {};
     game.finalAnswers = {};
