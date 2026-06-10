@@ -355,22 +355,12 @@ body {
     radial-gradient(circle at top, #1b2d5c 0%, #101728 45%, #070b14 100%);
 }
 
-.card,
-.side-panel,
-.editor-card {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
 
 .question-button {
   background: linear-gradient(#1f5de8, #12348c);
   color: #ffd447;
   font-weight: 900;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
   border: 2px solid #355fd8;
-  box-shadow:
-    inset 0 0 12px rgba(255, 255, 255, 0.12),
-    0 4px 10px rgba(0, 0, 0, 0.35);
 }
 
 .category-title {
