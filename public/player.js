@@ -231,7 +231,7 @@ function updateBuzzButton(game) {
   const buzzLocked = lockoutLeft > 0;
   const hasBuzzedPlayer = Boolean(game.buzzedPlayerId);
 
-  buzzBtn.disabled = hasBuzzedPlayer || buzzLocked;
+  buzzBtn.disabled = buzzLocked;
 
   buzzBtn.classList.remove("buzz-ready", "buzz-locked", "buzz-taken");
 
