@@ -84,6 +84,23 @@ function ensureScores(game) {
   });
 }
 
+function clearActiveQuestion(game) {
+  game.currentQuestion = null;
+  game.buzzedPlayerId = null;
+
+  if (game.timerInterval) {
+    clearInterval(game.timerInterval);
+    game.timerInterval = null;
+  }
+
+  game.answerEndsAt = null;
+  game.buzzUnlocksAt = null;
+  game.dailyDoubleMode = false;
+  game.dailyDoublePlayerId = null;
+  game.dailyDoubleWager = null;
+  game.dailyDoubleWagerSet = false;
+}
+
 function sendGameUpdate(code) {
   const game = games[code];
   if (!game) return;
@@ -92,6 +109,8 @@ function sendGameUpdate(code) {
   io.to(code).emit("gameUpdate", {
     code,
     gameName: game.gameName,
+    jeopardy: game.jeopardy,
+    doubleJeopardy: game.doubleJeopardy,
     currentRound: game.currentRound,
     finalMode: game.finalMode,
     finalMarked: game.finalMarked,
@@ -350,18 +369,7 @@ io.on("connection", (socket) => {
     );
     if (playerIndex !== -1) game.currentTurnIndex = playerIndex;
 
-    game.currentQuestion = null;
-    game.buzzedPlayerId = null;
-    if (game.timerInterval) {
-      clearInterval(game.timerInterval);
-      game.timerInterval = null;
-    }
-    game.answerEndsAt = null;
-    game.buzzUnlocksAt = null;
-    game.dailyDoubleMode = false;
-    game.dailyDoublePlayerId = null;
-    game.dailyDoubleWager = null;
-    game.dailyDoubleWagerSet = false;
+    clearActiveQuestion(game);
 
     sendGameUpdate(code);
   });
@@ -377,6 +385,13 @@ io.on("connection", (socket) => {
 
     game.scores[game.buzzedPlayerId] =
       (game.scores[game.buzzedPlayerId] || 0) - game.currentQuestion.value;
+
+    if (game.dailyDoubleMode) {
+      clearActiveQuestion(game);
+      sendGameUpdate(code);
+      return;
+    }
+
     game.buzzedPlayerId = null;
     game.answerEndsAt = null;
     game.dailyDoubleMode = false;
@@ -410,24 +425,11 @@ io.on("connection", (socket) => {
     const game = games[code];
     if (!game) return;
 
-    game.currentQuestion = null;
-    game.buzzedPlayerId = null;
-    if (game.timerInterval) {
-      clearInterval(game.timerInterval);
-      game.timerInterval = null;
-    }
-
-    game.buzzUnlocksAt = null;
-    game.answerEndsAt = null;
+    clearActiveQuestion(game);
 
     if (game.players.length > 0) {
       game.currentTurnIndex = (game.currentTurnIndex + 1) % game.players.length;
     }
-
-    game.dailyDoubleMode = false;
-    game.dailyDoublePlayerId = null;
-    game.dailyDoubleWager = null;
-    game.dailyDoubleWagerSet = false;
 
     sendGameUpdate(code);
   });
@@ -607,6 +609,9 @@ io.on("connection", (socket) => {
 
     games[snapshot.code] = {
       hostId: socket.id,
+      gameName: snapshot.gameName || "Restored Game",
+      jeopardy: snapshot.jeopardy || null,
+      doubleJeopardy: snapshot.doubleJeopardy || null,
       board: snapshot.board,
       players: snapshot.players,
       scores: snapshot.scores,

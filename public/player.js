@@ -37,12 +37,16 @@ if (joinBtn) {
   });
 }
 
-socket.on("joinedGame", ({ code, playerId }) => {
+socket.on("joinedGame", ({ code, playerId: joinedPlayerId }) => {
   const joiningName = nameInput ? nameInput.value.trim() : playerName;
+
+  currentCode = code;
+  playerName = joiningName;
+  playerId = joinedPlayerId;
 
   localStorage.setItem("gameCode", code);
   localStorage.setItem("playerName", joiningName);
-  localStorage.setItem("playerId", playerId);
+  localStorage.setItem("playerId", joinedPlayerId);
 
   if (!path.includes("game.html")) {
     window.location.href = "game.html";
@@ -69,7 +73,10 @@ if (path.includes("game.html")) {
 
 socket.on("gameUpdate", (game) => {
   currentCode = game.code;
-  const me = game.players.find((p) => p.name === playerName);
+  const me = game.players.find(
+    (p) => p.id === playerId || p.token === playerToken,
+  );
+
   if (me) {
     playerId = me.id;
     localStorage.setItem("playerId", playerId);
