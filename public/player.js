@@ -214,6 +214,29 @@ function renderPlayers(players, scores, currentTurnIndex) {
     .join("");
 }
 
+function updateBuzzButton(game) {
+  if (!buzzBtn) return;
+
+  const lockoutLeft = game.buzzLockoutLeft || 0;
+  const buzzLocked = lockoutLeft > 0;
+  const hasBuzzedPlayer = Boolean(game.buzzedPlayerId);
+
+  buzzBtn.disabled = hasBuzzedPlayer || buzzLocked;
+
+  buzzBtn.classList.remove("buzz-ready", "buzz-locked", "buzz-taken");
+
+  if (hasBuzzedPlayer) {
+    buzzBtn.classList.add("buzz-taken");
+    buzzBtn.textContent = "BUZZED";
+  } else if (buzzLocked) {
+    buzzBtn.classList.add("buzz-locked");
+    buzzBtn.textContent = `WAIT ${lockoutLeft}`;
+  } else {
+    buzzBtn.classList.add("buzz-ready");
+    buzzBtn.textContent = "BUZZ!";
+  }
+}
+
 function renderQuestion(game) {
   if (game.finalMode) {
     //if (boardDiv) boardDiv.classList.add("hidden");
@@ -340,11 +363,7 @@ function renderQuestion(game) {
   });
 
   if (questionKey === lastQuestionKey) {
-    if (buzzBtn) {
-      const lockoutLeft = game.buzzLockoutLeft || 0;
-      const buzzLocked = lockoutLeft > 0;
-      buzzBtn.disabled = Boolean(game.buzzedPlayerId) || buzzLocked;
-    }
+    updateBuzzButton(game);
     const timerText = document.getElementById("answerTimerText");
     if (timerText) {
       timerText.textContent =
@@ -407,9 +426,7 @@ function renderQuestion(game) {
   <p><strong>Buzzed:</strong> ${buzzedPlayer ? buzzedPlayer.name : "No one yet"}</p>
 `;
 
-  if (buzzBtn) {
-    buzzBtn.disabled = Boolean(game.buzzedPlayerId) || buzzLocked;
-  }
+  updateBuzzButton(game);
 }
 
 if (buzzBtn) {

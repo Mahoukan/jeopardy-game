@@ -482,3 +482,18 @@ body {
 button {
   touch-action: manipulation;
 }
+
+.buzz-btn.buzz-ready {
+  background: #22c55e;
+  opacity: 1;
+}
+
+.buzz-btn.buzz-locked {
+  background: #f97316;
+  opacity: 0.85;
+}
+
+.buzz-btn.buzz-taken {
+  background: #64748b;
+  opacity: 0.85;
+}
