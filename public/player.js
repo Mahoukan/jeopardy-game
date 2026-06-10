@@ -445,18 +445,6 @@ socket.on("connect", () => {
   }
 });
 
-socket.on("lateBuzz", ({ lateByMs }) => {
-  if (!buzzBtn || lateByMs === null) return;
-
-  const seconds = (lateByMs / 1000).toFixed(2);
-
-  buzzBtn.textContent = `${seconds}s late`;
-
-  setTimeout(() => {
-    buzzBtn.textContent = "BUZZED";
-  }, 1200);
-});
-
 setInterval(() => {
   if (currentCode) {
     socket.emit("heartbeat");
