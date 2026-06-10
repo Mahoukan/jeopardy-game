@@ -80,7 +80,10 @@ socket.on("gameUpdate", (game) => {
   window.currentCode = currentCode;
   if (!window.lastBackupTime || Date.now() - window.lastBackupTime > 5000) {
     window.lastBackupTime = Date.now();
-    localStorage.setItem("jeopardyBackup", JSON.stringify(game));
+    localStorage.setItem(
+      "jeopardyBackup",
+      JSON.stringify(buildBackupSnapshot(game)),
+    );
   }
   gameCodeText.textContent = `Game Code: ${game.code}`;
 
@@ -102,6 +105,33 @@ socket.on("gameUpdate", (game) => {
   }
   renderQuestion(game);
 });
+
+function buildBackupSnapshot(game) {
+  const existingBackup = getExistingBackupForCode(game.code);
+
+  return {
+    ...game,
+    gameName: game.gameName || existingBackup?.gameName || "Restored Game",
+    jeopardy: game.jeopardy || existingBackup?.jeopardy || selectedGame?.jeopardy || null,
+    doubleJeopardy:
+      game.doubleJeopardy ||
+      existingBackup?.doubleJeopardy ||
+      selectedGame?.doubleJeopardy ||
+      null,
+  };
+}
+
+function getExistingBackupForCode(code) {
+  try {
+    const existingBackup = JSON.parse(
+      localStorage.getItem("jeopardyBackup") || "null",
+    );
+
+    return existingBackup?.code === code ? existingBackup : null;
+  } catch (err) {
+    return null;
+  }
+}
 
 function renderSavedBoards() {
   if (savedBoards.length === 0) {

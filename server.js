@@ -101,16 +101,14 @@ function clearActiveQuestion(game) {
   game.dailyDoubleWagerSet = false;
 }
 
-function sendGameUpdate(code) {
+function sendGameUpdate(code, options = {}) {
   const game = games[code];
   if (!game) return;
   ensureScores(game);
 
-  io.to(code).emit("gameUpdate", {
+  const payload = {
     code,
     gameName: game.gameName,
-    jeopardy: game.jeopardy,
-    doubleJeopardy: game.doubleJeopardy,
     currentRound: game.currentRound,
     finalMode: game.finalMode,
     finalMarked: game.finalMarked,
@@ -134,7 +132,14 @@ function sendGameUpdate(code) {
     answerTimeLeft: game.answerEndsAt
       ? Math.max(0, Math.ceil((game.answerEndsAt - Date.now()) / 1000))
       : null,
-  });
+  };
+
+  if (options.includeFullGame) {
+    payload.jeopardy = game.jeopardy;
+    payload.doubleJeopardy = game.doubleJeopardy;
+  }
+
+  io.to(code).emit("gameUpdate", payload);
 }
 
 io.on("connection", (socket) => {
@@ -166,7 +171,7 @@ io.on("connection", (socket) => {
     socket.data.code = code;
     socket.data.isHost = true;
 
-    sendGameUpdate(code);
+    sendGameUpdate(code, { includeFullGame: true });
   });
   socket.on("getSavedBoards", () => {
     if (!socket.data.isAdmin) {
@@ -226,7 +231,7 @@ io.on("connection", (socket) => {
     socket.data.isHost = true;
 
     socket.emit("gameCreated", { code });
-    sendGameUpdate(code);
+    sendGameUpdate(code, { includeFullGame: true });
   });
 
   socket.on("joinGame", ({ code, name, playerToken }) => {
@@ -636,7 +641,7 @@ io.on("connection", (socket) => {
 
     socket.join(snapshot.code);
 
-    sendGameUpdate(snapshot.code);
+    sendGameUpdate(snapshot.code, { includeFullGame: true });
 
     socket.emit("successMessage", "Game restored.");
   });
