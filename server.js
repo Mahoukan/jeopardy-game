@@ -84,29 +84,12 @@ function ensureScores(game) {
   });
 }
 
-function clearActiveQuestion(game) {
-  game.currentQuestion = null;
-  game.buzzedPlayerId = null;
-
-  if (game.timerInterval) {
-    clearInterval(game.timerInterval);
-    game.timerInterval = null;
-  }
-
-  game.answerEndsAt = null;
-  game.buzzUnlocksAt = null;
-  game.dailyDoubleMode = false;
-  game.dailyDoublePlayerId = null;
-  game.dailyDoubleWager = null;
-  game.dailyDoubleWagerSet = false;
-}
-
-function sendGameUpdate(code, options = {}) {
+function sendGameUpdate(code) {
   const game = games[code];
   if (!game) return;
   ensureScores(game);
 
-  const payload = {
+  io.to(code).emit("gameUpdate", {
     code,
     gameName: game.gameName,
     currentRound: game.currentRound,
@@ -132,14 +115,7 @@ function sendGameUpdate(code, options = {}) {
     answerTimeLeft: game.answerEndsAt
       ? Math.max(0, Math.ceil((game.answerEndsAt - Date.now()) / 1000))
       : null,
-  };
-
-  if (options.includeFullGame) {
-    payload.jeopardy = game.jeopardy;
-    payload.doubleJeopardy = game.doubleJeopardy;
-  }
-
-  io.to(code).emit("gameUpdate", payload);
+  });
 }
 
 io.on("connection", (socket) => {
@@ -171,7 +147,7 @@ io.on("connection", (socket) => {
     socket.data.code = code;
     socket.data.isHost = true;
 
-    sendGameUpdate(code, { includeFullGame: true });
+    sendGameUpdate(code);
   });
   socket.on("getSavedBoards", () => {
     if (!socket.data.isAdmin) {
@@ -231,7 +207,7 @@ io.on("connection", (socket) => {
     socket.data.isHost = true;
 
     socket.emit("gameCreated", { code });
-    sendGameUpdate(code, { includeFullGame: true });
+    sendGameUpdate(code);
   });
 
   socket.on("joinGame", ({ code, name, playerToken }) => {
@@ -374,7 +350,18 @@ io.on("connection", (socket) => {
     );
     if (playerIndex !== -1) game.currentTurnIndex = playerIndex;
 
-    clearActiveQuestion(game);
+    game.currentQuestion = null;
+    game.buzzedPlayerId = null;
+    if (game.timerInterval) {
+      clearInterval(game.timerInterval);
+      game.timerInterval = null;
+    }
+    game.answerEndsAt = null;
+    game.buzzUnlocksAt = null;
+    game.dailyDoubleMode = false;
+    game.dailyDoublePlayerId = null;
+    game.dailyDoubleWager = null;
+    game.dailyDoubleWagerSet = false;
 
     sendGameUpdate(code);
   });
@@ -390,13 +377,6 @@ io.on("connection", (socket) => {
 
     game.scores[game.buzzedPlayerId] =
       (game.scores[game.buzzedPlayerId] || 0) - game.currentQuestion.value;
-
-    if (game.dailyDoubleMode) {
-      clearActiveQuestion(game);
-      sendGameUpdate(code);
-      return;
-    }
-
     game.buzzedPlayerId = null;
     game.answerEndsAt = null;
     game.dailyDoubleMode = false;
@@ -430,11 +410,24 @@ io.on("connection", (socket) => {
     const game = games[code];
     if (!game) return;
 
-    clearActiveQuestion(game);
+    game.currentQuestion = null;
+    game.buzzedPlayerId = null;
+    if (game.timerInterval) {
+      clearInterval(game.timerInterval);
+      game.timerInterval = null;
+    }
+
+    game.buzzUnlocksAt = null;
+    game.answerEndsAt = null;
 
     if (game.players.length > 0) {
       game.currentTurnIndex = (game.currentTurnIndex + 1) % game.players.length;
     }
+
+    game.dailyDoubleMode = false;
+    game.dailyDoublePlayerId = null;
+    game.dailyDoubleWager = null;
+    game.dailyDoubleWagerSet = false;
 
     sendGameUpdate(code);
   });
@@ -614,9 +607,6 @@ io.on("connection", (socket) => {
 
     games[snapshot.code] = {
       hostId: socket.id,
-      gameName: snapshot.gameName || "Restored Game",
-      jeopardy: snapshot.jeopardy || null,
-      doubleJeopardy: snapshot.doubleJeopardy || null,
       board: snapshot.board,
       players: snapshot.players,
       scores: snapshot.scores,
@@ -641,7 +631,7 @@ io.on("connection", (socket) => {
 
     socket.join(snapshot.code);
 
-    sendGameUpdate(snapshot.code, { includeFullGame: true });
+    sendGameUpdate(snapshot.code);
 
     socket.emit("successMessage", "Game restored.");
   });
