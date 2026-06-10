@@ -78,27 +78,8 @@ socket.on("gameCreated", ({ code }) => {
 socket.on("gameUpdate", (game) => {
   currentCode = game.code;
   window.currentCode = currentCode;
-  const backupState = JSON.stringify({
-    board: game.board,
-    players: game.players,
-    scores: game.scores,
-    currentTurnIndex: game.currentTurnIndex,
-    currentQuestion: game.currentQuestion,
-    finalMode: game.finalMode,
-    finalRevealed: game.finalRevealed,
-    finalWagers: game.finalWagers,
-    finalAnswers: game.finalAnswers,
-    finalMarked: game.finalMarked,
-    finalJeopardy: game.finalJeopardy,
-    currentRound: game.currentRound,
-    dailyDoubleMode: game.dailyDoubleMode,
-    dailyDoublePlayerId: game.dailyDoublePlayerId,
-    dailyDoubleWager: game.dailyDoubleWager,
-    dailyDoubleWagerSet: game.dailyDoubleWagerSet,
-  });
-
-  if (backupState !== localStorage.getItem("lastBackupState")) {
-    localStorage.setItem("lastBackupState", backupState);
+  if (!window.lastBackupTime || Date.now() - window.lastBackupTime > 5000) {
+    window.lastBackupTime = Date.now();
     localStorage.setItem("jeopardyBackup", JSON.stringify(game));
   }
   gameCodeText.textContent = `Game Code: ${game.code}`;
