@@ -197,6 +197,8 @@ io.on("connection", (socket) => {
       currentTurnIndex: 0,
       currentQuestion: null,
       buzzedPlayerId: null,
+      buzzedAt: null,
+      lateBuzzShown: {},
       buzzUnlocksAt: null,
       timerInterval: null,
       answerEndsAt: null,
@@ -314,6 +316,8 @@ io.on("connection", (socket) => {
     }, 1000);
 
     game.buzzedPlayerId = null;
+    game.buzzedAt = null;
+    game.lateBuzzShown = {};
 
     sendGameUpdate(code);
   });
@@ -324,14 +328,26 @@ io.on("connection", (socket) => {
 
     if (Date.now() < game.buzzUnlocksAt) return;
 
-    if (!game.buzzedPlayerId) {
-      const player = game.players.find((p) => p.socketId === socket.id);
-      if (!player) return;
+    const player = game.players.find((p) => p.socketId === socket.id);
+    if (!player) return;
 
+    const now = Date.now();
+
+    if (!game.buzzedPlayerId) {
       game.buzzedPlayerId = player.id;
-      game.answerEndsAt = Date.now() + ANSWER_TIME_MS;
+      game.buzzedAt = now;
+      game.answerEndsAt = now + ANSWER_TIME_MS;
       sendGameUpdate(code);
+      return;
     }
+
+    if (game.lateBuzzShown?.[player.id]) return;
+
+    game.lateBuzzShown[player.id] = true;
+
+    socket.emit("lateBuzz", {
+      lateByMs: game.buzzedAt ? now - game.buzzedAt : null,
+    });
   });
 
   socket.on("markCorrect", ({ code }) => {

@@ -5,6 +5,7 @@ const path = window.location.pathname;
 let lastBoardState = "";
 let lastPlayersState = "";
 
+const lateBuzzText = document.getElementById("lateBuzzText");
 const nameInput = document.getElementById("nameInput");
 const codeInput = document.getElementById("codeInput");
 const joinBtn = document.getElementById("joinBtn");
@@ -47,6 +48,15 @@ socket.on("joinedGame", ({ code, playerId }) => {
   if (!path.includes("game.html")) {
     window.location.href = "game.html";
   }
+});
+socket.on("lateBuzz", ({ lateByMs }) => {
+  if (!lateBuzzText || lateByMs === null) return;
+
+  lateBuzzText.textContent = `You were ${(lateByMs / 1000).toFixed(2)}s late.`;
+
+  setTimeout(() => {
+    lateBuzzText.textContent = "";
+  }, 2000);
 });
 
 socket.on("joinError", (error) => {
