@@ -56,7 +56,7 @@ socket.on("lateBuzz", ({ lateByMs }) => {
 
   setTimeout(() => {
     lateBuzzText.textContent = "";
-  }, 2000);
+  }, 5000);
 });
 
 socket.on("joinError", (error) => {
