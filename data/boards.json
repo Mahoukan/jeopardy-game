@@ -487,51 +487,143 @@
         {
           "category": "ODD ONE OUT",
           "questions": [
-            { "value": 200, "clue": "Dog, Cat, Rabbit, Lion", "answer": "Lion" },
-            { "value": 400, "clue": "Apple, Banana, Carrot, Orange", "answer": "Carrot" },
-            { "value": 600, "clue": "Fortnite, Minecraft, Roblox, FIFA", "answer": "FIFA" },
-            { "value": 800, "clue": "Snapchat, TikTok, Instagram, YouTube", "answer": "YouTube" },
-            { "value": 1000, "clue": "Taylor Swift, Billie Eilish, Drake, The Beatles", "answer": "The Beatles" }
+            {
+              "value": 200,
+              "clue": "Dog, Cat, Rabbit, Lion",
+              "answer": "Lion"
+            },
+            {
+              "value": 400,
+              "clue": "Apple, Banana, Carrot, Orange",
+              "answer": "Carrot"
+            },
+            {
+              "value": 600,
+              "clue": "Fortnite, Minecraft, Roblox, FIFA",
+              "answer": "FIFA"
+            },
+            {
+              "value": 800,
+              "clue": "Snapchat, TikTok, Instagram, YouTube",
+              "answer": "YouTube"
+            },
+            {
+              "value": 1000,
+              "clue": "Taylor Swift, Billie Eilish, Drake, The Beatles",
+              "answer": "The Beatles"
+            }
           ]
         },
         {
           "category": "WHICH IS REAL?",
           "questions": [
-            { "value": 200, "clue": "Flying snake / Invisible frog / Giant sand hamster", "answer": "Flying snake" },
-            { "value": 400, "clue": "Professional sleeper / Cloud watcher / Pillow tester", "answer": "Professional sleeper" },
-            { "value": 600, "clue": "Most socks on one foot / Eating a wall / Longest blink", "answer": "Most socks on one foot" },
-            { "value": 800, "clue": "Goat Simulator / Bread Jump Arena / Frog Dentist Pro", "answer": "Goat Simulator" },
-            { "value": 1000, "clue": "Rabbits invade town / Volcano survival / Exploding whale", "answer": "Exploding whale" }
+            {
+              "value": 200,
+              "clue": "Flying snake / Invisible frog / Giant sand hamster",
+              "answer": "Flying snake"
+            },
+            {
+              "value": 400,
+              "clue": "Professional sleeper / Cloud watcher / Pillow tester",
+              "answer": "Professional sleeper"
+            },
+            {
+              "value": 600,
+              "clue": "Most socks on one foot / Eating a wall / Longest blink",
+              "answer": "Most socks on one foot"
+            },
+            {
+              "value": 800,
+              "clue": "Goat Simulator / Bread Jump Arena / Frog Dentist Pro",
+              "answer": "Goat Simulator"
+            },
+            {
+              "value": 1000,
+              "clue": "Rabbits invade town / Volcano survival / Exploding whale",
+              "answer": "Exploding whale"
+            }
           ]
         },
         {
           "category": "GENERAL KNOWLEDGE",
           "questions": [
-            { "value": 200, "clue": "What planet do we live on?", "answer": "Earth" },
-            { "value": 400, "clue": "How many days are in a week?", "answer": "7" },
-            { "value": 600, "clue": "Largest animal on Earth?", "answer": "Blue whale" },
-            { "value": 800, "clue": "Country famous for kangaroos?", "answer": "Australia" },
-            { "value": 1000, "clue": "Capital city of New Zealand?", "answer": "Wellington" }
+            {
+              "value": 200,
+              "clue": "What planet do we live on?",
+              "answer": "Earth"
+            },
+            {
+              "value": 400,
+              "clue": "How many days are in a week?",
+              "answer": "7"
+            },
+            {
+              "value": 600,
+              "clue": "Largest animal on Earth?",
+              "answer": "Blue whale"
+            },
+            {
+              "value": 800,
+              "clue": "Country famous for kangaroos?",
+              "answer": "Australia"
+            },
+            {
+              "value": 1000,
+              "clue": "Capital city of New Zealand?",
+              "answer": "Wellington"
+            }
           ]
         },
         {
           "category": "FASTEST FIRST",
           "questions": [
             { "value": 200, "clue": "Colour of bananas?", "answer": "Yellow" },
-            { "value": 400, "clue": "How many legs does a spider have?", "answer": "8" },
-            { "value": 600, "clue": "Capital of Australia?", "answer": "Canberra" },
+            {
+              "value": 400,
+              "clue": "How many legs does a spider have?",
+              "answer": "8"
+            },
+            {
+              "value": 600,
+              "clue": "Capital of Australia?",
+              "answer": "Canberra"
+            },
             { "value": 800, "clue": "9 × 7?", "answer": "63" },
-            { "value": 1000, "clue": "Fastest land animal?", "answer": "Cheetah" }
+            {
+              "value": 1000,
+              "clue": "Fastest land animal?",
+              "answer": "Cheetah"
+            }
           ]
         },
         {
           "category": "GUESS THE CHARACTER",
           "questions": [
-            { "value": 200, "clue": "Lives in a pineapple under the sea", "answer": "SpongeBob SquarePants" },
-            { "value": 400, "clue": "Red and blue superhero who shoots webs", "answer": "Spider-Man" },
-            { "value": 600, "clue": "Wizard with a lightning bolt scar", "answer": "Harry Potter" },
-            { "value": 800, "clue": "Green ogre living in a swamp", "answer": "Shrek" },
-            { "value": 1000, "clue": "Blue alien, 'Ohana means family'", "answer": "Stitch" }
+            {
+              "value": 200,
+              "clue": "Lives in a pineapple under the sea",
+              "answer": "SpongeBob SquarePants"
+            },
+            {
+              "value": 400,
+              "clue": "Red and blue superhero who shoots webs",
+              "answer": "Spider-Man"
+            },
+            {
+              "value": 600,
+              "clue": "Wizard with a lightning bolt scar",
+              "answer": "Harry Potter"
+            },
+            {
+              "value": 800,
+              "clue": "Green ogre living in a swamp",
+              "answer": "Shrek"
+            },
+            {
+              "value": 1000,
+              "clue": "Blue alien, 'Ohana means family'",
+              "answer": "Stitch"
+            }
           ]
         }
       ]
@@ -551,11 +643,31 @@
         {
           "category": "GUESS THE CELEBRITY",
           "questions": [
-            { "value": 400, "clue": "Singer of 'Bad Guy'", "answer": "Billie Eilish" },
-            { "value": 800, "clue": "Eras Tour pop star", "answer": "Taylor Swift" },
-            { "value": 1200, "clue": "Plays Wednesday Addams", "answer": "Jenna Ortega" },
-            { "value": 1600, "clue": "Singer of 'Espresso'", "answer": "Sabrina Carpenter" },
-            { "value": 2000, "clue": "Rapper known for 'Munch'", "answer": "Ice Spice" }
+            {
+              "value": 400,
+              "clue": "Singer of 'Bad Guy'",
+              "answer": "Billie Eilish"
+            },
+            {
+              "value": 800,
+              "clue": "Eras Tour pop star",
+              "answer": "Taylor Swift"
+            },
+            {
+              "value": 1200,
+              "clue": "Plays Wednesday Addams",
+              "answer": "Jenna Ortega"
+            },
+            {
+              "value": 1600,
+              "clue": "Singer of 'Espresso'",
+              "answer": "Sabrina Carpenter"
+            },
+            {
+              "value": 2000,
+              "clue": "Rapper known for 'Munch'",
+              "answer": "Ice Spice"
+            }
           ]
         },
         {
@@ -565,37 +677,93 @@
             { "value": 800, "clue": "Cloud skin", "answer": "Real" },
             { "value": 1200, "clue": "Glow cloud fashion", "answer": "Fake" },
             { "value": 1600, "clue": "Clean girl aesthetic", "answer": "Real" },
-            { "value": 2000, "clue": "Digital freckles filter challenge", "answer": "Real" }
+            {
+              "value": 2000,
+              "clue": "Digital freckles filter challenge",
+              "answer": "Real"
+            }
           ]
         },
         {
           "category": "FACT OR CAP",
           "questions": [
-            { "value": 400, "clue": "Octopuses have three hearts", "answer": "Fact" },
-            { "value": 800, "clue": "You can sneeze while asleep", "answer": "Cap" },
+            {
+              "value": 400,
+              "clue": "Octopuses have three hearts",
+              "answer": "Fact"
+            },
+            {
+              "value": 800,
+              "clue": "You can sneeze while asleep",
+              "answer": "Cap"
+            },
             { "value": 1200, "clue": "Bananas are berries", "answer": "Fact" },
-            { "value": 1600, "clue": "Goldfish have a 3-second memory", "answer": "Cap" },
-            { "value": 2000, "clue": "Sharks existed before trees", "answer": "Fact" }
+            {
+              "value": 1600,
+              "clue": "Goldfish have a 3-second memory",
+              "answer": "Cap"
+            },
+            {
+              "value": 2000,
+              "clue": "Sharks existed before trees",
+              "answer": "Fact"
+            }
           ]
         },
         {
           "category": "WHATS THE CONNECTION",
           "questions": [
             { "value": 400, "clue": "Dog, Cat, Rabbit", "answer": "Pets" },
-            { "value": 800, "clue": "Apple, Banana, Orange", "answer": "Fruits" },
-            { "value": 1200, "clue": "Snapchat, TikTok, Instagram", "answer": "Social media" },
-            { "value": 1600, "clue": "Taylor Swift, Billie Eilish, Olivia Rodrigo", "answer": "Female singers" },
-            { "value": 2000, "clue": "Mercury, Venus, Earth, Mars", "answer": "Inner planets" }
+            {
+              "value": 800,
+              "clue": "Apple, Banana, Orange",
+              "answer": "Fruits"
+            },
+            {
+              "value": 1200,
+              "clue": "Snapchat, TikTok, Instagram",
+              "answer": "Social media"
+            },
+            {
+              "value": 1600,
+              "clue": "Taylor Swift, Billie Eilish, Olivia Rodrigo",
+              "answer": "Female singers"
+            },
+            {
+              "value": 2000,
+              "clue": "Mercury, Venus, Earth, Mars",
+              "answer": "Inner planets"
+            }
           ]
         },
         {
           "category": "GUESS THE APP",
           "questions": [
-            { "value": 400, "clue": "Short videos and trends", "answer": "TikTok" },
-            { "value": 800, "clue": "Disappearing messages", "answer": "Snapchat" },
-            { "value": 1200, "clue": "Photos, reels, stories", "answer": "Instagram" },
-            { "value": 1600, "clue": "Videos and subscribers", "answer": "YouTube" },
-            { "value": 2000, "clue": "Save ideas to boards", "answer": "Pinterest" }
+            {
+              "value": 400,
+              "clue": "Short videos and trends",
+              "answer": "TikTok"
+            },
+            {
+              "value": 800,
+              "clue": "Disappearing messages",
+              "answer": "Snapchat"
+            },
+            {
+              "value": 1200,
+              "clue": "Photos, reels, stories",
+              "answer": "Instagram"
+            },
+            {
+              "value": 1600,
+              "clue": "Videos and subscribers",
+              "answer": "YouTube"
+            },
+            {
+              "value": 2000,
+              "clue": "Save ideas to boards",
+              "answer": "Pinterest"
+            }
           ]
         }
       ]
@@ -614,61 +782,212 @@
         {
           "category": "KEY DEFINITIONS",
           "questions": [
-            { "value": 200, "clue": "Define algorithm", "answer": "A finite step-by-step process to solve a problem", "used": false },
-            { "value": 400, "clue": "Define protocol", "answer": "A set of rules governing communication between devices", "used": false },
-            { "value": 600, "clue": "Define URL", "answer": "An address used to locate a resource on the internet", "used": false },
-            { "value": 800, "clue": "Define search engine", "answer": "A system that searches the web and returns results", "used": false },
-            { "value": 1000, "clue": "Define legacy system", "answer": "An old system still in use", "used": false }
+            {
+              "value": 200,
+              "clue": "Define algorithm",
+              "answer": "A finite step-by-step process to solve a problem",
+              "used": false
+            },
+            {
+              "value": 400,
+              "clue": "Define protocol",
+              "answer": "A set of rules governing communication between devices",
+              "used": false
+            },
+            {
+              "value": 600,
+              "clue": "Define URL",
+              "answer": "An address used to locate a resource on the internet",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "Define search engine",
+              "answer": "A system that searches the web and returns results",
+              "used": false
+            },
+            {
+              "value": 1000,
+              "clue": "Define legacy system",
+              "answer": "An old system still in use",
+              "used": false
+            }
           ]
         },
         {
           "category": "HARDWARE & CPU",
           "questions": [
-            { "value": 200, "clue": "Function of the CPU", "answer": "Executes instructions and processes data", "used": false },
-            { "value": 400, "clue": "Purpose of MDR", "answer": "Stores data being transferred to or from memory", "used": false },
-            { "value": 600, "clue": "Role of ALU", "answer": "Performs arithmetic and logical operations", "used": false },
-            { "value": 800, "clue": "Function of Program Counter", "answer": "Stores address of next instruction", "used": false },
-            { "value": 1000, "clue": "What is RAM used for?", "answer": "Temporary storage of data and programs in use", "used": false, "dailyDouble": true }
+            {
+              "value": 200,
+              "clue": "Function of the CPU",
+              "answer": "Executes instructions and processes data",
+              "used": false
+            },
+            {
+              "value": 400,
+              "clue": "Purpose of MDR",
+              "answer": "Stores data being transferred to or from memory",
+              "used": false
+            },
+            {
+              "value": 600,
+              "clue": "Role of ALU",
+              "answer": "Performs arithmetic and logical operations",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "Function of Program Counter",
+              "answer": "Stores address of next instruction",
+              "used": false
+            },
+            {
+              "value": 1000,
+              "clue": "What is RAM used for?",
+              "answer": "Temporary storage of data and programs in use",
+              "used": false,
+              "dailyDouble": true
+            }
           ]
         },
         {
           "category": "ALGORITHMS",
           "questions": [
-            { "value": 200, "clue": "Define iteration", "answer": "Repeating instructions", "used": false },
-            { "value": 400, "clue": "Define selection", "answer": "Decision making using conditions", "used": false },
-            { "value": 600, "clue": "What is Boolean?", "answer": "Data type with True or False values", "used": false },
-            { "value": 800, "clue": "What is linear search?", "answer": "Checks each item sequentially", "used": false },
-            { "value": 1000, "clue": "What is binary search?", "answer": "Searches by dividing sorted list in half", "used": false }
+            {
+              "value": 200,
+              "clue": "Define iteration",
+              "answer": "Repeating instructions",
+              "used": false
+            },
+            {
+              "value": 400,
+              "clue": "Define selection",
+              "answer": "Decision making using conditions",
+              "used": false
+            },
+            {
+              "value": 600,
+              "clue": "What is Boolean?",
+              "answer": "Data type with True or False values",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "What is linear search?",
+              "answer": "Checks each item sequentially",
+              "used": false
+            },
+            {
+              "value": 1000,
+              "clue": "What is binary search?",
+              "answer": "Searches by dividing sorted list in half",
+              "used": false
+            }
           ]
         },
         {
           "category": "NETWORKS",
           "questions": [
-            { "value": 200, "clue": "What does DNS do?", "answer": "Converts domain names to IP addresses", "used": false },
-            { "value": 400, "clue": "What is HTTP used for?", "answer": "Requesting and loading web pages", "used": false },
-            { "value": 600, "clue": "What is an IP address?", "answer": "Unique identifier for a device on a network", "used": false },
-            { "value": 800, "clue": "What is packet switching?", "answer": "Data split into packets and sent separately", "used": false },
-            { "value": 1000, "clue": "What is HTTPS?", "answer": "Secure version of HTTP using encryption", "used": false }
+            {
+              "value": 200,
+              "clue": "What does DNS do?",
+              "answer": "Converts domain names to IP addresses",
+              "used": false
+            },
+            {
+              "value": 400,
+              "clue": "What is HTTP used for?",
+              "answer": "Requesting and loading web pages",
+              "used": false
+            },
+            {
+              "value": 600,
+              "clue": "What is an IP address?",
+              "answer": "Unique identifier for a device on a network",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "What is packet switching?",
+              "answer": "Data split into packets and sent separately",
+              "used": false
+            },
+            {
+              "value": 1000,
+              "clue": "What is HTTPS?",
+              "answer": "Secure version of HTTP using encryption",
+              "used": false
+            }
           ]
         },
         {
           "category": "DATA REPRESENTATION",
           "questions": [
-            { "value": 200, "clue": "What is a bit?", "answer": "Smallest unit of data (0 or 1)", "used": false },
-            { "value": 400, "clue": "What is a byte?", "answer": "8 bits", "used": false },
-            { "value": 600, "clue": "Why do computers use binary?", "answer": "It represents electrical states (on/off)", "used": false },
-            { "value": 800, "clue": "How many values can 12 bits represent?", "answer": "4096", "used": false },
-            { "value": 1000, "clue": "What is hexadecimal?", "answer": "Base 16 number system", "used": false }
+            {
+              "value": 200,
+              "clue": "What is a bit?",
+              "answer": "Smallest unit of data (0 or 1)",
+              "used": false
+            },
+            {
+              "value": 400,
+              "clue": "What is a byte?",
+              "answer": "8 bits",
+              "used": false
+            },
+            {
+              "value": 600,
+              "clue": "Why do computers use binary?",
+              "answer": "It represents electrical states (on/off)",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "How many values can 12 bits represent?",
+              "answer": "4096",
+              "used": false
+            },
+            {
+              "value": 1000,
+              "clue": "What is hexadecimal?",
+              "answer": "Base 16 number system",
+              "used": false
+            }
           ]
         },
         {
           "category": "SYSTEMS",
           "questions": [
-            { "value": 200, "clue": "What is user acceptance testing?", "answer": "Testing by users to confirm requirements are met", "used": false },
-            { "value": 400, "clue": "What is data migration?", "answer": "Transfer of data from old system to new", "used": false },
-            { "value": 600, "clue": "What is parallel running?", "answer": "Running old and new systems together", "used": false },
-            { "value": 800, "clue": "What is direct changeover?", "answer": "Switching immediately to new system", "used": false },
-            { "value": 1000, "clue": "One risk of data migration", "answer": "Data loss or corruption", "used": false }
+            {
+              "value": 200,
+              "clue": "What is user acceptance testing?",
+              "answer": "Testing by users to confirm requirements are met",
+              "used": false
+            },
+            {
+              "value": 400,
+              "clue": "What is data migration?",
+              "answer": "Transfer of data from old system to new",
+              "used": false
+            },
+            {
+              "value": 600,
+              "clue": "What is parallel running?",
+              "answer": "Running old and new systems together",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "What is direct changeover?",
+              "answer": "Switching immediately to new system",
+              "used": false
+            },
+            {
+              "value": 1000,
+              "clue": "One risk of data migration",
+              "answer": "Data loss or corruption",
+              "used": false
+            }
           ]
         }
       ]
@@ -679,61 +998,214 @@
         {
           "category": "EXPLAIN",
           "questions": [
-            { "value": 400, "clue": "Explain why client-side scripting is important", "answer": "Allows interaction, reduces server load, improves user experience", "used": false },
-            { "value": 800, "clue": "Explain how a web crawler indexes pages", "answer": "Visits pages, scans content, stores indexed results", "used": false },
-            { "value": 1200, "clue": "Explain how DNS and HTTP work together", "answer": "DNS finds IP, HTTP requests webpage", "used": false, "dailyDouble": true },
-            { "value": 1600, "clue": "Explain connectionless communication", "answer": "Data sent without establishing a dedicated connection", "used": false },
-            { "value": 2000, "clue": "Explain why HTTPS is secure", "answer": "Uses encryption to protect data in transit", "used": false }
+            {
+              "value": 400,
+              "clue": "Explain why client-side scripting is important",
+              "answer": "Allows interaction, reduces server load, improves user experience",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "Explain how a web crawler indexes pages",
+              "answer": "Visits pages, scans content, stores indexed results",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "Explain how DNS and HTTP work together",
+              "answer": "DNS finds IP, HTTP requests webpage",
+              "used": false,
+              "dailyDouble": true
+            },
+            {
+              "value": 1600,
+              "clue": "Explain connectionless communication",
+              "answer": "Data sent without establishing a dedicated connection",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "Explain why HTTPS is secure",
+              "answer": "Uses encryption to protect data in transit",
+              "used": false
+            }
           ]
         },
         {
           "category": "EVALUATE",
           "questions": [
-            { "value": 400, "clue": "Evaluate lossless vs lossy for text", "answer": "Lossless keeps quality; lossy unsuitable", "used": false },
-            { "value": 800, "clue": "Evaluate lossy for music", "answer": "Smaller files but reduced quality", "used": false },
-            { "value": 1200, "clue": "Evaluate lossy for textbooks", "answer": "Compression reduces clarity so not ideal", "used": false },
-            { "value": 1600, "clue": "Evaluate parallel vs direct changeover", "answer": "Parallel safer, direct cheaper but risky", "used": false, "dailyDouble": true },
-            { "value": 2000, "clue": "Evaluate digital protection methods", "answer": "Login restricts access; disabling save is weak", "used": false }
+            {
+              "value": 400,
+              "clue": "Evaluate lossless vs lossy for text",
+              "answer": "Lossless keeps quality; lossy unsuitable",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "Evaluate lossy for music",
+              "answer": "Smaller files but reduced quality",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "Evaluate lossy for textbooks",
+              "answer": "Compression reduces clarity so not ideal",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "Evaluate parallel vs direct changeover",
+              "answer": "Parallel safer, direct cheaper but risky",
+              "used": false,
+              "dailyDouble": true
+            },
+            {
+              "value": 2000,
+              "clue": "Evaluate digital protection methods",
+              "answer": "Login restricts access; disabling save is weak",
+              "used": false
+            }
           ]
         },
         {
           "category": "SCENARIO",
           "questions": [
-            { "value": 400, "clue": "Identify URL components", "answer": "Protocol, domain, path", "used": false },
-            { "value": 800, "clue": "Identify HTTPS characteristics", "answer": "Encryption and secure communication", "used": false },
-            { "value": 1200, "clue": "Outline connectionless web request", "answer": "Data sent in packets without connection", "used": false },
-            { "value": 1600, "clue": "Explain keyword search benefit", "answer": "Improves relevance and reduces noise", "used": false },
-            { "value": 2000, "clue": "Discuss black hat SEO impact", "answer": "Misleading results and poor research quality", "used": false, "dailyDouble": true }
+            {
+              "value": 400,
+              "clue": "Identify URL components",
+              "answer": "Protocol, domain, path",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "Identify HTTPS characteristics",
+              "answer": "Encryption and secure communication",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "Outline connectionless web request",
+              "answer": "Data sent in packets without connection",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "Explain keyword search benefit",
+              "answer": "Improves relevance and reduces noise",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "Discuss black hat SEO impact",
+              "answer": "Misleading results and poor research quality",
+              "used": false,
+              "dailyDouble": true
+            }
           ]
         },
         {
           "category": "NETWORKS",
           "questions": [
-            { "value": 400, "clue": "Two fibre optic features", "answer": "High speed, low interference", "used": false },
-            { "value": 800, "clue": "Two wireless features", "answer": "Mobile, prone to interference", "used": false },
-            { "value": 1200, "clue": "Describe encryption", "answer": "Data converted to unreadable form using a key", "used": false },
-            { "value": 1600, "clue": "Explain packet switching", "answer": "Packets sent separately then reassembled", "used": false },
-            { "value": 2000, "clue": "Explain P2P pros and cons", "answer": "Decentralised but security risks", "used": false }
+            {
+              "value": 400,
+              "clue": "Two fibre optic features",
+              "answer": "High speed, low interference",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "Two wireless features",
+              "answer": "Mobile, prone to interference",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "Describe encryption",
+              "answer": "Data converted to unreadable form using a key",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "Explain packet switching",
+              "answer": "Packets sent separately then reassembled",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "Explain P2P pros and cons",
+              "answer": "Decentralised but security risks",
+              "used": false
+            }
           ]
         },
         {
           "category": "SYSTEMS",
           "questions": [
-            { "value": 400, "clue": "One requirements method", "answer": "Interview / observation", "used": false },
-            { "value": 800, "clue": "Explain importance of user roles", "answer": "Different needs affect system design", "used": false },
-            { "value": 1200, "clue": "Explain migration issue", "answer": "Data loss or incompatibility", "used": false },
-            { "value": 1600, "clue": "Evaluate training method", "answer": "Improves skills but costly", "used": false },
-            { "value": 2000, "clue": "Discuss VPN impact", "answer": "Enables remote work but reduces interaction", "used": false }
+            {
+              "value": 400,
+              "clue": "One requirements method",
+              "answer": "Interview / observation",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "Explain importance of user roles",
+              "answer": "Different needs affect system design",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "Explain migration issue",
+              "answer": "Data loss or incompatibility",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "Evaluate training method",
+              "answer": "Improves skills but costly",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "Discuss VPN impact",
+              "answer": "Enables remote work but reduces interaction",
+              "used": false
+            }
           ]
         },
         {
           "category": "ALGORITHMS",
           "questions": [
-            { "value": 400, "clue": "Explain trace table", "answer": "Tracks variables step-by-step", "used": false },
-            { "value": 800, "clue": "Purpose of odd count algorithm", "answer": "Counts numbers not divisible by 2", "used": false },
-            { "value": 1200, "clue": "Compare linear vs binary search", "answer": "Linear checks all; binary faster but needs sorted data", "used": false },
-            { "value": 1600, "clue": "Why binary needs sorted data", "answer": "Eliminates half based on order", "used": false },
-            { "value": 2000, "clue": "Bubble sort advantage/disadvantage", "answer": "Simple but inefficient", "used": false }
+            {
+              "value": 400,
+              "clue": "Explain trace table",
+              "answer": "Tracks variables step-by-step",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "Purpose of odd count algorithm",
+              "answer": "Counts numbers not divisible by 2",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "Compare linear vs binary search",
+              "answer": "Linear checks all; binary faster but needs sorted data",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "Why binary needs sorted data",
+              "answer": "Eliminates half based on order",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "Bubble sort advantage/disadvantage",
+              "answer": "Simple but inefficient",
+              "used": false
+            }
           ]
         }
       ]
@@ -746,457 +1218,937 @@
     }
   },
   {
-  "id": "POP-GAME-4",
-  "name": "Pop Culture Jeopardy! 4",
-  "jeopardy": {
-    "board": [
-      {
-        "category": "MOVIE VILLAINS",
-        "questions": [
-          {
-            "value": 200,
-            "clue": "This villain sought the six Infinity Stones.",
-            "answer": "Thanos",
-            "used": false
-          },
-          {
-            "value": 400,
-            "clue": "This Batman villain's true identity is usually unknown.",
-            "answer": "The Joker",
-            "used": false
-          },
-          {
-            "value": 600,
-            "clue": "Before becoming a Sith Lord, he was a Jedi Knight.",
-            "answer": "Darth Vader",
-            "used": false
-          },
-          {
-            "value": 800,
-            "clue": "This Disney villain transformed into a dragon while battling Prince Phillip.",
-            "answer": "Maleficent",
-            "used": false
-          },
-          {
-            "value": 1000,
-            "clue": "This is the main villain from The Silence of the Lambs.",
-            "answer": "Hannibal Lecter",
-            "used": false
-          }
-        ]
-      },
-      {
-        "category": "VIDEO GAMES",
-        "questions": [
-          {
-            "value": 200,
-            "clue": "This sandbox game became the best-selling video game of all time.",
-            "answer": "Minecraft",
-            "used": false
-          },
-          {
-            "value": 400,
-            "clue": "This game series features a yellow creature that can capture others in small red-and-white balls.",
-            "answer": "Pokémon",
-            "used": false
-          },
-          {
-            "value": 600,
-            "clue": "This game franchise features the factions Terran, Protoss, and Zerg.",
-            "answer": "StarCraft",
-            "used": false
-          },
-          {
-            "value": 800,
-            "clue": "This game introduced the Companion Cube.",
-            "answer": "Portal",
-            "used": false
-          },
-          {
-            "value": 1000,
-            "clue": "This 2007 game shocked players with the phrase, \"Would you kindly?\"",
-            "answer": "BioShock",
-            "used": false
-          }
-        ]
-      },
-      {
-        "category": "INTERNET LEGENDS",
-        "questions": [
-          {
-            "value": 200,
-            "clue": "This singer became the face of an internet prank where users were unexpectedly redirected to his music video.",
-            "answer": "Rick Astley",
-            "used": false
-          },
-          {
-            "value": 400,
-            "clue": "This rainbow-trailing flying cat became one of the internet's most recognizable animated memes.",
-            "answer": "Nyan Cat",
-            "used": false
-          },
-          {
-            "value": 600,
-            "clue": "This viral YouTube video featured a young boy saying, \"he bit me!\"",
-            "answer": "Charlie Bit My Finger",
-            "used": false
-          },
-          {
-            "value": 800,
-            "clue": "This dog from a 2010 photograph inspired the \"much wow\" meme.",
-            "answer": "Doge",
-            "used": false
-          },
-          {
-            "value": 1000,
-            "clue": "This meme features a stock-photo model smiling despite clearly looking exhausted.",
-            "answer": "Hide the Pain Harold",
-            "used": false
-          }
-        ]
-      },
-      {
-        "category": "GUESS THE FLAG",
-        "questions": [
-          {
-            "value": 200,
-            "clue": "Name this flag.",
-            "answer": "Canada",
-            "media": {
-              "type": "image",
-              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg"
+    "id": "POP-GAME-4",
+    "name": "Pop Culture Jeopardy! 4",
+    "jeopardy": {
+      "board": [
+        {
+          "category": "MOVIE VILLAINS",
+          "questions": [
+            {
+              "value": 200,
+              "clue": "This villain sought the six Infinity Stones.",
+              "answer": "Thanos",
+              "used": false
+            },
+            {
+              "value": 400,
+              "clue": "This Batman villain's true identity is usually unknown.",
+              "answer": "The Joker",
+              "used": false
+            },
+            {
+              "value": 600,
+              "clue": "Before becoming a Sith Lord, he was a Jedi Knight.",
+              "answer": "Darth Vader",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "This Disney villain transformed into a dragon while battling Prince Phillip.",
+              "answer": "Maleficent",
+              "used": false
+            },
+            {
+              "value": 1000,
+              "clue": "This is the main villain from The Silence of the Lambs.",
+              "answer": "Hannibal Lecter",
+              "used": false
             }
-          },
-          {
-            "value": 400,
-            "clue": "Name this flag.",
-            "answer": "Brazil",
-            "media": {
-              "type": "image",
-              "url": "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg"
+          ]
+        },
+        {
+          "category": "VIDEO GAMES",
+          "questions": [
+            {
+              "value": 200,
+              "clue": "This sandbox game became the best-selling video game of all time.",
+              "answer": "Minecraft",
+              "used": false
+            },
+            {
+              "value": 400,
+              "clue": "This game series features a yellow creature that can capture others in small red-and-white balls.",
+              "answer": "Pokémon",
+              "used": false
+            },
+            {
+              "value": 600,
+              "clue": "This game franchise features the factions Terran, Protoss, and Zerg.",
+              "answer": "StarCraft",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "This game introduced the Companion Cube.",
+              "answer": "Portal",
+              "used": false
+            },
+            {
+              "value": 1000,
+              "clue": "This 2007 game shocked players with the phrase, \"Would you kindly?\"",
+              "answer": "BioShock",
+              "used": false
             }
-          },
-          {
-            "value": 600,
-            "clue": "Name this flag.",
-            "answer": "Wales",
-            "media": {
-              "type": "image",
-              "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Flag_of_Wales.svg"
+          ]
+        },
+        {
+          "category": "INTERNET LEGENDS",
+          "questions": [
+            {
+              "value": 200,
+              "clue": "This singer became the face of an internet prank where users were unexpectedly redirected to his music video.",
+              "answer": "Rick Astley",
+              "used": false
+            },
+            {
+              "value": 400,
+              "clue": "This rainbow-trailing flying cat became one of the internet's most recognizable animated memes.",
+              "answer": "Nyan Cat",
+              "used": false
+            },
+            {
+              "value": 600,
+              "clue": "This viral YouTube video featured a young boy saying, \"he bit me!\"",
+              "answer": "Charlie Bit My Finger",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "This dog from a 2010 photograph inspired the \"much wow\" meme.",
+              "answer": "Doge",
+              "used": false
+            },
+            {
+              "value": 1000,
+              "clue": "This meme features a stock-photo model smiling despite clearly looking exhausted.",
+              "answer": "Hide the Pain Harold",
+              "used": false
             }
-          },
-          {
-            "value": 800,
-            "clue": "Name this flag.",
-            "answer": "Sweden",
-            "media": {
-              "type": "image",
-              "url": "https://upload.wikimedia.org/wikipedia/en/4/4c/Flag_of_Sweden.svg"
+          ]
+        },
+        {
+          "category": "GUESS THE FLAG",
+          "questions": [
+            {
+              "value": 200,
+              "clue": "Name this flag.",
+              "answer": "Canada",
+              "media": {
+                "type": "image",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg"
+              }
+            },
+            {
+              "value": 400,
+              "clue": "Name this flag.",
+              "answer": "Brazil",
+              "media": {
+                "type": "image",
+                "url": "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg"
+              }
+            },
+            {
+              "value": 600,
+              "clue": "Name this flag.",
+              "answer": "Wales",
+              "media": {
+                "type": "image",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Flag_of_Wales.svg"
+              }
+            },
+            {
+              "value": 800,
+              "clue": "Name this flag.",
+              "answer": "Sweden",
+              "media": {
+                "type": "image",
+                "url": "https://upload.wikimedia.org/wikipedia/en/4/4c/Flag_of_Sweden.svg"
+              }
+            },
+            {
+              "value": 1000,
+              "clue": "Name this flag.",
+              "answer": "Bhutan",
+              "media": {
+                "type": "image",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Flag_of_Bhutan.svg"
+              }
             }
-          },
-          {
-            "value": 1000,
-            "clue": "Name this flag.",
-            "answer": "Bhutan",
-            "media": {
-              "type": "image",
-              "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Flag_of_Bhutan.svg"
+          ]
+        },
+        {
+          "category": "AITA?",
+          "questions": [
+            {
+              "value": 200,
+              "clue": "AITA for making my nephew destroy a piece of family jewellery instead of doing it myself?",
+              "answer": "Gandalf",
+              "used": false
+            },
+            {
+              "value": 400,
+              "clue": "AITA for lying about my identity to train with an army that specifically banned people like me?",
+              "answer": "Mulan",
+              "used": false
+            },
+            {
+              "value": 600,
+              "clue": "AITA for letting a complete stranger onto a piece of floating debris instead of sharing it?",
+              "answer": "Rose",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "AITA for pretending to be a dead man because I didn't want to marry the king?",
+              "answer": "Aragorn",
+              "used": false
+            },
+            {
+              "value": 1000,
+              "clue": "AITA for abandoning my nephew on a desert planet because I thought his father might come looking for him?",
+              "answer": "Obi-Wan Kenobi",
+              "used": false
             }
-          }
-        ]
-      },
-      {
-        "category": "AITA?",
-        "questions": [
-          {
-            "value": 200,
-            "clue": "AITA for making my nephew destroy a piece of family jewellery instead of doing it myself?",
-            "answer": "Gandalf",
-            "used": false
-          },
-          {
-            "value": 400,
-            "clue": "AITA for lying about my identity to train with an army that specifically banned people like me?",
-            "answer": "Mulan",
-            "used": false
-          },
-          {
-            "value": 600,
-            "clue": "AITA for letting a complete stranger onto a piece of floating debris instead of sharing it?",
-            "answer": "Rose",
-            "used": false
-          },
-          {
-            "value": 800,
-            "clue": "AITA for pretending to be a dead man because I didn't want to marry the king?",
-            "answer": "Aragorn",
-            "used": false
-          },
-          {
-            "value": 1000,
-            "clue": "AITA for abandoning my nephew on a desert planet because I thought his father might come looking for him?",
-            "answer": "Obi-Wan Kenobi",
-            "used": false
-          }
-        ]
-      },
-      {
-        "category": "OUT OF CONTEXT QUOTES",
-        "questions": [
-          {
-            "value": 200,
-            "clue": "\"I am the Senate.\"",
-            "answer": "Palpatine",
-            "used": false
-          },
-          {
-            "value": 400,
-            "clue": "\"Why is Gamora?\"",
-            "answer": "Drax",
-            "used": false
-          },
-          {
-            "value": 600,
-            "clue": "\"There is no Easter Bunny, there is no Tooth Fairy, and there is no Queen of England.\"",
-            "answer": "Donkey",
-            "used": false
-          },
-          {
-            "value": 800,
-            "clue": "\"Some of you may die, but it's a sacrifice I am willing to make.\"",
-            "answer": "Lord Farquaad",
-            "used": false,
-            "dailyDouble": true
-          },
-          {
-            "value": 1000,
-            "clue": "\"Good. Twice the pride, double the fall.\"",
-            "answer": "Count Dooku",
-            "used": false
-          }
-        ]
-      }
-    ]
+          ]
+        },
+        {
+          "category": "OUT OF CONTEXT QUOTES",
+          "questions": [
+            {
+              "value": 200,
+              "clue": "\"I am the Senate.\"",
+              "answer": "Palpatine",
+              "used": false
+            },
+            {
+              "value": 400,
+              "clue": "\"Why is Gamora?\"",
+              "answer": "Drax",
+              "used": false
+            },
+            {
+              "value": 600,
+              "clue": "\"There is no Easter Bunny, there is no Tooth Fairy, and there is no Queen of England.\"",
+              "answer": "Donkey",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "\"Some of you may die, but it's a sacrifice I am willing to make.\"",
+              "answer": "Lord Farquaad",
+              "used": false,
+              "dailyDouble": true
+            },
+            {
+              "value": 1000,
+              "clue": "\"Good. Twice the pride, double the fall.\"",
+              "answer": "Count Dooku",
+              "used": false
+            }
+          ]
+        }
+      ]
+    },
+    "doubleJeopardy": {
+      "board": [
+        {
+          "category": "SONGS BY ONE LYRIC",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "\"Is this the real life? Is this just fantasy?\"",
+              "answer": "Bohemian Rhapsody",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "\"Wake me up inside\"",
+              "answer": "Bring Me To Life",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "\"I walk a lonely road\"",
+              "answer": "Boulevard of Broken Dreams",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "\"Do you have the time to listen to me whine?\"",
+              "answer": "Basket Case",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "\"Somebody once told me\"",
+              "answer": "All Star",
+              "used": false,
+              "dailyDouble": true
+            }
+          ]
+        },
+        {
+          "category": "FICTIONAL PLACES",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "This desert planet is the homeworld of Luke Skywalker.",
+              "answer": "Tatooine",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "This hidden African nation is ruled by Black Panther.",
+              "answer": "Wakanda",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "This city-state from Game of Thrones is home to the Iron Throne.",
+              "answer": "King's Landing",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "This kingdom is ruled by Princess Zelda.",
+              "answer": "Hyrule",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "This city from The Lord of the Rings is known as the White City and serves as the capital of Gondor.",
+              "answer": "Minas Tirith",
+              "used": false
+            }
+          ]
+        },
+        {
+          "category": "OH NO, IT'S CANON",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "Mario's full name is this.",
+              "answer": "Mario Mario",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "In Star Wars, Yoda's first name is simply this.",
+              "answer": "Yoda",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "According to Pokémon canon, this fish Pokémon can supposedly leap over mountains.",
+              "answer": "Magikarp",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "In The Simpsons, Homer's middle name is this.",
+              "answer": "J",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "According to The Lord of the Rings, this wizard's real name is Olórin.",
+              "answer": "Gandalf",
+              "used": false
+            }
+          ]
+        },
+        {
+          "category": "MEMES",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "This meme features a frog often associated with the phrase \"feels bad man.\"",
+              "answer": "Pepe the Frog",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "This meme features a burning room and the phrase \"This is fine.\"",
+              "answer": "This Is Fine Dog",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "This meme shows a woman yelling while sitting across from a confused white cat.",
+              "answer": "Woman Yelling at a Cat",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "This meme features a man looking at another woman while his girlfriend looks on in disgust.",
+              "answer": "Distracted Boyfriend",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "This meme features a young child clenching his fist in victory on a beach.",
+              "answer": "Success Kid",
+              "used": false
+            }
+          ]
+        },
+        {
+          "category": "BAD EXPLANATIONS",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "Archaeologist repeatedly ignores museum policies.",
+              "answer": "Indiana Jones",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "Local tradesman repeatedly assaults wildlife to save royalty.",
+              "answer": "Super Mario Bros.",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "Farm boy vandalizes government property.",
+              "answer": "Star Wars",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "Man becomes obsessed with whale, forgets his actual job.",
+              "answer": "Moby-Dick",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "Rich man adopts several children and gives them severe emotional issues.",
+              "answer": "Batman",
+              "used": false
+            }
+          ]
+        },
+        {
+          "category": "TV SHOWS",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "This show features characters named Homelander, Butcher, and Hughie.",
+              "answer": "The Boys",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "Walter White adopts this alias while building his methamphetamine empire.",
+              "answer": "Heisenberg",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "This mystery series begins with the crash of Oceanic Flight 815.",
+              "answer": "Lost",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "This sci-fi series features the planet Skaro.",
+              "answer": "Doctor Who",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "This television series follows the Roy family as they compete for control of Waystar Royco.",
+              "answer": "Succession",
+              "used": false
+            }
+          ]
+        }
+      ]
+    },
+    "finalJeopardy": {
+      "category": "ACTORS",
+      "clue": "This actor has played a Jedi, a Guinness World Record holder, a Lumière brother, and Obi-Wan Kenobi.",
+      "answer": "Who is Ewan McGregor?"
+    }
   },
-  "doubleJeopardy": {
-    "board": [
-      {
-        "category": "SONGS BY ONE LYRIC",
-        "questions": [
-          {
-            "value": 400,
-            "clue": "\"Is this the real life? Is this just fantasy?\"",
-            "answer": "Bohemian Rhapsody",
-            "used": false
-          },
-          {
-            "value": 800,
-            "clue": "\"Wake me up inside\"",
-            "answer": "Bring Me To Life",
-            "used": false
-          },
-          {
-            "value": 1200,
-            "clue": "\"I walk a lonely road\"",
-            "answer": "Boulevard of Broken Dreams",
-            "used": false
-          },
-          {
-            "value": 1600,
-            "clue": "\"Do you have the time to listen to me whine?\"",
-            "answer": "Basket Case",
-            "used": false
-          },
-          {
-            "value": 2000,
-            "clue": "\"Somebody once told me\"",
-            "answer": "All Star",
-            "used": false,
-            "dailyDouble": true
-          }
-        ]
-      },
-      {
-        "category": "FICTIONAL PLACES",
-        "questions": [
-          {
-            "value": 400,
-            "clue": "This desert planet is the homeworld of Luke Skywalker.",
-            "answer": "Tatooine",
-            "used": false
-          },
-          {
-            "value": 800,
-            "clue": "This hidden African nation is ruled by Black Panther.",
-            "answer": "Wakanda",
-            "used": false
-          },
-          {
-            "value": 1200,
-            "clue": "This city-state from Game of Thrones is home to the Iron Throne.",
-            "answer": "King's Landing",
-            "used": false
-          },
-          {
-            "value": 1600,
-            "clue": "This kingdom is ruled by Princess Zelda.",
-            "answer": "Hyrule",
-            "used": false
-          },
-          {
-            "value": 2000,
-            "clue": "This city from The Lord of the Rings is known as the White City and serves as the capital of Gondor.",
-            "answer": "Minas Tirith",
-            "used": false
-          }
-        ]
-      },
-      {
-        "category": "OH NO, IT'S CANON",
-        "questions": [
-          {
-            "value": 400,
-            "clue": "Mario's full name is this.",
-            "answer": "Mario Mario",
-            "used": false
-          },
-          {
-            "value": 800,
-            "clue": "In Star Wars, Yoda's first name is simply this.",
-            "answer": "Yoda",
-            "used": false
-          },
-          {
-            "value": 1200,
-            "clue": "According to Pokémon canon, this fish Pokémon can supposedly leap over mountains.",
-            "answer": "Magikarp",
-            "used": false
-          },
-          {
-            "value": 1600,
-            "clue": "In The Simpsons, Homer's middle name is this.",
-            "answer": "J",
-            "used": false
-          },
-          {
-            "value": 2000,
-            "clue": "According to The Lord of the Rings, this wizard's real name is Olórin.",
-            "answer": "Gandalf",
-            "used": false
-          }
-        ]
-      },
-      {
-        "category": "MEMES",
-        "questions": [
-          {
-            "value": 400,
-            "clue": "This meme features a frog often associated with the phrase \"feels bad man.\"",
-            "answer": "Pepe the Frog",
-            "used": false
-          },
-          {
-            "value": 800,
-            "clue": "This meme features a burning room and the phrase \"This is fine.\"",
-            "answer": "This Is Fine Dog",
-            "used": false
-          },
-          {
-            "value": 1200,
-            "clue": "This meme shows a woman yelling while sitting across from a confused white cat.",
-            "answer": "Woman Yelling at a Cat",
-            "used": false
-          },
-          {
-            "value": 1600,
-            "clue": "This meme features a man looking at another woman while his girlfriend looks on in disgust.",
-            "answer": "Distracted Boyfriend",
-            "used": false
-          },
-          {
-            "value": 2000,
-            "clue": "This meme features a young child clenching his fist in victory on a beach.",
-            "answer": "Success Kid",
-            "used": false
-          }
-        ]
-      },
-      {
-        "category": "BAD EXPLANATIONS",
-        "questions": [
-          {
-            "value": 400,
-            "clue": "Archaeologist repeatedly ignores museum policies.",
-            "answer": "Indiana Jones",
-            "used": false
-          },
-          {
-            "value": 800,
-            "clue": "Local tradesman repeatedly assaults wildlife to save royalty.",
-            "answer": "Super Mario Bros.",
-            "used": false
-          },
-          {
-            "value": 1200,
-            "clue": "Farm boy vandalizes government property.",
-            "answer": "Star Wars",
-            "used": false
-          },
-          {
-            "value": 1600,
-            "clue": "Man becomes obsessed with whale, forgets his actual job.",
-            "answer": "Moby-Dick",
-            "used": false
-          },
-          {
-            "value": 2000,
-            "clue": "Rich man adopts several children and gives them severe emotional issues.",
-            "answer": "Batman",
-            "used": false
-          }
-        ]
-      },
-      {
-        "category": "TV SHOWS",
-        "questions": [
-          {
-            "value": 400,
-            "clue": "This show features characters named Homelander, Butcher, and Hughie.",
-            "answer": "The Boys",
-            "used": false
-          },
-          {
-            "value": 800,
-            "clue": "Walter White adopts this alias while building his methamphetamine empire.",
-            "answer": "Heisenberg",
-            "used": false
-          },
-          {
-            "value": 1200,
-            "clue": "This mystery series begins with the crash of Oceanic Flight 815.",
-            "answer": "Lost",
-            "used": false
-          },
-          {
-            "value": 1600,
-            "clue": "This sci-fi series features the planet Skaro.",
-            "answer": "Doctor Who",
-            "used": false
-          },
-          {
-            "value": 2000,
-            "clue": "This television series follows the Roy family as they compete for control of Waystar Royco.",
-            "answer": "Succession",
-            "used": false
-          }
-        ]
-      }
-    ]
-  },
-  "finalJeopardy": {
-    "category": "ACTORS",
-    "clue": "This actor has played a Jedi, a Guinness World Record holder, a Lumière brother, and Obi-Wan Kenobi.",
-    "answer": "Who is Ewan McGregor?"
-  }
+  {
+    "id": "JUNIOR-GAME-1",
+    "name": "Junior Jeopardy!",
+    "jeopardy": {
+      "board": [
+        {
+          "category": "ANIMALS",
+          "questions": [
+            {
+              "value": 200,
+              "clue": "This is the largest animal on Earth.",
+              "answer": "Blue Whale",
+              "used": false
+            },
+            {
+              "value": 400,
+              "clue": "This mammal is famous for carrying its babies in a pouch.",
+              "answer": "Kangaroo",
+              "used": false
+            },
+            {
+              "value": 600,
+              "clue": "Despite its name, this black-and-white bear mainly eats bamboo.",
+              "answer": "Giant Panda",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "This bird is the national symbol of New Zealand and cannot fly.",
+              "answer": "Kiwi",
+              "used": false
+            },
+            {
+              "value": 1000,
+              "clue": "This reptile can change its skin colour to help communicate and regulate its temperature.",
+              "answer": "Chameleon",
+              "used": false
+            }
+          ]
+        },
+        {
+          "category": "MOVIES",
+          "questions": [
+            {
+              "value": 200,
+              "clue": "This blue fish forgets things very easily in Finding Nemo and Finding Dory.",
+              "answer": "Dory",
+              "used": false
+            },
+            {
+              "value": 400,
+              "clue": "In Frozen, this character has the power to create ice and snow.",
+              "answer": "Elsa",
+              "used": false
+            },
+            {
+              "value": 600,
+              "clue": "This wizard receives a letter inviting him to attend Hogwarts School of Witchcraft and Wizardry.",
+              "answer": "Harry Potter",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "In Shrek, this talkative companion joins Shrek on his quest to rescue Princess Fiona.",
+              "answer": "Donkey",
+              "used": false
+            },
+            {
+              "value": 1000,
+              "clue": "This Pixar movie follows a young musician named Miguel who travels to the Land of the Dead.",
+              "answer": "Coco",
+              "used": false
+            }
+          ]
+        },
+        {
+          "category": "SCIENCE",
+          "questions": [
+            {
+              "value": 200,
+              "clue": "This organ pumps blood around the human body.",
+              "answer": "Heart",
+              "used": false
+            },
+            {
+              "value": 400,
+              "clue": "Humans breathe in this gas and breathe out carbon dioxide.",
+              "answer": "Oxygen",
+              "used": false
+            },
+            {
+              "value": 600,
+              "clue": "Water freezes at this temperature on the Celsius scale.",
+              "answer": "0°C",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "This force keeps your feet on the ground and causes objects to fall toward Earth.",
+              "answer": "Gravity",
+              "used": false
+            },
+            {
+              "value": 1000,
+              "clue": "This part of a plant absorbs water and nutrients from the soil.",
+              "answer": "Roots",
+              "used": false,
+              "dailyDouble": true
+            }
+          ]
+        },
+        {
+          "category": "EMOJI MOVIES",
+          "questions": [
+            {
+              "value": 200,
+              "clue": "🦁👑",
+              "answer": "The Lion King",
+              "used": false
+            },
+            {
+              "value": 400,
+              "clue": "❄️👭☃️",
+              "answer": "Frozen",
+              "used": false
+            },
+            {
+              "value": 600,
+              "clue": "🐟🔍",
+              "answer": "Finding Nemo",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "🎈🏠",
+              "answer": "Up",
+              "used": false
+            },
+            {
+              "value": 1000,
+              "clue": "🟨👖🍍",
+              "answer": "SpongeBob SquarePants Movie",
+              "used": false
+            }
+          ]
+        },
+        {
+          "category": "LOGOS",
+          "questions": [
+            {
+              "value": 200,
+              "clue": "Name this logo.",
+              "answer": "McDonald's",
+              "used": false,
+              "media": {
+                "type": "image",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/McDonald%27s_Golden_Arches.svg"
+              }
+            },
+            {
+              "value": 400,
+              "clue": "Name this logo.",
+              "answer": "YouTube",
+              "used": false,
+              "media": {
+                "type": "image",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
+              }
+            },
+            {
+              "value": 600,
+              "clue": "Name this logo.",
+              "answer": "Nike",
+              "used": false,
+              "media": {
+                "type": "image",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg"
+              }
+            },
+            {
+              "value": 800,
+              "clue": "Name this logo.",
+              "answer": "Spotify",
+              "used": false,
+              "media": {
+                "type": "image",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
+              }
+            },
+            {
+              "value": 1000,
+              "clue": "Name this logo.",
+              "answer": "Discord",
+              "used": false,
+              "media": {
+                "type": "image",
+                "url": "https://upload.wikimedia.org/wikipedia/fr/4/4f/Discord_Logo_sans_texte.svg"
+              }
+            }
+          ]
+        },
+        {
+          "category": "FOOD",
+          "questions": [
+            {
+              "value": 200,
+              "clue": "This Italian food is made with dough, sauce, and cheese.",
+              "answer": "Pizza",
+              "used": false
+            },
+            {
+              "value": 400,
+              "clue": "This Mexican food consists of a folded tortilla filled with meat, beans, cheese, or vegetables.",
+              "answer": "Taco",
+              "used": false
+            },
+            {
+              "value": 600,
+              "clue": "This spread made from chickpeas is popular in Middle Eastern cuisine.",
+              "answer": "Hummus",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "This tropical fruit has a spiky exterior and a sweet yellow interior.",
+              "answer": "Pineapple",
+              "used": false
+            },
+            {
+              "value": 1000,
+              "clue": "This fruit has its seeds on the outside.",
+              "answer": "Strawberry",
+              "used": false
+            }
+          ]
+        }
+      ]
+    },
+    "doubleJeopardy": {
+      "board": [
+        {
+          "category": "DISNEY",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "This wooden puppet dreamed of becoming a real boy.",
+              "answer": "Pinocchio",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "This Disney princess has a chameleon named Pascal.",
+              "answer": "Rapunzel",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "This villain steals the voice of Ariel in The Little Mermaid.",
+              "answer": "Ursula",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "This demigod is voiced by Dwayne Johnson in Moana.",
+              "answer": "Maui",
+              "used": false,
+              "dailyDouble": true
+            },
+            {
+              "value": 2000,
+              "clue": "This Disney character sings \"I'll Make a Man Out of You.\"",
+              "answer": "Li Shang",
+              "used": false
+            }
+          ]
+        },
+        {
+          "category": "CAN YOU BEAT A YEAR 3?",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "What is 7 × 8?",
+              "answer": "56",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "What color do you get when you mix blue and yellow?",
+              "answer": "Green",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "How many sides does a hexagon have?",
+              "answer": "6",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "Which planet is closest to the Sun?",
+              "answer": "Mercury",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "If a train leaves Auckland and travels south, which island of New Zealand is it on?",
+              "answer": "North Island",
+              "used": false
+            }
+          ]
+        },
+        {
+          "category": "FLAGS",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "Name this flag.",
+              "answer": "New Zealand",
+              "used": false,
+              "media": {
+                "type": "image",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_New_Zealand.svg"
+              }
+            },
+            {
+              "value": 800,
+              "clue": "Name this flag.",
+              "answer": "Australia",
+              "used": false,
+              "media": {
+                "type": "image",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg"
+              }
+            },
+            {
+              "value": 1200,
+              "clue": "Name this flag.",
+              "answer": "Japan",
+              "used": false,
+              "media": {
+                "type": "image",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg"
+              }
+            },
+            {
+              "value": 1600,
+              "clue": "Name this flag.",
+              "answer": "Brazil",
+              "used": false,
+              "media": {
+                "type": "image",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
+              }
+            },
+            {
+              "value": 2000,
+              "clue": "Name this flag.",
+              "answer": "Bhutan",
+              "used": false,
+              "media": {
+                "type": "image",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Flag_of_Bhutan.svg"
+              }
+            }
+          ]
+        },
+        {
+          "category": "SCHOOL STUFF",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "This punctuation mark is used at the end of a question.",
+              "answer": "Question Mark",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "In mathematics, this shape has three sides.",
+              "answer": "Triangle",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "This element has the chemical symbol O.",
+              "answer": "Oxygen",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "This literary device compares two things using \"like\" or \"as.\"",
+              "answer": "Simile",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "This branch of mathematics deals with unknown values often represented by letters.",
+              "answer": "Algebra",
+              "used": false
+            }
+          ]
+        },
+        {
+          "category": "SPORTS",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "In this sport, players try to score goals using their feet.",
+              "answer": "Football (Soccer)",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "This sport uses a bat, a ball, and wickets.",
+              "answer": "Cricket",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "This sport includes the positions point guard, shooting guard, and center.",
+              "answer": "Basketball",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "This sport features events such as the 100m sprint, long jump, and javelin.",
+              "answer": "Athletics (Track and Field)",
+              "used": false
+            },
+            {
+              "value": 2000,
+              "clue": "This sport features the Grand Slam tournaments Wimbledon, Roland-Garros, the US Open, and the Australian Open.",
+              "answer": "Tennis",
+              "used": false
+            }
+          ]
+        },
+        {
+          "category": "EMOJIS",
+          "questions": [
+            {
+              "value": 400,
+              "clue": "Which singer is this: 🐈👁️",
+              "answer": "Katseye",
+              "used": false
+            },
+            {
+              "value": 800,
+              "clue": "What movie is this: 🦁👑",
+              "answer": "Lion King",
+              "used": false
+            },
+            {
+              "value": 1200,
+              "clue": "Which is this flag: 🇦🇷",
+              "answer": "Argentina",
+              "used": false
+            },
+            {
+              "value": 1600,
+              "clue": "What country is this: 🇳🇵",
+              "answer": "Nepal",
+              "used": false,
+              "dailyDouble": true
+            },
+            {
+              "value": 2000,
+              "clue": "What movie is this: 🔙2🔮🚗",
+              "answer": "Back to the Future",
+              "used": false
+            }
+          ]
+        }
+      ]
+    },
+    "finalJeopardy": {
+      "category": "SCIENCE",
+      "clue": "This planet is known for its rings and is the second-largest planet in our Solar System.",
+      "answer": "What is Saturn?"
+    }
   }
 ]
